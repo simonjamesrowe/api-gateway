@@ -1,0 +1,17 @@
+spring:
+  codec:
+    max-in-memory-size: 10MB
+  cloud:
+    gateway:
+      routes:
+        - id: cms-json
+          uri: ${cms.url}
+          predicates:
+            - Path=/jobs,/profiles,/tags,/blogs,/blogs/{id}
+
+cms:
+  url: http://localhost:8000/
+
+image:
+  compressFilesLargerThanKb: 400
+
