@@ -9,7 +9,7 @@ image:
 
 # define environment variables here as a map of key: value
 env:
-
+  CMS_URL: http://cms/
 # enable this flag to use knative serve to deploy the app
 knativeDeploy: false
 
@@ -44,7 +44,7 @@ canary:
   host: acme.com
 
 service:
-  name: api-gateway
+  name: api
   type: ClusterIP
   externalPort: 80
   internalPort: 8080
