@@ -1,0 +1,217 @@
+
+Showing logs for build [32msimonjamesrowe-api-gateway-mast-2h4kv-5[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-c2xlw[0m
+{"level":"info","ts":1600416030.4290237,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
+{"level":"info","ts":1600416030.4298408,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32msimonjamesrowe-api-gateway-mast-2h4kv-5[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-wmrv7[0m
+{"level":"info","ts":1600416031.9129317,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1600416031.9143903,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32msimonjamesrowe-api-gateway-mast-2h4kv-5[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32msimonjamesrowe-api-gateway-mast-2h4kv-5[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-simonjamesrowe-api-gateway-mast-2h4kv-9fbhd[0m
+{"level":"info","ts":1600416038.884594,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
+{"level":"info","ts":1600416040.8640993,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/simonjamesrowe/api-gateway.git @ v0.0.5 in path /workspace/source"}
+
+Showing logs for build [32msimonjamesrowe-api-gateway-mast-2h4kv-5[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:6b89411c7b439c0ef30985bbe0f58e22ad58e755
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32msimonjamesrowe-api-gateway-mast-2h4kv-5[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32msimonjamesrowe-api-gateway-mast-2h4kv-5[0m stage [32mfrom-build-pack[0m and container [32mstep-build-mvn-deploy[0m
+Picked up _JAVA_OPTIONS: -XX:+UnlockExperimentalVMOptions -Dsun.zip.disableMemoryMapping=true -XX:+UseParallelGC -XX:MinHeapFreeRatio=5 -XX:MaxHeapFreeRatio=10 -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Xms10m -Xmx192m
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------------< com.simonjamesrowe:api-gateway >-------------------
+[INFO] Building api-gateway 0.0.5
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ api-gateway ---
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:resources (default-resources) @ api-gateway ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ api-gateway ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- kotlin-maven-plugin:1.3.72:compile (compile) @ api-gateway ---
+[INFO] Applied plugin: 'spring'
+[WARNING] /workspace/source/src/main/kotlin/com/simonjamesrowe/apigateway/UploadController.kt: (45, 94) Unchecked cast: ResponseEntity<ByteArray> to ResponseEntity<ByteArray?>
+[WARNING] /workspace/source/src/main/kotlin/com/simonjamesrowe/apigateway/UploadController.kt: (55, 86) Unchecked cast: ResponseEntity<ByteArray> to ResponseEntity<ByteArray?>
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:testResources (default-testResources) @ api-gateway ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /workspace/source/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ api-gateway ---
+[INFO] Changes detected - recompiling the module!
+[INFO] 
+[INFO] --- kotlin-maven-plugin:1.3.72:test-compile (test-compile) @ api-gateway ---
+[INFO] Applied plugin: 'spring'
+[INFO] 
+[INFO] --- maven-surefire-plugin:3.0.0-M1:test (default-test) @ api-gateway ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.simonjamesrowe.apigateway.ApiGatewayApplicationTests
+08:01:54.772 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+08:01:54.875 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+08:01:54.995 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.simonjamesrowe.apigateway.ApiGatewayApplicationTests] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+08:01:55.075 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.simonjamesrowe.apigateway.ApiGatewayApplicationTests], using SpringBootContextLoader
+08:01:55.082 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.simonjamesrowe.apigateway.ApiGatewayApplicationTests]: class path resource [com/simonjamesrowe/apigateway/ApiGatewayApplicationTests-context.xml] does not exist
+08:01:55.082 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.simonjamesrowe.apigateway.ApiGatewayApplicationTests]: class path resource [com/simonjamesrowe/apigateway/ApiGatewayApplicationTestsContext.groovy] does not exist
+08:01:55.082 [main] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.simonjamesrowe.apigateway.ApiGatewayApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+08:01:55.084 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.simonjamesrowe.apigateway.ApiGatewayApplicationTests]: ApiGatewayApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+08:01:55.396 [main] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.simonjamesrowe.apigateway.ApiGatewayApplicationTests]
+08:01:55.657 [main] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [/workspace/source/target/classes/com/simonjamesrowe/apigateway/ApiGatewayApplication.class]
+08:01:55.677 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.simonjamesrowe.apigateway.ApiGatewayApplication for test class com.simonjamesrowe.apigateway.ApiGatewayApplicationTests
+08:01:56.159 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.simonjamesrowe.apigateway.ApiGatewayApplicationTests]: using defaults.
+08:01:56.161 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+08:01:56.177 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Skipping candidate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener] due to a missing dependency. Specify custom listener classes or make the default listener classes and their required dependencies available. Offending class: [javax/servlet/ServletContext]
+08:01:56.181 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Skipping candidate TestExecutionListener [org.springframework.test.context.transaction.TransactionalTestExecutionListener] due to a missing dependency. Specify custom listener classes or make the default listener classes and their required dependencies available. Offending class: [org/springframework/transaction/TransactionDefinition]
+08:01:56.183 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Skipping candidate TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener] due to a missing dependency. Specify custom listener classes or make the default listener classes and their required dependencies available. Offending class: [org/springframework/transaction/interceptor/TransactionAttribute]
+08:01:56.184 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@4b2a01d4, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@8692d67, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@78f5c518, org.springframework.test.context.support.DirtiesContextTestExecutionListener@2f48b3d2, org.springframework.test.context.event.EventPublishingTestExecutionListener@34f7234e, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@753432a2, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@23bff419, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@4983159f, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@44e3a2b2, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@101639ae, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@4c550889]
+08:01:56.255 [main] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@60957c0f testClass = ApiGatewayApplicationTests, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [ReactiveWebMergedContextConfiguration@293a5f75 testClass = ApiGatewayApplicationTests, locations = '{}', classes = '{class com.simonjamesrowe.apigateway.ApiGatewayApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@6cc4cdb9, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@1a5b6f42, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@79defdc, org.springframework.boot.test.web.reactive.server.WebTestClientContextCustomizer@17d919b6, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@7905a0b8, org.springframework.boot.test.context.SpringBootTestArgs@1], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map[[empty]]], class annotated with @DirtiesContext [false] with mode [null].
+08:01:56.275 [main] DEBUG org.springframework.test.context.support.DependencyInjectionTestExecutionListener - Performing dependency injection for test context [[DefaultTestContext@60957c0f testClass = ApiGatewayApplicationTests, testInstance = com.simonjamesrowe.apigateway.ApiGatewayApplicationTests@3c9bfddc, testMethod = [null], testException = [null], mergedContextConfiguration = [ReactiveWebMergedContextConfiguration@293a5f75 testClass = ApiGatewayApplicationTests, locations = '{}', classes = '{class com.simonjamesrowe.apigateway.ApiGatewayApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@6cc4cdb9, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@1a5b6f42, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@79defdc, org.springframework.boot.test.web.reactive.server.WebTestClientContextCustomizer@17d919b6, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@7905a0b8, org.springframework.boot.test.context.SpringBootTestArgs@1], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map[[empty]]]].
+08:01:56.458 [main] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.3.1.RELEASE)
+
+2020-09-18 08:01:59.674  INFO 78 --- [           main] c.s.a.ApiGatewayApplicationTests         : No active profile set, falling back to default profiles: default
+2020-09-18 08:02:03.921  INFO 78 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=550ec0f2-fec4-3d89-9b33-512f3d2fb234
+2020-09-18 08:02:12.531  INFO 78 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [After]
+2020-09-18 08:02:12.531  INFO 78 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Before]
+2020-09-18 08:02:12.531  INFO 78 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Between]
+2020-09-18 08:02:12.531  INFO 78 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Cookie]
+2020-09-18 08:02:12.532  INFO 78 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Header]
+2020-09-18 08:02:12.532  INFO 78 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Host]
+2020-09-18 08:02:12.532  INFO 78 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Method]
+2020-09-18 08:02:12.532  INFO 78 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Path]
+2020-09-18 08:02:12.532  INFO 78 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Query]
+2020-09-18 08:02:12.532  INFO 78 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [ReadBodyPredicateFactory]
+2020-09-18 08:02:12.532  INFO 78 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [RemoteAddr]
+2020-09-18 08:02:12.532  INFO 78 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Weight]
+2020-09-18 08:02:12.532  INFO 78 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2020-09-18 08:02:15.050  INFO 78 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-09-18 08:02:16.850  INFO 78 --- [           main] c.s.a.ApiGatewayApplicationTests         : Started ApiGatewayApplicationTests in 20.413 seconds (JVM running for 25.419)
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 23.557 s - in com.simonjamesrowe.apigateway.ApiGatewayApplicationTests
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- maven-jar-plugin:3.2.0:jar (default-jar) @ api-gateway ---
+[INFO] Building jar: /workspace/source/target/api-gateway-0.0.5.jar
+[INFO] 
+[INFO] --- spring-boot-maven-plugin:2.3.1.RELEASE:repackage (repackage) @ api-gateway ---
+[INFO] Replacing main artifact with repackaged archive
+[INFO] 
+[INFO] --- maven-install-plugin:2.5.2:install (default-install) @ api-gateway ---
+[INFO] Installing /workspace/source/target/api-gateway-0.0.5.jar to /home/jenkins/.mvnrepository/com/simonjamesrowe/api-gateway/0.0.5/api-gateway-0.0.5.jar
+[INFO] Installing /workspace/source/pom.xml to /home/jenkins/.mvnrepository/com/simonjamesrowe/api-gateway/0.0.5/api-gateway-0.0.5.pom
+[INFO] 
+[INFO] --- maven-deploy-plugin:2.8.2:deploy (default-deploy) @ api-gateway ---
+[INFO] Using alternate deployment repository local-nexus::default::http://nexus/repository/maven-releases/
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  01:40 min
+[INFO] Finished at: 2020-09-18T08:02:28Z
+[INFO] ------------------------------------------------------------------------
+
+Showing logs for build [32msimonjamesrowe-api-gateway-mast-2h4kv-5[0m stage [32mfrom-build-pack[0m and container [32mstep-build-skaffold-version[0m
+v1.0.1
+
+Showing logs for build [32msimonjamesrowe-api-gateway-mast-2h4kv-5[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+[36mINFO[0m[0001] Using dockerignore file: /workspace/source/.dockerignore 
+[36mINFO[0m[0001] Retrieving image manifest openjdk:11-jre-slim 
+[36mINFO[0m[0004] Retrieving image manifest openjdk:11-jre-slim 
+[36mINFO[0m[0005] Built cross stage deps: map[]                
+[36mINFO[0m[0005] Retrieving image manifest openjdk:11-jre-slim 
+[36mINFO[0m[0006] Retrieving image manifest openjdk:11-jre-slim 
+[36mINFO[0m[0008] Executing 0 build triggers                   
+[36mINFO[0m[0008] cmd: EXPOSE                                  
+[36mINFO[0m[0008] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0008] Resolving srcs [pom.xml target/lib*]...      
+[36mINFO[0m[0008] Checking for cached layer harbor.simonjamesrowe.com/todo/cache:a5c919aa768154a5ebf563a9f3027061a7c409bc8b9400ec01f2dd609f6f69a0... 
+[36mINFO[0m[0009] No cached layer found for cmd COPY pom.xml target/lib* /opt/lib/ 
+[36mINFO[0m[0009] Resolving srcs [target/*.jar]...             
+[36mINFO[0m[0009] Unpacking ****fs as cmd COPY pom.xml target/lib* /opt/lib/ requires it. 
+[36mINFO[0m[0026] ENV PORT 8080                                
+[36mINFO[0m[0026] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0026] ENV CLASSPATH /opt/lib                       
+[36mINFO[0m[0026] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0026] EXPOSE 8080                                  
+[36mINFO[0m[0026] cmd: EXPOSE                                  
+[36mINFO[0m[0026] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0026] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0026] Resolving srcs [pom.xml target/lib*]...      
+[36mINFO[0m[0026] COPY pom.xml target/lib* /opt/lib/           
+[36mINFO[0m[0026] Resolving srcs [pom.xml target/lib*]...      
+[36mINFO[0m[0026] Resolving 1 paths                            
+[36mINFO[0m[0026] Taking snapshot of files...                  
+[36mINFO[0m[0026] Pushing layer harbor.simonjamesrowe.com/todo/cache:a5c919aa768154a5ebf563a9f3027061a7c409bc8b9400ec01f2dd609f6f69a0 to cache now 
+[36mINFO[0m[0026] Resolving srcs [target/*.jar]...             
+[36mINFO[0m[0026] COPY target/*.jar /opt/app.jar               
+[36mINFO[0m[0026] Resolving srcs [target/*.jar]...             
+[36mINFO[0m[0026] Resolving 1 paths                            
+[36mINFO[0m[0026] Taking snapshot of files...                  
+[36mINFO[0m[0028] WORKDIR /opt                                 
+[36mINFO[0m[0028] cmd: workdir                                 
+[36mINFO[0m[0028] Changed working directory to /opt            
+[36mINFO[0m[0028] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0028] CMD ["java", "-jar", "app.jar"]              
+[36mINFO[0m[0028] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0028] Pushing layer harbor.simonjamesrowe.com/todo/cache:2d003c2266d5ecde85198885da82c46dd913962a5106087492bae8ebadff66a7 to cache now 
+[33mWARN[0m[0028] error uploading layer to cache: failed to push to destination harbor.simonjamesrowe.com/todo/cache:a5c919aa768154a5ebf563a9f3027061a7c409bc8b9400ec01f2dd609f6f69a0: HEAD https://harbor.simonjamesrowe.com/v2/todo/cache/blobs/sha256:626021c806b91b88bb6368faf02daa95e7137a44f0b324869b433d213e6f3e3b: unsupported status code 401 
+
+Showing logs for build [32msimonjamesrowe-api-gateway-mast-2h4kv-5[0m stage [32mfrom-build-pack[0m and container [32mstep-build-post-build[0m
+no CVE provider running in the current ** namespace so skip adding image to be analysed
+
+Showing logs for build [32msimonjamesrowe-api-gateway-mast-2h4kv-5[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-changelog[0m
+Converted /workspace/source/charts/api-gateway to an unshallow repository
+Generating change log from git ref 23b19ae17fc7e32c837b372a9be18f195b91086b => 5d748fa6d1e2a037cc2aa682b67698aa21a9ad55
+WARNING: Failed to enrich commit 6b89411c7b439c0ef30985bbe0f58e22ad58e755 with issues: users.jenkins.io "x-0" already exists
+WARNING: Failed to enrich commit 6b89411c7b439c0ef30985bbe0f58e22ad58e755 with issues: users.jenkins.io "x-0" already exists
+Finding issues in commit messages using git format
+WARNING: No release found for simonjamesrowe/api-gateway and tag v0.0.5 so creating a new release
+Updated the release information at https://github.com/simonjamesrowe/api-gateway/releases/tag/v0.0.5
+generated: /workspace/source/charts/api-gateway/templates/release.yaml
+Created Release api-gateway-0-0-5 resource in namespace **
+Updating PipelineActivity simonjamesrowe-api-gateway-master-5 with version 0.0.5
+Updated PipelineActivities simonjamesrowe-api-gateway-master-5 with release notes URL: https://github.com/simonjamesrowe/api-gateway/releases/tag/v0.0.5
+
+Showing logs for build [32msimonjamesrowe-api-gateway-mast-2h4kv-5[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-helm-release[0m
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Uploading chart file api-gateway-0.0.5.tgz to http://jenkins-x-chartmuseum:8080/api/charts
+Received 201 response: {"saved":true}
+
+Showing logs for build [32msimonjamesrowe-api-gateway-mast-2h4kv-5[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-promote[0m
+WARNING: prow based install so skip waiting for the merge of Pull Requests to go green as currently there is an issue with gettingstatuses from the PR, see https://github.com/jenkins-x/**/issues/2410
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Promoting app api-gateway version 0.0.5 to namespace **-staging
+Created Pull Request: https://github.com/simonjamesrowe/environment-simonjamesrowe-staging/pull/43
+Added label updatebot to Pull Request https://github.com/simonjamesrowe/environment-simonjamesrowe-staging/pull/43
+WARNING: Failed to query the Pull Request last commit status for https://github.com/simonjamesrowe/environment-simonjamesrowe-staging/pull/43 ref 5e155c6398d15f5837d69fd74d75acdd633e4eee Could not find a status for repository simonjamesrowe/environment-simonjamesrowe-staging with ref 5e155c6398d15f5837d69fd74d75acdd633e4eee
+got git provider status pending from PR https://github.com/simonjamesrowe/environment-simonjamesrowe-staging/pull/43
+got git provider status pending from PR https://github.com/simonjamesrowe/environment-simonjamesrowe-staging/pull/43
+Pull Request https://github.com/simonjamesrowe/environment-simonjamesrowe-staging/pull/43 is merged at sha 83234921411abbf03497db3d095be17c58414efc
+Pull Request merged but we are not waiting for the update pipeline to complete!
+WARNING: Could not find the service URL in namespace **-staging for names api-gateway, **-api-gateway, **-staging-api-gateway
