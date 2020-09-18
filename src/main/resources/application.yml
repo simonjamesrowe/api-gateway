@@ -7,7 +7,7 @@ spring:
         - id: cms-json
           uri: ${cms.url}
           predicates:
-            - Path=/jobs,/profiles,/tags,/blogs,/blogs/{id}
+            - Path=/jobs,/profiles,/tags,/blogs,/blogs/{id},/skills-groups,/social-medias
 
 cms:
   url: http://localhost:8000/
