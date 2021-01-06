@@ -10,6 +10,11 @@ image:
 # define environment variables here as a map of key: value
 env:
   CMS_URL: http://cms/
+  SPRING_KAFKA_BOOTSTRAP-SERVERS: jenkins-x-cp-kafka.jx:9092
+
+envFrom:
+  - secretRef:
+      name: api-gateway
 # enable this flag to use knative serve to deploy the app
 knativeDeploy: false
 

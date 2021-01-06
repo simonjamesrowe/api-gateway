@@ -1,6 +1,14 @@
 spring:
+  security:
+    user:
+      name: webhook
+      password: password
   codec:
     max-in-memory-size: 10MB
+
+  jackson:
+    serialization:
+      write_dates_as_timestamps: false
   cloud:
     gateway:
       routes:
@@ -8,10 +16,49 @@ spring:
           uri: ${cms.url}
           predicates:
             - Path=/jobs,/profiles,/tags,/blogs,/blogs/{id},/skills-groups,/social-medias
+    stream:
+      bindings:
+        output:
+          destination: ${namespace:LOCAL}_EVENTS
+          producer:
+            use-native-encoding: true
+            partition-count: 1
+        input:
+          destination: ${namespace:LOCAL}_EVENTS
+          group: api-gateway
+          consumer:
+            use-native-decoding: true
+      kafka:
+        binder:
+          brokers: ${spring.kafka.bootstrap-servers}
+          consumer-properties:
+            max.poll.records: 50
+          auto-add-partitions: true
+          replication-factor: 1
+        bindings:
+          default:
+            consumer:
+              autoCommitOnError: false
+              autoCommitOffset: true
+              startOffset: earliest
+              headerMode: raw
+          input:
+            consumer:
+              configuration:
+                value.deserializer: com.simonjamesrowe.apigateway.kafka.serialization.EventDeserializer
+                key.deserializer: org.apache.kafka.common.serialization.StringDeserializer
+          output:
+            producer:
+              configuration:
+                value.serializer: com.simonjamesrowe.apigateway.kafka.serialization.EventSerializer
+                key.serializer: org.apache.kafka.common.serialization.StringSerializer
+  kafka:
+    consumer:
+      properties:
+        spring.json.trusted.packages: com.simonjamesrowe.model
 
 cms:
   url: http://localhost:8000/
 
 image:
   compressFilesLargerThanKb: 400
-
