@@ -45,12 +45,12 @@ spring:
           input:
             consumer:
               configuration:
-                value.deserializer: com.simonjamesrowe.apigateway.kafka.serialization.EventDeserializer
+                value.deserializer: com.simonjamesrowe.model.serialization.EventDeserializer
                 key.deserializer: org.apache.kafka.common.serialization.StringDeserializer
           output:
             producer:
               configuration:
-                value.serializer: com.simonjamesrowe.apigateway.kafka.serialization.EventSerializer
+                value.serializer: com.simonjamesrowe.model.serialization.EventSerializer
                 key.serializer: org.apache.kafka.common.serialization.StringSerializer
   kafka:
     consumer:

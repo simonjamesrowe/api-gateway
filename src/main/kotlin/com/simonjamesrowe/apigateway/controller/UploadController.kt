@@ -1,4 +1,4 @@
-package com.simonjamesrowe.apigateway
+package com.simonjamesrowe.apigateway.controller
 
 import org.apache.commons.io.IOUtils
 import org.slf4j.LoggerFactory

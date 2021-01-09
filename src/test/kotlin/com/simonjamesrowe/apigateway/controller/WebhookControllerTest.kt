@@ -1,15 +1,13 @@
 @file:Suppress("DEPRECATION")
 
-package com.simonjamesrowe.apigateway
+package com.simonjamesrowe.apigateway.controller
 
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.simonjamesrowe.component.test.BaseComponentTest
-import com.simonjamesrowe.component.test.kafka.WithEmbeddedKafka
 import com.simonjamesrowe.component.test.kafka.WithKafkaContainer
-import com.simonjamesrowe.model.Blog
-import com.simonjamesrowe.model.Event
+import com.simonjamesrowe.model.data.Blog
+import com.simonjamesrowe.model.data.Event
 import io.restassured.RestAssured.given
-import io.restassured.mapper.ObjectMapperType
 import org.assertj.core.api.Assertions.assertThat
 import org.awaitility.Awaitility.await
 import org.junit.jupiter.api.BeforeEach
@@ -18,15 +16,12 @@ import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.cloud.stream.annotation.EnableBinding
 import org.springframework.cloud.stream.annotation.StreamListener
 import org.springframework.cloud.stream.messaging.Sink
-import org.springframework.context.annotation.Import
-import org.springframework.context.annotation.Lazy
 import org.springframework.context.annotation.Profile
 import org.springframework.kafka.support.KafkaHeaders
 import org.springframework.messaging.Message
 import org.springframework.stereotype.Service
 import org.springframework.test.context.ActiveProfiles
 import java.time.Duration
-import java.time.LocalDateTime
 import java.time.ZonedDateTime
 
 @WithKafkaContainer
@@ -814,6 +809,16 @@ internal class WebhookControllerTest : BaseComponentTest() {
     assertThat(blog.skills).hasSize(11)
     assertThat(blog.createdAt).isEqualTo(ZonedDateTime.parse("2020-07-05T18:02:46.731Z"))
     assertThat(blog.updatedAt).isEqualTo(ZonedDateTime.parse("2021-01-02T15:49:35.901Z"))
+    assertThat(blog.image.url).isEqualTo("/uploads/Website_Icon_727b161f01.jpeg")
+    assertThat(blog.image.name).isEqualTo("Website Icon.jpeg")
+    assertThat(blog.image.size).isEqualTo(29)
+    assertThat(blog.image.width).isEqualTo(801)
+    assertThat(blog.image.height).isEqualTo(401)
+    assertThat(blog.image.mime).isEqualTo("image/jpeg")
+    assertThat(blog.image.formats?.thumbnail).isNotNull
+    assertThat(blog.image.formats?.small).isNotNull
+    assertThat(blog.image.formats?.medium).isNotNull
+    assertThat(blog.image.formats?.large).isNull()
   }
 }
 

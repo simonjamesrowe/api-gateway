@@ -1,6 +1,6 @@
 package com.simonjamesrowe.apigateway.controller
 
-import com.simonjamesrowe.model.Event
+import com.simonjamesrowe.model.data.Event
 import org.springframework.cloud.stream.messaging.Source
 import org.springframework.kafka.support.KafkaHeaders
 import org.springframework.messaging.support.MessageBuilder
