@@ -1,5 +1,3 @@
-@file:Suppress("DEPRECATION")
-
 package com.simonjamesrowe.apigateway.controller
 
 import com.fasterxml.jackson.databind.ObjectMapper
@@ -13,16 +11,15 @@ import org.awaitility.Awaitility.await
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
-import org.springframework.cloud.stream.annotation.EnableBinding
-import org.springframework.cloud.stream.annotation.StreamListener
-import org.springframework.cloud.stream.messaging.Sink
+import org.springframework.context.annotation.Bean
+import org.springframework.context.annotation.Configuration
 import org.springframework.context.annotation.Profile
 import org.springframework.kafka.support.KafkaHeaders
 import org.springframework.messaging.Message
-import org.springframework.stereotype.Service
 import org.springframework.test.context.ActiveProfiles
 import java.time.Duration
 import java.time.ZonedDateTime
+import java.util.function.Consumer
 
 @WithKafkaContainer
 @ActiveProfiles("webhookControllerTest")
@@ -822,16 +819,14 @@ internal class WebhookControllerTest : BaseComponentTest() {
   }
 }
 
-@Service
+@Configuration
 @Profile("webhookControllerTest")
-@EnableBinding(Sink::class)
 class TestStreamListener {
 
   val events: MutableList<Message<Event>> = mutableListOf()
 
-  @StreamListener(Sink.INPUT)
-  fun consumeEvent(message: Message<Event>) {
-    events.add(message)
-  }
+  @Bean
+  fun consume() : Consumer<Message<Event>> =
+    Consumer<Message<Event>> { events.add(it) }
 
 }

@@ -6,7 +6,6 @@ import org.springframework.cloud.stream.annotation.EnableBinding
 import org.springframework.cloud.stream.messaging.Source
 
 @SpringBootApplication
-@EnableBinding(Source::class)
 class ApiGatewayApplication
 
 fun main(args: Array<String>) {
