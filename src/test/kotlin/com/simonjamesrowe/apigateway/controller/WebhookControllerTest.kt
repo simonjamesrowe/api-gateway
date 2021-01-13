@@ -15,6 +15,8 @@ import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import org.springframework.context.annotation.Profile
 import org.springframework.kafka.support.KafkaHeaders
+import org.springframework.kafka.support.converter.BatchMessagingMessageConverter
+import org.springframework.kafka.support.converter.KafkaMessageHeaders
 import org.springframework.messaging.Message
 import org.springframework.test.context.ActiveProfiles
 import java.time.Duration
@@ -795,9 +797,9 @@ internal class WebhookControllerTest : BaseComponentTest() {
     }
 
     val blogEventMessage = testStreamListener.events[0]
-    val blog = objectMapper.convertValue(blogEventMessage.payload.entry, Blog::class.java)
-    val key = blogEventMessage.headers[KafkaHeaders.RECEIVED_MESSAGE_KEY]
-    val modelType = blogEventMessage.headers["model"]
+    val blog = objectMapper.convertValue(blogEventMessage.payload[0].entry, Blog::class.java)
+    val key = (blogEventMessage.headers[KafkaHeaders.RECEIVED_MESSAGE_KEY] as List<String>)[0]
+    val modelType = (blogEventMessage.headers[KafkaHeaders.BATCH_CONVERTED_HEADERS] as List<Map<String,String>>)[0].get("model")
     assertThat(modelType).isEqualTo("blog")
     assertThat(key).isEqualTo("blog-5f0215c69d8081001fd38fa1")
     assertThat(blog.title).isEqualTo("Creating a rich web app that can be hosted from home")
@@ -823,10 +825,12 @@ internal class WebhookControllerTest : BaseComponentTest() {
 @Profile("webhookControllerTest")
 class TestStreamListener {
 
-  val events: MutableList<Message<Event>> = mutableListOf()
+  val events: MutableList<Message<List<Event>>> = mutableListOf()
 
   @Bean
-  fun consume() : Consumer<Message<Event>> =
-    Consumer<Message<Event>> { events.add(it) }
+  fun consume() : Consumer<Message<List<Event>>> =
+    Consumer<Message<List<Event>>> {
+      events.add(it)
+    }
 
 }

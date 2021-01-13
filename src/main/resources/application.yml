@@ -27,6 +27,7 @@ spring:
           destination: ${namespace:LOCAL}_EVENTS
           group: api-gateway
           consumer:
+            batch-mode: true
             use-native-decoding: true
       kafka:
         binder:
