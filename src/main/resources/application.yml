@@ -16,6 +16,12 @@ spring:
           uri: ${cms.url}
           predicates:
             - Path=/jobs,/profiles,/tags,/blogs,/blogs/{id},/skills-groups,/social-medias
+        - id: search
+          uri: ${search.url}
+          predicates:
+            - Path=/search/**
+          filters:
+            - StripPrefix=1
     stream:
       bindings:
         output:
@@ -60,6 +66,8 @@ spring:
 
 cms:
   url: http://localhost:8000/
+search:
+  url: http://localhost:8081
 
 image:
   compressFilesLargerThanKb: 400

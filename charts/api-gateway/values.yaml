@@ -10,6 +10,7 @@ image:
 # define environment variables here as a map of key: value
 env:
   CMS_URL: http://cms/
+  SEARCH_URL: http://search-service/
   SPRING_KAFKA_BOOTSTRAP-SERVERS: jenkins-x-cp-kafka.jx:9092
 
 envFrom:
