@@ -137,13 +137,7 @@
                 <configuration>
                     <image>
                         <name>harbor.simonjamesrowe.com/simonjamesrowe/library/${project.artifactId}:${project.version}</name>
-                        <publish>true</publish>
                     </image>
-                    <docker>
-                        <builderRegistry>
-                            <url>https://harbor.simonjamesrowe.com/v1/</url>
-                        </builderRegistry>
-                    </docker>
                 </configuration>
             </plugin>
             <plugin>
