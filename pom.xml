@@ -137,7 +137,6 @@
                 <configuration>
                     <image>
                         <name>harbor.simonjamesrowe.com/simonjamesrowe/library/${project.artifactId}:${project.version}</name>
-                        <publish>true</publish>
                     </image>
                 </configuration>
             </plugin>
