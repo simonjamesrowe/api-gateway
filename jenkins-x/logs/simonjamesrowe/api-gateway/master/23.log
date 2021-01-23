@@ -1,0 +1,1700 @@
+
+Showing logs for build [32msimonjamesrowe-api-gateway-mast-tw6qt-23[0m stage [32mfrom-build-pack[0m and container [32mcredential-initializer[0m
+{"level":"info","ts":1611442773.4306355,"caller":"creds-init/main.go:44","msg":"Credentials initialized."}
+
+Showing logs for build [32msimonjamesrowe-api-gateway-mast-tw6qt-23[0m stage [32mfrom-build-pack[0m and container [32mworking-dir-initializer[0m
+
+Showing logs for build [32msimonjamesrowe-api-gateway-mast-tw6qt-23[0m stage [32mfrom-build-pack[0m and container [32mplace-tools[0m
+
+Showing logs for build [32msimonjamesrowe-api-gateway-mast-tw6qt-23[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-simonjamesrowe-api-gateway-mast-tw6qt-j74mk[0m
+{"level":"info","ts":1611442782.4424427,"caller":"git/git.go:105","msg":"Successfully cloned https://github.com/simonjamesrowe/api-gateway.git @ v0.0.28 in path /workspace/source"}
+{"level":"warn","ts":1611442782.4426045,"caller":"git/git.go:152","msg":"Unexpected error: creating symlink: symlink /tekton/home/.ssh /****/.ssh: file exists"}
+{"level":"info","ts":1611442782.495489,"caller":"git/git.go:133","msg":"Successfully initialized and updated submodules in path /workspace/source"}
+
+Showing logs for build [32msimonjamesrowe-api-gateway-mast-tw6qt-23[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-builder-home[0m
+
+Showing logs for build [32msimonjamesrowe-api-gateway-mast-tw6qt-23[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32msimonjamesrowe-api-gateway-mast-tw6qt-23[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32msimonjamesrowe-api-gateway-mast-tw6qt-23[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+Picked up _JAVA_OPTIONS: -XX:+UnlockExperimentalVMOptions -Dsun.zip.disableMemoryMapping=true -XX:+UseParallelGC -XX:MinHeapFreeRatio=5 -XX:MaxHeapFreeRatio=10 -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Xms10m -Xmx192m
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------------< com.simonjamesrowe:api-gateway >-------------------
+[INFO] Building api-gateway 0.0.28
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot-maven-plugin:2.4.2:build-image (default-cli) > package @ api-gateway >>>
+[WARNING] The POM for com.sun.xml.bind:jaxb-osgi:jar:2.2.10 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+[INFO] 
+[INFO] --- maven-resources-plugin:3.2.0:resources (default-resources) @ api-gateway ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] Copying 1 resource
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ api-gateway ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- kotlin-maven-plugin:1.4.21:compile (compile) @ api-gateway ---
+[INFO] Applied plugin: 'spring'
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by com.intellij.util.ReflectionUtil (file:/home/jenkins/.mvnrepository/org/jetbrains/kotlin/kotlin-compiler/1.4.21/kotlin-compiler-1.4.21.jar) to method java.util.ResourceBundle.setParent(java.util.ResourceBundle)
+WARNING: Please consider reporting this to the maintainers of com.intellij.util.ReflectionUtil
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+[WARNING] /workspace/source/src/main/kotlin/com/simonjamesrowe/apigateway/ApiGatewayApplication.kt: (5, 52) 'EnableBinding' is deprecated. Deprecated in Java
+[WARNING] /workspace/source/src/main/kotlin/com/simonjamesrowe/apigateway/controller/UploadController.kt: (45, 94) Unchecked cast: ResponseEntity<ByteArray> to ResponseEntity<ByteArray?>
+[WARNING] /workspace/source/src/main/kotlin/com/simonjamesrowe/apigateway/controller/UploadController.kt: (55, 86) Unchecked cast: ResponseEntity<ByteArray> to ResponseEntity<ByteArray?>
+[INFO] 
+[INFO] --- maven-resources-plugin:3.2.0:testResources (default-testResources) @ api-gateway ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ api-gateway ---
+[INFO] Changes detected - recompiling the module!
+[INFO] 
+[INFO] --- kotlin-maven-plugin:1.4.21:test-compile (test-compile) @ api-gateway ---
+[INFO] Applied plugin: 'spring'
+[WARNING] /workspace/source/src/test/kotlin/com/simonjamesrowe/apigateway/controller/WebhookControllerTest.kt: (801, 76) Unchecked cast: Any? to List<String>
+[WARNING] /workspace/source/src/test/kotlin/com/simonjamesrowe/apigateway/controller/WebhookControllerTest.kt: (802, 85) Unchecked cast: Any? to List<Map<String, String>>
+[INFO] 
+[INFO] --- maven-surefire-plugin:3.0.0-M1:test (default-test) @ api-gateway ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.simonjamesrowe.apigateway.ApiGatewayApplicationTests
+23:00:43.223 [main] DEBUG org.testcontainers.utility.TestcontainersConfiguration - Testcontainers configuration overrides will be loaded from file:/****/.testcontainers.properties
+23:00:43.243 [main] WARN org.testcontainers.utility.TestcontainersConfiguration - Attempted to read Testcontainers configuration file at file:/****/.testcontainers.properties but the file was not found. Exception message: FileNotFoundException: /****/.testcontainers.properties (No such file or directory)
+23:00:43.296 [main] DEBUG org.testcontainers.utility.TestcontainersConfiguration - Testcontainers configuration overrides will be loaded from jar:file:/home/jenkins/.mvnrepository/com/simonjamesrowe/component-test/0.0.7/component-test-0.0.7.jar!/testcontainers.properties
+23:00:43.306 [main] INFO org.testcontainers.dockerclient.DockerMachineClientProviderStrategy - docker-machine executable was not found on PATH ([/opt/apache-maven-3.6.3/bin, /home/jenkins/.**/bin, /usr/local/git/bin, /usr/local/sbin, /usr/local/bin, /usr/sbin, /usr/bin, /sbin, /bin, /usr/bin/google-cloud-sdk/bin, /opt/google/chrome])
+23:00:43.306 [main] DEBUG org.testcontainers.dockerclient.RootlessDockerClientProviderStrategy - $XDG_RUNTIME_DIR is not set.
+23:00:43.307 [main] DEBUG org.testcontainers.dockerclient.RootlessDockerClientProviderStrategy - '/****/.docker/run' does not exist.
+23:00:43.411 [main] DEBUG org.testcontainers.dockerclient.RootlessDockerClientProviderStrategy - '/run/user/0' does not exist.
+23:00:44.359 [ducttape-0] DEBUG org.testcontainers.dockerclient.DockerClientProviderStrategy - Pinging docker daemon...
+23:00:44.423 [ducttape-0] DEBUG org.testcontainers.shaded.com.github.dockerjava.core.command.AbstrDockerCmd - Cmd: 
+23:00:45.017 [main] INFO org.testcontainers.dockerclient.DockerClientProviderStrategy - Found Docker environment with local Unix socket (unix:///var/run/docker.sock)
+23:00:45.018 [main] DEBUG org.testcontainers.dockerclient.DockerClientProviderStrategy - Transport type: 'okhttp', Docker host: 'unix:///var/run/docker.sock'
+23:00:45.018 [main] DEBUG org.testcontainers.dockerclient.DockerClientProviderStrategy - Checking Docker OS type for local Unix socket (unix:///var/run/docker.sock)
+23:00:45.094 [main] INFO org.testcontainers.DockerClientFactory - Docker host IP address is 192.168.4.23
+23:00:45.103 [main] DEBUG org.testcontainers.shaded.com.github.dockerjava.core.command.AbstrDockerCmd - Cmd: 
+23:00:45.134 [main] DEBUG org.testcontainers.shaded.com.github.dockerjava.core.command.AbstrDockerCmd - Cmd: 
+23:00:45.165 [main] INFO org.testcontainers.DockerClientFactory - Connected to docker: 
+  Server Version: 20.10.0-beta1
+  API Version: 1.41
+  Operating System: Docker Desktop
+  Total Memory: 24053 MB
+23:00:45.166 [main] DEBUG org.testcontainers.DockerClientFactory - Ryuk is enabled
+23:00:45.174 [main] INFO org.testcontainers.utility.ImageNameSubstitutor - Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+23:00:45.196 [main] DEBUG org.testcontainers.utility.PrefixingImageNameSubstitutor - No prefix is configured
+23:00:45.197 [main] DEBUG org.testcontainers.utility.ImageNameSubstitutor - Did not find a substitute image for testcontainers/ryuk:0.3.0 (using image substitutor: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor'))
+23:00:45.199 [main] DEBUG org.testcontainers.shaded.com.github.dockerjava.core.command.AbstrDockerCmd - Cmd: testcontainers/ryuk:0.3.0
+23:00:45.397 [main] DEBUG org.testcontainers.utility.RegistryAuthLocator - Looking up auth config for image: testcontainers/ryuk:0.3.0 at registry: index.*********
+23:00:45.398 [main] DEBUG org.testcontainers.utility.RegistryAuthLocator - RegistryAuthLocator has configFile: /home/jenkins/.docker/config.json (exists) and commandPathPrefix: 
+23:00:45.405 [main] DEBUG org.testcontainers.utility.RegistryAuthLocator - registryName [index.*********] for dockerImageName [testcontainers/ryuk:0.3.0]
+23:00:45.406 [main] DEBUG org.testcontainers.utility.RegistryAuthLocator - No matching Auth Configs - falling back to defaultAuthConfig [null]
+23:00:45.407 [main] DEBUG org.testcontainers.dockerclient.AuthDelegatingDockerClientConfig - Effective auth config [null]
+23:00:45.412 [main] DEBUG org.testcontainers.shaded.com.github.dockerjava.core.command.AbstrDockerCmd - Cmd: org.testcontainers.shaded.com.github.dockerjava.core.command.CreateContainerCmdImpl@24f360b2[name=testcontainers-ryuk-11b1f30c-145a-497b-8778-1a3d82f7d500,hostName=<null>,domainName=<null>,user=<null>,attachStdin=<null>,attachStdout=<null>,attachStderr=<null>,portSpecs=<null>,tty=<null>,stdinOpen=<null>,stdInOnce=<null>,env=<null>,cmd=<null>,healthcheck=<null>,argsEscaped=<null>,entrypoint=<null>,image=testcontainers/ryuk:0.3.0,volumes=com.github.dockerjava.api.model.Volumes@770d0ea6,workingDir=<null>,macAddress=<null>,onBuild=<null>,networkDisabled=<null>,exposedPorts=com.github.dockerjava.api.model.ExposedPorts@48c40605,stopSignal=<null>,stopTimeout=<null>,hostConfig=HostConfig(binds=[/var/run/docker.sock:/var/run/docker.sock:rw], blkioWeight=null, blkioWeightDevice=null, blkioDeviceReadBps=null, blkioDeviceWriteBps=null, blkioDeviceReadIOps=null, blkioDeviceWriteIOps=null, memorySwappiness=null, nanoCPUs=null, capAdd=null, capDrop=null, containerIDFile=null, cpuPeriod=null, cpuRealtimePeriod=null, cpuRealtimeRuntime=null, cpuShares=null, cpuQuota=null, cpusetCpus=null, cpusetMems=null, devices=null, deviceCgroupRules=null, deviceRequests=null, diskQuota=null, dns=null, dnsOptions=null, dnsSearch=null, extraHosts=null, groupAdd=null, ipcMode=null, cgroup=null, links=[], logConfig=LogConfig(type=null, config=null), lxcConf=null, memory=null, memorySwap=null, memoryReservation=null, kernelMemory=null, networkMode=null, oomKillDisable=null, init=null, autoRemove=true, oomScoreAdj=null, portBindings=null, privileged=false, publishAllPorts=true, readonlyRootfs=null, restartPolicy=null, ulimits=null, cpuCount=null, cpuPercent=null, ioMaximumIOps=null, ioMaximumBandwidth=null, volumesFrom=null, mounts=null, pidMode=null, isolation=null, securityOpts=null, storageOpt=null, cgroupParent=null, volumeDriver=null, shmSize=null, pidsLimit=null, runtime=null, tmpFs=null, utSMode=null, usernsMode=null, sysctls=null, consoleSize=null),labels={org.testcontainers=true},shell=<null>,networkingConfig=<null>,ipv4Address=<null>,ipv6Address=<null>,aliases=<null>,authConfig=<null>]
+23:00:45.745 [main] DEBUG org.testcontainers.shaded.com.github.dockerjava.core.command.AbstrDockerCmd - Cmd: 1215e8733c95802fdf6ee52d4baa18433f7a353d4093b3b71e4e800cbfd29b79
+23:00:46.031 [main] DEBUG org.testcontainers.shaded.com.github.dockerjava.core.command.AbstrDockerCmd - Cmd: 1215e8733c95802fdf6ee52d4baa18433f7a353d4093b3b71e4e800cbfd29b79,false
+23:00:46.033 [main] DEBUG org.testcontainers.shaded.com.github.dockerjava.core.exec.InspectContainerCmdExec - GET: DefaultWebTarget{path=[/containers/1215e8733c95802fdf6ee52d4baa18433f7a353d4093b3b71e4e800cbfd29b79/json], queryParams={}}
+23:00:46.202 [testcontainers-ryuk] DEBUG org.testcontainers.utility.ResourceReaper - Sending 'label=org.testcontainers%3Dtrue&label=org.testcontainers.sessionId%3D11b1f30c-145a-497b-8778-1a3d82f7d500' to Ryuk
+23:00:46.206 [testcontainers-ryuk] DEBUG org.testcontainers.utility.ResourceReaper - Received 'ACK' from Ryuk
+23:00:46.306 [main] INFO org.testcontainers.DockerClientFactory - Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+23:00:46.307 [main] DEBUG org.testcontainers.DockerClientFactory - Checks are enabled
+23:00:46.307 [main] INFO org.testcontainers.DockerClientFactory - Checking the system...
+23:00:46.308 [main] INFO org.testcontainers.DockerClientFactory - ✔︎ Docker server version should be at least 1.6.0
+23:00:46.311 [main] DEBUG org.testcontainers.shaded.com.github.dockerjava.core.command.AbstrDockerCmd - Cmd: 1215e8733c95802fdf6ee52d4baa18433f7a353d4093b3b71e4e800cbfd29b79,<null>,true,<null>,<null>,<null>,<null>,{df,-P},<null>,<null>
+23:00:46.472 [main] INFO org.testcontainers.DockerClientFactory - ✔︎ Docker environment should have more than 2GB free disk space
+23:00:46.476 [main] DEBUG org.testcontainers.shaded.com.github.dockerjava.core.command.AbstrDockerCmd - Cmd: bridge
+23:00:46.497 [main] DEBUG org.testcontainers.utility.PrefixingImageNameSubstitutor - No prefix is configured
+23:00:46.497 [main] DEBUG org.testcontainers.utility.ImageNameSubstitutor - Did not find a substitute image for confluentinc/cp-kafka:latest (using image substitutor: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor'))
+23:00:46.504 [main] DEBUG org.testcontainers.shaded.com.github.dockerjava.core.command.AbstrDockerCmd - Cmd: ListImagesCmdImpl[imageNameFilter=<null>,showAll=false,filters=org.testcontainers.shaded.com.github.dockerjava.core.util.FiltersBuilder@0]
+23:00:47.092 [main] DEBUG 🐳 [confluentinc/cp-kafka:latest] - confluentinc/cp-kafka:latest is not in image name cache, updating...
+23:00:47.092 [main] DEBUG org.testcontainers.shaded.com.github.dockerjava.core.command.AbstrDockerCmd - Cmd: confluentinc/cp-kafka:latest
+23:00:47.118 [main] DEBUG org.testcontainers.images.AbstractImagePullPolicy - Using locally available and not pulling image: confluentinc/cp-kafka:latest
+23:00:47.119 [main] DEBUG 🐳 [confluentinc/cp-kafka:latest] - Starting container: confluentinc/cp-kafka:latest
+23:00:47.119 [main] DEBUG 🐳 [confluentinc/cp-kafka:latest] - Trying to start container: confluentinc/cp-kafka:latest (attempt 1/1)
+23:00:47.120 [main] DEBUG 🐳 [confluentinc/cp-kafka:latest] - Starting container: confluentinc/cp-kafka:latest
+23:00:47.120 [main] INFO 🐳 [confluentinc/cp-kafka:latest] - Creating container for image: confluentinc/cp-kafka:latest
+23:00:47.120 [main] DEBUG org.testcontainers.utility.RegistryAuthLocator - Looking up auth config for image: confluentinc/cp-kafka:latest at registry: index.*********
+23:00:47.120 [main] DEBUG org.testcontainers.utility.RegistryAuthLocator - No matching Auth Configs - falling back to defaultAuthConfig [null]
+23:00:47.121 [main] DEBUG org.testcontainers.dockerclient.AuthDelegatingDockerClientConfig - Effective auth config [null]
+23:00:47.131 [main] DEBUG org.testcontainers.shaded.com.github.dockerjava.core.command.AbstrDockerCmd - Cmd: org.testcontainers.shaded.com.github.dockerjava.core.command.CreateContainerCmdImpl@39fc6b2c[name=<null>,hostName=<null>,domainName=<null>,user=<null>,attachStdin=<null>,attachStdout=<null>,attachStderr=<null>,portSpecs=<null>,tty=<null>,stdinOpen=<null>,stdInOnce=<null>,env={KAFKA_LOG_FLUSH_INTERVAL_MESSAGES=9223372036854775807,KAFKA_BROKER_ID=1,KAFKA_OFFSETS_TOPIC_NUM_PARTITIONS=1,KAFKA_LISTENERS=PLAINTEXT://0.0.0.0:9093,BROKER://0.0.0.0:9092,KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR=1,KAFKA_INTER_BROKER_LISTENER_NAME=BROKER,KAFKA_LISTENER_SECURITY_PROTOCOL_MAP=BROKER:PLAINTEXT,PLAINTEXT:PLAINTEXT,KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS=0},cmd={sh,-c,while [ ! -f /testcontainers_start.sh ]; do sleep 0.1; done; /testcontainers_start.sh},healthcheck=<null>,argsEscaped=<null>,entrypoint=<null>,image=confluentinc/cp-kafka:latest,volumes=com.github.dockerjava.api.model.Volumes@704b2127,workingDir=<null>,macAddress=<null>,onBuild=<null>,networkDisabled=<null>,exposedPorts=com.github.dockerjava.api.model.ExposedPorts@3ee39da0,stopSignal=<null>,stopTimeout=<null>,hostConfig=HostConfig(binds=[], blkioWeight=null, blkioWeightDevice=null, blkioDeviceReadBps=null, blkioDeviceWriteBps=null, blkioDeviceReadIOps=null, blkioDeviceWriteIOps=null, memorySwappiness=null, nanoCPUs=null, capAdd=null, capDrop=null, containerIDFile=null, cpuPeriod=null, cpuRealtimePeriod=null, cpuRealtimeRuntime=null, cpuShares=null, cpuQuota=null, cpusetCpus=null, cpusetMems=null, devices=null, deviceCgroupRules=null, deviceRequests=null, diskQuota=null, dns=null, dnsOptions=null, dnsSearch=null, extraHosts=[], groupAdd=null, ipcMode=null, cgroup=null, links=[], logConfig=LogConfig(type=null, config=null), lxcConf=null, memory=null, memorySwap=null, memoryReservation=null, kernelMemory=null, networkMode=null, oomKillDisable=null, init=null, autoRemove=null, oomScoreAdj=null, portBindings={}, privileged=null, publishAllPorts=true, readonlyRootfs=null, restartPolicy=null, ulimits=null, cpuCount=null, cpuPercent=null, ioMaximumIOps=null, ioMaximumBandwidth=null, volumesFrom=[], mounts=null, pidMode=null, isolation=null, securityOpts=null, storageOpt=null, cgroupParent=null, volumeDriver=null, shmSize=null, pidsLimit=null, runtime=null, tmpFs=null, utSMode=null, usernsMode=null, sysctls=null, consoleSize=null),labels={org.testcontainers=true, org.testcontainers.sessionId=11b1f30c-145a-497b-8778-1a3d82f7d500},shell=<null>,networkingConfig=<null>,ipv4Address=<null>,ipv6Address=<null>,aliases=<null>,authConfig=<null>]
+23:00:47.247 [main] INFO 🐳 [confluentinc/cp-kafka:latest] - Starting container with ID: 9ac970c1a133a626a6f78a72c7641044386a78cac0a0dff3c3a3e9b5965427db
+23:00:47.248 [main] DEBUG org.testcontainers.shaded.com.github.dockerjava.core.command.AbstrDockerCmd - Cmd: 9ac970c1a133a626a6f78a72c7641044386a78cac0a0dff3c3a3e9b5965427db
+23:00:47.620 [main] INFO 🐳 [confluentinc/cp-kafka:latest] - Container confluentinc/cp-kafka:latest is starting: 9ac970c1a133a626a6f78a72c7641044386a78cac0a0dff3c3a3e9b5965427db
+23:00:47.621 [main] DEBUG org.testcontainers.shaded.com.github.dockerjava.core.command.AbstrDockerCmd - Cmd: 9ac970c1a133a626a6f78a72c7641044386a78cac0a0dff3c3a3e9b5965427db,false
+23:00:47.621 [main] DEBUG org.testcontainers.shaded.com.github.dockerjava.core.exec.InspectContainerCmdExec - GET: DefaultWebTarget{path=[/containers/9ac970c1a133a626a6f78a72c7641044386a78cac0a0dff3c3a3e9b5965427db/json], queryParams={}}
+23:00:47.636 [main] DEBUG org.testcontainers.shaded.com.github.dockerjava.core.command.AbstrDockerCmd - Cmd: 9ac970c1a133a626a6f78a72c7641044386a78cac0a0dff3c3a3e9b5965427db,false
+23:00:47.636 [main] DEBUG org.testcontainers.shaded.com.github.dockerjava.core.exec.InspectContainerCmdExec - GET: DefaultWebTarget{path=[/containers/9ac970c1a133a626a6f78a72c7641044386a78cac0a0dff3c3a3e9b5965427db/json], queryParams={}}
+23:00:47.647 [main] DEBUG org.testcontainers.shaded.com.github.dockerjava.core.command.AbstrDockerCmd - Cmd: 9ac970c1a133a626a6f78a72c7641044386a78cac0a0dff3c3a3e9b5965427db,false
+23:00:47.648 [main] DEBUG org.testcontainers.shaded.com.github.dockerjava.core.exec.InspectContainerCmdExec - GET: DefaultWebTarget{path=[/containers/9ac970c1a133a626a6f78a72c7641044386a78cac0a0dff3c3a3e9b5965427db/json], queryParams={}}
+23:00:47.700 [main] DEBUG org.testcontainers.shaded.com.github.dockerjava.core.command.AbstrDockerCmd - Cmd: org.testcontainers.shaded.com.github.dockerjava.core.command.CopyArchiveToContainerCmdImpl@515f4131[cp ,<null>, ,9ac970c1a133a626a6f78a72c7641044386a78cac0a0dff3c3a3e9b5965427db,:,/]
+23:00:47.775 [ducttape-0] DEBUG org.testcontainers.shaded.com.github.dockerjava.core.command.AbstrDockerCmd - Cmd: 9ac970c1a133a626a6f78a72c7641044386a78cac0a0dff3c3a3e9b5965427db,false
+23:00:47.775 [ducttape-0] DEBUG org.testcontainers.shaded.com.github.dockerjava.core.exec.InspectContainerCmdExec - GET: DefaultWebTarget{path=[/containers/9ac970c1a133a626a6f78a72c7641044386a78cac0a0dff3c3a3e9b5965427db/json], queryParams={}}
+23:00:47.793 [ducttape-0] DEBUG org.testcontainers.containers.ExecInContainerPattern - /determined_leavitt: Running "exec" command: /bin/sh -c true &&  (cat /proc/net/tcp* | awk '{print $2}' | grep -i ':0*2385' || nc -vz -w 1 localhost 9093 || /bin/bash -c '</dev/tcp/localhost/9093') &&  (cat /proc/net/tcp* | awk '{print $2}' | grep -i ':0*885' || nc -vz -w 1 localhost 2181 || /bin/bash -c '</dev/tcp/localhost/2181')
+23:00:47.793 [ducttape-0] DEBUG org.testcontainers.shaded.com.github.dockerjava.core.command.AbstrDockerCmd - Cmd: 9ac970c1a133a626a6f78a72c7641044386a78cac0a0dff3c3a3e9b5965427db,<null>,true,true,<null>,<null>,<null>,{/bin/sh,-c,true &&  (cat /proc/net/tcp* | awk '{print $2}' | grep -i ':0*2385' || nc -vz -w 1 localhost 9093 || /bin/bash -c '</dev/tcp/localhost/9093') &&  (cat /proc/net/tcp* | awk '{print $2}' | grep -i ':0*885' || nc -vz -w 1 localhost 2181 || /bin/bash -c '</dev/tcp/localhost/2181')},<null>,<null>
+23:00:47.924 [ducttape-0] DEBUG org.testcontainers.shaded.com.github.dockerjava.core.command.AbstrDockerCmd - Cmd: 7900e3e40ddf7d8057ac860528991fa2cd1de77dc5ff57ac867287f55912df6e
+23:00:47.925 [ducttape-0] DEBUG org.testcontainers.shaded.com.github.dockerjava.core.exec.InspectExecCmdExec - GET: DefaultWebTarget{path=[/exec/7900e3e40ddf7d8057ac860528991fa2cd1de77dc5ff57ac867287f55912df6e/json], queryParams={}}
+23:00:48.941 [ducttape-0] DEBUG org.testcontainers.containers.ExecInContainerPattern - /determined_leavitt: Running "exec" command: /bin/sh -c true &&  (cat /proc/net/tcp* | awk '{print $2}' | grep -i ':0*2385' || nc -vz -w 1 localhost 9093 || /bin/bash -c '</dev/tcp/localhost/9093') &&  (cat /proc/net/tcp* | awk '{print $2}' | grep -i ':0*885' || nc -vz -w 1 localhost 2181 || /bin/bash -c '</dev/tcp/localhost/2181')
+23:00:48.941 [ducttape-0] DEBUG org.testcontainers.shaded.com.github.dockerjava.core.command.AbstrDockerCmd - Cmd: 9ac970c1a133a626a6f78a72c7641044386a78cac0a0dff3c3a3e9b5965427db,<null>,true,true,<null>,<null>,<null>,{/bin/sh,-c,true &&  (cat /proc/net/tcp* | awk '{print $2}' | grep -i ':0*2385' || nc -vz -w 1 localhost 9093 || /bin/bash -c '</dev/tcp/localhost/9093') &&  (cat /proc/net/tcp* | awk '{print $2}' | grep -i ':0*885' || nc -vz -w 1 localhost 2181 || /bin/bash -c '</dev/tcp/localhost/2181')},<null>,<null>
+23:00:49.053 [ducttape-0] DEBUG org.testcontainers.shaded.com.github.dockerjava.core.command.AbstrDockerCmd - Cmd: 015afbaf36895473d587e8f0a8c36eefffe221ed0708fb84f10d0dfa7cc42728
+23:00:49.054 [ducttape-0] DEBUG org.testcontainers.shaded.com.github.dockerjava.core.exec.InspectExecCmdExec - GET: DefaultWebTarget{path=[/exec/015afbaf36895473d587e8f0a8c36eefffe221ed0708fb84f10d0dfa7cc42728/json], queryParams={}}
+23:00:50.065 [ducttape-0] DEBUG org.testcontainers.containers.ExecInContainerPattern - /determined_leavitt: Running "exec" command: /bin/sh -c true &&  (cat /proc/net/tcp* | awk '{print $2}' | grep -i ':0*2385' || nc -vz -w 1 localhost 9093 || /bin/bash -c '</dev/tcp/localhost/9093') &&  (cat /proc/net/tcp* | awk '{print $2}' | grep -i ':0*885' || nc -vz -w 1 localhost 2181 || /bin/bash -c '</dev/tcp/localhost/2181')
+23:00:50.066 [ducttape-0] DEBUG org.testcontainers.shaded.com.github.dockerjava.core.command.AbstrDockerCmd - Cmd: 9ac970c1a133a626a6f78a72c7641044386a78cac0a0dff3c3a3e9b5965427db,<null>,true,true,<null>,<null>,<null>,{/bin/sh,-c,true &&  (cat /proc/net/tcp* | awk '{print $2}' | grep -i ':0*2385' || nc -vz -w 1 localhost 9093 || /bin/bash -c '</dev/tcp/localhost/9093') &&  (cat /proc/net/tcp* | awk '{print $2}' | grep -i ':0*885' || nc -vz -w 1 localhost 2181 || /bin/bash -c '</dev/tcp/localhost/2181')},<null>,<null>
+23:00:50.189 [ducttape-0] DEBUG org.testcontainers.shaded.com.github.dockerjava.core.command.AbstrDockerCmd - Cmd: 20c6ea884b5ca854c6687aa9c11112dc1f4e00e809d18089ce8d4c1555bd4378
+23:00:50.190 [ducttape-0] DEBUG org.testcontainers.shaded.com.github.dockerjava.core.exec.InspectExecCmdExec - GET: DefaultWebTarget{path=[/exec/20c6ea884b5ca854c6687aa9c11112dc1f4e00e809d18089ce8d4c1555bd4378/json], queryParams={}}
+23:00:51.200 [ducttape-0] DEBUG org.testcontainers.containers.ExecInContainerPattern - /determined_leavitt: Running "exec" command: /bin/sh -c true &&  (cat /proc/net/tcp* | awk '{print $2}' | grep -i ':0*2385' || nc -vz -w 1 localhost 9093 || /bin/bash -c '</dev/tcp/localhost/9093') &&  (cat /proc/net/tcp* | awk '{print $2}' | grep -i ':0*885' || nc -vz -w 1 localhost 2181 || /bin/bash -c '</dev/tcp/localhost/2181')
+23:00:51.201 [ducttape-0] DEBUG org.testcontainers.shaded.com.github.dockerjava.core.command.AbstrDockerCmd - Cmd: 9ac970c1a133a626a6f78a72c7641044386a78cac0a0dff3c3a3e9b5965427db,<null>,true,true,<null>,<null>,<null>,{/bin/sh,-c,true &&  (cat /proc/net/tcp* | awk '{print $2}' | grep -i ':0*2385' || nc -vz -w 1 localhost 9093 || /bin/bash -c '</dev/tcp/localhost/9093') &&  (cat /proc/net/tcp* | awk '{print $2}' | grep -i ':0*885' || nc -vz -w 1 localhost 2181 || /bin/bash -c '</dev/tcp/localhost/2181')},<null>,<null>
+23:00:51.327 [ducttape-0] DEBUG org.testcontainers.shaded.com.github.dockerjava.core.command.AbstrDockerCmd - Cmd: 5fd61f8e9e285583f439813a2d7af7c02269908848edd3931183c0fb4733ab26
+23:00:51.329 [ducttape-0] DEBUG org.testcontainers.shaded.com.github.dockerjava.core.exec.InspectExecCmdExec - GET: DefaultWebTarget{path=[/exec/5fd61f8e9e285583f439813a2d7af7c02269908848edd3931183c0fb4733ab26/json], queryParams={}}
+23:00:52.339 [ducttape-0] DEBUG org.testcontainers.containers.ExecInContainerPattern - /determined_leavitt: Running "exec" command: /bin/sh -c true &&  (cat /proc/net/tcp* | awk '{print $2}' | grep -i ':0*2385' || nc -vz -w 1 localhost 9093 || /bin/bash -c '</dev/tcp/localhost/9093') &&  (cat /proc/net/tcp* | awk '{print $2}' | grep -i ':0*885' || nc -vz -w 1 localhost 2181 || /bin/bash -c '</dev/tcp/localhost/2181')
+23:00:52.340 [ducttape-0] DEBUG org.testcontainers.shaded.com.github.dockerjava.core.command.AbstrDockerCmd - Cmd: 9ac970c1a133a626a6f78a72c7641044386a78cac0a0dff3c3a3e9b5965427db,<null>,true,true,<null>,<null>,<null>,{/bin/sh,-c,true &&  (cat /proc/net/tcp* | awk '{print $2}' | grep -i ':0*2385' || nc -vz -w 1 localhost 9093 || /bin/bash -c '</dev/tcp/localhost/9093') &&  (cat /proc/net/tcp* | awk '{print $2}' | grep -i ':0*885' || nc -vz -w 1 localhost 2181 || /bin/bash -c '</dev/tcp/localhost/2181')},<null>,<null>
+23:00:52.464 [ducttape-0] DEBUG org.testcontainers.shaded.com.github.dockerjava.core.command.AbstrDockerCmd - Cmd: 275a0b05b7c38f9c5eb6eaf1c23f165cdde87a15d9bc0e6ebc16e3f4f65ff0e5
+23:00:52.465 [ducttape-0] DEBUG org.testcontainers.shaded.com.github.dockerjava.core.exec.InspectExecCmdExec - GET: DefaultWebTarget{path=[/exec/275a0b05b7c38f9c5eb6eaf1c23f165cdde87a15d9bc0e6ebc16e3f4f65ff0e5/json], queryParams={}}
+23:00:53.476 [ducttape-0] DEBUG org.testcontainers.containers.ExecInContainerPattern - /determined_leavitt: Running "exec" command: /bin/sh -c true &&  (cat /proc/net/tcp* | awk '{print $2}' | grep -i ':0*2385' || nc -vz -w 1 localhost 9093 || /bin/bash -c '</dev/tcp/localhost/9093') &&  (cat /proc/net/tcp* | awk '{print $2}' | grep -i ':0*885' || nc -vz -w 1 localhost 2181 || /bin/bash -c '</dev/tcp/localhost/2181')
+23:00:53.476 [ducttape-0] DEBUG org.testcontainers.shaded.com.github.dockerjava.core.command.AbstrDockerCmd - Cmd: 9ac970c1a133a626a6f78a72c7641044386a78cac0a0dff3c3a3e9b5965427db,<null>,true,true,<null>,<null>,<null>,{/bin/sh,-c,true &&  (cat /proc/net/tcp* | awk '{print $2}' | grep -i ':0*2385' || nc -vz -w 1 localhost 9093 || /bin/bash -c '</dev/tcp/localhost/9093') &&  (cat /proc/net/tcp* | awk '{print $2}' | grep -i ':0*885' || nc -vz -w 1 localhost 2181 || /bin/bash -c '</dev/tcp/localhost/2181')},<null>,<null>
+23:00:53.605 [ducttape-0] DEBUG org.testcontainers.shaded.com.github.dockerjava.core.command.AbstrDockerCmd - Cmd: 944472571bb7a17dac03398345be1bdfa3f81446747e4b06dbb8e3773a5542b4
+23:00:53.606 [ducttape-0] DEBUG org.testcontainers.shaded.com.github.dockerjava.core.exec.InspectExecCmdExec - GET: DefaultWebTarget{path=[/exec/944472571bb7a17dac03398345be1bdfa3f81446747e4b06dbb8e3773a5542b4/json], queryParams={}}
+23:00:53.629 [main] INFO 🐳 [confluentinc/cp-kafka:latest] - Container confluentinc/cp-kafka:latest started in PT7.132497S
+23:00:53.654 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+23:00:53.675 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+23:00:53.818 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.simonjamesrowe.apigateway.ApiGatewayApplicationTests] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+23:00:53.904 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.simonjamesrowe.component.test.BaseComponentTest]: class path resource [com/simonjamesrowe/component/test/BaseComponentTest-context.xml] does not exist
+23:00:53.905 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.simonjamesrowe.component.test.BaseComponentTest]: class path resource [com/simonjamesrowe/component/test/BaseComponentTestContext.groovy] does not exist
+23:00:53.905 [main] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.simonjamesrowe.component.test.BaseComponentTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+23:00:53.906 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.simonjamesrowe.component.test.BaseComponentTest]: BaseComponentTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+23:00:54.206 [main] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [/workspace/source/target/classes/com/simonjamesrowe/apigateway/ApiGatewayApplication.class]
+23:00:54.207 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.simonjamesrowe.apigateway.ApiGatewayApplication for test class com.simonjamesrowe.apigateway.ApiGatewayApplicationTests
+23:00:54.495 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.simonjamesrowe.apigateway.ApiGatewayApplicationTests]: using defaults.
+23:00:54.497 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener, org.springframework.cloud.contract.wiremock.WireMockTestExecutionListener]
+23:00:54.513 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Skipping candidate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener] due to a missing dependency. Specify custom listener classes or make the default listener classes and their required dependencies available. Offending class: [javax/servlet/ServletContext]
+23:00:54.522 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@68c87fc3, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@bc0f53b, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@8d7b252, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@4682eba5, org.springframework.test.context.support.DirtiesContextTestExecutionListener@6d9fb2d1, org.springframework.test.context.transaction.TransactionalTestExecutionListener@61fafb74, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@540a903b, org.springframework.test.context.event.EventPublishingTestExecutionListener@58496dc, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@151db587, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@238acd0b, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@23811a09, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@2125ad3, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@7a5b769b, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@f4c0e4e, org.springframework.cloud.contract.wiremock.WireMockTestExecutionListener@24361cfc]
+23:00:54.527 [main] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@76c548f testClass = ApiGatewayApplicationTests, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [ReactiveWebMergedContextConfiguration@3900fa71 testClass = ApiGatewayApplicationTests, locations = '{}', classes = '{class com.simonjamesrowe.apigateway.ApiGatewayApplication}', contextInitializerClasses = '[]', activeProfiles = '{component-test, wiremock}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true, server.port=0}', contextCustomizers = set[[ImportsContextCustomizer@26722665 key = [org.springframework.cloud.contract.wiremock.WireMockRestTemplateConfiguration, org.springframework.cloud.contract.wiremock.WireMockConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@d02f8d, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@732bb66d, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@349d0836, org.springframework.boot.test.web.reactive.server.WebTestClientContextCustomizer@4a699efa, org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@66434cc8, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@e5dd10ba, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@1eea9d2d, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@7586beff], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> false]], class annotated with @DirtiesContext [false] with mode [null].
+23:00:54.608 [main] DEBUG org.springframework.core.env.StandardEnvironment - Activating profiles [component-test, wiremock]
+23:00:54.612 [main] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true, server.port=0}
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.4.2)
+
+2021-01-23 23:00:58.234  INFO 73 --- [           main] c.s.a.ApiGatewayApplicationTests         : Starting ApiGatewayApplicationTests using Java 11.0.2 on simonjamesrowe-api-gateway-mast-tw6qt-23-from-build-pack--mxqks with PID 73 (started by **** in /workspace/source)
+2021-01-23 23:00:58.235  INFO 73 --- [           main] c.s.a.ApiGatewayApplicationTests         : The following profiles are active: component-test,wiremock,kubernetes
+2021-01-23 23:01:04.725  INFO 73 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=ca9533f0-0bc9-3c44-a002-cf809d906616
+2021-01-23 23:01:04.919  INFO 73 --- [           main] o.s.c.a.ConfigurationClassEnhancer       : @Bean method FunctionConfiguration.po is non-static and returns an object assignable to Spring's BeanFactoryPostProcessor interface. This will result in a failure to process annotations such as @Autowired, @Resource and @PostConstruct within the method's declaring @Configuration class. Add the 'static' modifier to this method to avoid these container lifecycle issues; see @Bean javadoc for complete details.
+2021-01-23 23:01:05.014  INFO 73 --- [           main] faultConfiguringBeanFactoryPostProcessor : No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2021-01-23 23:01:05.021  INFO 73 --- [           main] faultConfiguringBeanFactoryPostProcessor : No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+2021-01-23 23:01:05.028  INFO 73 --- [           main] faultConfiguringBeanFactoryPostProcessor : No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2021-01-23 23:01:05.331  INFO 73 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-01-23 23:01:05.417  INFO 73 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'integrationChannelResolver' of type [org.springframework.integration.support.channel.BeanFactoryChannelResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-01-23 23:01:05.421  INFO 73 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-01-23 23:01:08.001  INFO 73 --- [           main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2021-01-23 23:01:09.814  INFO 73 --- [           main] wiremock.org.eclipse.jetty.util.log      : Logging initialized @29876ms to wiremock.org.eclipse.jetty.util.log.Slf4jLog
+2021-01-23 23:01:09.909  WARN 73 --- [           main] w.o.e.jetty.server.AbstractConnector     : Acceptors should be <= availableProcessors: NetworkTrafficServerConnector@c2ddfeb{HTTP/1.1, (http/1.1)}{0.0.0.0:0}
+2021-01-23 23:01:10.038  WARN 73 --- [           main] w.o.e.jetty.server.AbstractConnector     : Acceptors should be <= availableProcessors: NetworkTrafficServerConnector@4a9d6eb9{SSL, (ssl, alpn, h2, http/1.1)}{0.0.0.0:0}
+2021-01-23 23:01:10.216  INFO 73 --- [           main] w.org.eclipse.jetty.server.Server        : jetty-9.4.30.v20200611; built: 2020-06-11T12:34:51.929Z; git: 271836e4c1f4612f12b7bb13ef5a92a927634b0d; jvm 11.0.2+9
+2021-01-23 23:01:10.235  INFO 73 --- [           main] w.o.e.j.server.handler.ContextHandler    : Started w.o.e.j.s.ServletContextHandler@6e200307{/__*****,null,AVAILABLE}
+2021-01-23 23:01:10.238  INFO 73 --- [           main] w.o.e.j.server.handler.ContextHandler    : Started w.o.e.j.s.ServletContextHandler@6c289070{/,null,AVAILABLE}
+2021-01-23 23:01:10.254  INFO 73 --- [           main] w.o.e.jetty.server.AbstractConnector     : Started NetworkTrafficServerConnector@c2ddfeb{HTTP/1.1, (http/1.1)}{0.0.0.0:11336}
+2021-01-23 23:01:10.298  INFO 73 --- [           main] w.o.e.jetty.util.ssl.SslContextFactory   : x509=X509@4bfaff23(wiremock,h=[],w=[]) for Server@3da8a302[provider=Conscrypt,keyStore=null,trustStore=null]
+2021-01-23 23:01:10.300  INFO 73 --- [           main] w.o.e.jetty.util.ssl.SslContextFactory   : Unable to get KeyManagerFactory instance for algorithm [SunX509] on provider [Conscrypt], using default
+2021-01-23 23:01:10.328  INFO 73 --- [           main] w.o.e.jetty.server.AbstractConnector     : Started NetworkTrafficServerConnector@4a9d6eb9{SSL, (ssl, alpn, h2, http/1.1)}{0.0.0.0:14872}
+2021-01-23 23:01:10.328  INFO 73 --- [           main] w.org.eclipse.jetty.server.Server        : Started @30390ms
+2021-01-23 23:01:13.876  INFO 73 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [After]
+2021-01-23 23:01:13.876  INFO 73 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Before]
+2021-01-23 23:01:13.876  INFO 73 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Between]
+2021-01-23 23:01:13.876  INFO 73 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Cookie]
+2021-01-23 23:01:13.876  INFO 73 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Header]
+2021-01-23 23:01:13.876  INFO 73 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Host]
+2021-01-23 23:01:13.877  INFO 73 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Method]
+2021-01-23 23:01:13.877  INFO 73 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Path]
+2021-01-23 23:01:13.878  INFO 73 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Query]
+2021-01-23 23:01:13.878  INFO 73 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [ReadBody]
+2021-01-23 23:01:13.878  INFO 73 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [RemoteAddr]
+2021-01-23 23:01:13.878  INFO 73 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Weight]
+2021-01-23 23:01:13.879  INFO 73 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2021-01-23 23:01:15.717  INFO 73 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2021-01-23 23:01:19.177  INFO 73 --- [           main] o.s.i.endpoint.EventDrivenConsumer       : Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2021-01-23 23:01:19.177  INFO 73 --- [           main] o.s.i.channel.PublishSubscribeChannel    : Channel 'application.errorChannel' has 1 subscriber(s).
+2021-01-23 23:01:19.177  INFO 73 --- [           main] o.s.i.endpoint.EventDrivenConsumer       : started bean '_org.springframework.integration.errorLogger'
+2021-01-23 23:01:19.383  INFO 73 --- [           main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 39293
+2021-01-23 23:01:19.590  INFO 73 --- [           main] c.s.a.ApiGatewayApplicationTests         : Started ApiGatewayApplicationTests in 24.997 seconds (JVM running for 39.675)
+2021-01-23 23:01:21.201  INFO 73 --- [           main] w.o.e.jetty.server.AbstractConnector     : Stopped NetworkTrafficServerConnector@c2ddfeb{HTTP/1.1, (http/1.1)}{0.0.0.0:11336}
+2021-01-23 23:01:21.202  INFO 73 --- [           main] w.o.e.jetty.server.AbstractConnector     : Stopped NetworkTrafficServerConnector@4a9d6eb9{SSL, (ssl, alpn, h2, http/1.1)}{0.0.0.0:14872}
+2021-01-23 23:01:21.205  INFO 73 --- [           main] w.o.e.j.server.handler.ContextHandler    : Stopped w.o.e.j.s.ServletContextHandler@6c289070{/,null,UNAVAILABLE}
+2021-01-23 23:01:21.206  INFO 73 --- [           main] w.o.e.j.server.handler.ContextHandler    : Stopped w.o.e.j.s.ServletContextHandler@6e200307{/__*****,null,UNAVAILABLE}
+2021-01-23 23:01:21.206  INFO 73 --- [           main] w.org.eclipse.jetty.server.Server        : jetty-9.4.30.v20200611; built: 2020-06-11T12:34:51.929Z; git: 271836e4c1f4612f12b7bb13ef5a92a927634b0d; jvm 11.0.2+9
+2021-01-23 23:01:21.214  INFO 73 --- [           main] w.o.e.j.server.handler.ContextHandler    : Started w.o.e.j.s.ServletContextHandler@6e200307{/__*****,null,AVAILABLE}
+2021-01-23 23:01:21.214  INFO 73 --- [           main] w.o.e.j.server.handler.ContextHandler    : Started w.o.e.j.s.ServletContextHandler@6c289070{/,null,AVAILABLE}
+2021-01-23 23:01:21.218  INFO 73 --- [           main] w.o.e.jetty.server.AbstractConnector     : Started NetworkTrafficServerConnector@c2ddfeb{HTTP/1.1, (http/1.1)}{0.0.0.0:11336}
+2021-01-23 23:01:21.270  INFO 73 --- [           main] w.o.e.jetty.util.ssl.SslContextFactory   : x509=X509@6b7a96e1(wiremock,h=[],w=[]) for Server@3da8a302[provider=Conscrypt,keyStore=null,trustStore=null]
+2021-01-23 23:01:21.271  INFO 73 --- [           main] w.o.e.jetty.util.ssl.SslContextFactory   : Unable to get KeyManagerFactory instance for algorithm [SunX509] on provider [Conscrypt], using default
+2021-01-23 23:01:21.278  INFO 73 --- [           main] w.o.e.jetty.server.AbstractConnector     : Started NetworkTrafficServerConnector@4a9d6eb9{SSL, (ssl, alpn, h2, http/1.1)}{0.0.0.0:14872}
+2021-01-23 23:01:21.278  INFO 73 --- [           main] w.org.eclipse.jetty.server.Server        : Started @41363ms
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 38.282 s - in com.simonjamesrowe.apigateway.ApiGatewayApplicationTests
+[INFO] Running com.simonjamesrowe.apigateway.controller.WebhookControllerTest
+2021-01-23 23:01:21.287  INFO 73 --- [           main] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.simonjamesrowe.component.test.BaseComponentTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2021-01-23 23:01:21.288  INFO 73 --- [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.simonjamesrowe.component.test.BaseComponentTest]: BaseComponentTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2021-01-23 23:01:21.297  INFO 73 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.simonjamesrowe.apigateway.ApiGatewayApplication for test class com.simonjamesrowe.apigateway.controller.WebhookControllerTest
+2021-01-23 23:01:21.373  INFO 73 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener, org.springframework.cloud.contract.wiremock.WireMockTestExecutionListener]
+2021-01-23 23:01:21.374  INFO 73 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@402e48d, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@1daf79ab, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@1b84d2e, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@7e3c5dbb, org.springframework.test.context.support.DirtiesContextTestExecutionListener@6d89f87d, org.springframework.test.context.transaction.TransactionalTestExecutionListener@b8da646, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@489f5b24, org.springframework.test.context.event.EventPublishingTestExecutionListener@54d20609, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@763a46fe, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@106361e9, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@22974eba, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@6631e6af, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@42985121, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@497f0cb2, org.springframework.cloud.contract.wiremock.WireMockTestExecutionListener@510579b9]
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.4.2)
+
+2021-01-23 23:01:22.388  INFO 73 --- [           main] c.s.a.controller.WebhookControllerTest   : Starting WebhookControllerTest using Java 11.0.2 on simonjamesrowe-api-gateway-mast-tw6qt-23-from-build-pack--mxqks with PID 73 (started by **** in /workspace/source)
+2021-01-23 23:01:22.388  INFO 73 --- [           main] c.s.a.controller.WebhookControllerTest   : The following profiles are active: component-test,wiremock,*******ControllerTest,kubernetes
+2021-01-23 23:01:23.683  INFO 73 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=80f4bc78-e7de-39e3-b1c8-8b9da11f40de
+2021-01-23 23:01:23.698  INFO 73 --- [           main] o.s.c.a.ConfigurationClassEnhancer       : @Bean method FunctionConfiguration.po is non-static and returns an object assignable to Spring's BeanFactoryPostProcessor interface. This will result in a failure to process annotations such as @Autowired, @Resource and @PostConstruct within the method's declaring @Configuration class. Add the 'static' modifier to this method to avoid these container lifecycle issues; see @Bean javadoc for complete details.
+2021-01-23 23:01:23.701  INFO 73 --- [           main] faultConfiguringBeanFactoryPostProcessor : No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2021-01-23 23:01:23.702  INFO 73 --- [           main] faultConfiguringBeanFactoryPostProcessor : No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+2021-01-23 23:01:23.707  INFO 73 --- [           main] faultConfiguringBeanFactoryPostProcessor : No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2021-01-23 23:01:23.804  INFO 73 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-01-23 23:01:23.817  INFO 73 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'integrationChannelResolver' of type [org.springframework.integration.support.channel.BeanFactoryChannelResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-01-23 23:01:23.874  INFO 73 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-01-23 23:01:24.812  INFO 73 --- [           main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2021-01-23 23:01:24.901  WARN 73 --- [           main] w.o.e.jetty.server.AbstractConnector     : Acceptors should be <= availableProcessors: NetworkTrafficServerConnector@4b330722{HTTP/1.1, (http/1.1)}{0.0.0.0:0}
+2021-01-23 23:01:24.971  WARN 73 --- [           main] w.o.e.jetty.server.AbstractConnector     : Acceptors should be <= availableProcessors: NetworkTrafficServerConnector@7356f0e0{SSL, (ssl, alpn, h2, http/1.1)}{0.0.0.0:0}
+2021-01-23 23:01:24.973  INFO 73 --- [           main] w.org.eclipse.jetty.server.Server        : jetty-9.4.30.v20200611; built: 2020-06-11T12:34:51.929Z; git: 271836e4c1f4612f12b7bb13ef5a92a927634b0d; jvm 11.0.2+9
+2021-01-23 23:01:24.979  INFO 73 --- [           main] w.o.e.j.server.handler.ContextHandler    : Started w.o.e.j.s.ServletContextHandler@2939bfa0{/__*****,null,AVAILABLE}
+2021-01-23 23:01:24.980  INFO 73 --- [           main] w.o.e.j.server.handler.ContextHandler    : Started w.o.e.j.s.ServletContextHandler@45bf1b4e{/,null,AVAILABLE}
+2021-01-23 23:01:24.982  INFO 73 --- [           main] w.o.e.jetty.server.AbstractConnector     : Started NetworkTrafficServerConnector@4b330722{HTTP/1.1, (http/1.1)}{0.0.0.0:10484}
+2021-01-23 23:01:24.983  INFO 73 --- [           main] w.o.e.jetty.util.ssl.SslContextFactory   : x509=X509@59250335(wiremock,h=[],w=[]) for Server@109fa8e2[provider=Conscrypt,keyStore=null,trustStore=null]
+2021-01-23 23:01:24.983  INFO 73 --- [           main] w.o.e.jetty.util.ssl.SslContextFactory   : Unable to get KeyManagerFactory instance for algorithm [SunX509] on provider [Conscrypt], using default
+2021-01-23 23:01:24.993  INFO 73 --- [           main] w.o.e.jetty.server.AbstractConnector     : Started NetworkTrafficServerConnector@7356f0e0{SSL, (ssl, alpn, h2, http/1.1)}{0.0.0.0:14742}
+2021-01-23 23:01:24.993  INFO 73 --- [           main] w.org.eclipse.jetty.server.Server        : Started @45078ms
+2021-01-23 23:01:26.515  INFO 73 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [After]
+2021-01-23 23:01:26.516  INFO 73 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Before]
+2021-01-23 23:01:26.516  INFO 73 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Between]
+2021-01-23 23:01:26.516  INFO 73 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Cookie]
+2021-01-23 23:01:26.516  INFO 73 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Header]
+2021-01-23 23:01:26.516  INFO 73 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Host]
+2021-01-23 23:01:26.516  INFO 73 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Method]
+2021-01-23 23:01:26.516  INFO 73 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Path]
+2021-01-23 23:01:26.516  INFO 73 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Query]
+2021-01-23 23:01:26.516  INFO 73 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [ReadBody]
+2021-01-23 23:01:26.516  INFO 73 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [RemoteAddr]
+2021-01-23 23:01:26.516  INFO 73 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Weight]
+2021-01-23 23:01:26.570  INFO 73 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2021-01-23 23:01:27.314  INFO 73 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2021-01-23 23:01:27.716  INFO 73 --- [           main] o.s.c.s.m.DirectWithAttributesChannel    : Channel 'application.consume-in-0' has 1 subscriber(s).
+2021-01-23 23:01:28.676  INFO 73 --- [           main] o.s.i.endpoint.EventDrivenConsumer       : Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2021-01-23 23:01:28.676  INFO 73 --- [           main] o.s.i.channel.PublishSubscribeChannel    : Channel 'application.errorChannel' has 1 subscriber(s).
+2021-01-23 23:01:28.676  INFO 73 --- [           main] o.s.i.endpoint.EventDrivenConsumer       : started bean '_org.springframework.integration.errorLogger'
+2021-01-23 23:01:28.678  INFO 73 --- [           main] o.s.c.s.binder.DefaultBinderFactory      : Creating binder: kafka
+2021-01-23 23:01:31.978  INFO 73 --- [           main] o.s.c.s.binder.DefaultBinderFactory      : Caching the binder: kafka
+2021-01-23 23:01:31.979  INFO 73 --- [           main] o.s.c.s.binder.DefaultBinderFactory      : Retrieving cached binder: kafka
+2021-01-23 23:01:32.076  INFO 73 --- [           main] o.a.k.clients.*****.AdminClientConfig    : AdminClientConfig values: 
+	bootstrap.servers = [192.168.4.23:49214]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2021-01-23 23:01:32.309  INFO 73 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 2.6.0
+2021-01-23 23:01:32.309  INFO 73 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 62abe01bee039651
+2021-01-23 23:01:32.309  INFO 73 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1611442892307
+2021-01-23 23:01:33.290  INFO 73 --- [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 100
+	auto.offset.reset = earliest
+	bootstrap.servers = [192.168.4.23:49214]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-api-gateway-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = api-gateway
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 50
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class com.simonjamesrowe.model.serialization.EventDeserializer
+
+2021-01-23 23:01:33.582  INFO 73 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 2.6.0
+2021-01-23 23:01:33.583  INFO 73 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 62abe01bee039651
+2021-01-23 23:01:33.583  INFO 73 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1611442893582
+2021-01-23 23:01:33.689  INFO 73 --- [           main] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-api-gateway-1, groupId=api-gateway] Cluster ID: MDliW9gpT3Cv4Xs_aqrUNg
+2021-01-23 23:01:33.789  INFO 73 --- [           main] o.s.c.stream.binder.BinderErrorChannel   : Channel 'LOCAL_EVENTS.api-gateway.errors' has 1 subscriber(s).
+2021-01-23 23:01:33.791  INFO 73 --- [           main] o.s.c.stream.binder.BinderErrorChannel   : Channel 'LOCAL_EVENTS.api-gateway.errors' has 0 subscriber(s).
+2021-01-23 23:01:33.792  INFO 73 --- [           main] o.s.c.stream.binder.BinderErrorChannel   : Channel 'LOCAL_EVENTS.api-gateway.errors' has 1 subscriber(s).
+2021-01-23 23:01:33.792  INFO 73 --- [           main] o.s.c.stream.binder.BinderErrorChannel   : Channel 'LOCAL_EVENTS.api-gateway.errors' has 2 subscriber(s).
+2021-01-23 23:01:33.874  INFO 73 --- [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 100
+	auto.offset.reset = earliest
+	bootstrap.servers = [192.168.4.23:49214]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-api-gateway-2
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = api-gateway
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 50
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class com.simonjamesrowe.model.serialization.EventDeserializer
+
+2021-01-23 23:01:33.889  INFO 73 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 2.6.0
+2021-01-23 23:01:33.890  INFO 73 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 62abe01bee039651
+2021-01-23 23:01:33.890  INFO 73 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1611442893889
+2021-01-23 23:01:33.973  INFO 73 --- [           main] o.a.k.clients.consumer.KafkaConsumer     : [Consumer clientId=consumer-api-gateway-2, groupId=api-gateway] Subscribed to topic(s): LOCAL_EVENTS
+2021-01-23 23:01:33.977  INFO 73 --- [           main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService
+2021-01-23 23:01:33.984  INFO 73 --- [           main] s.i.k.i.KafkaMessageDrivenChannelAdapter : started org.springframework.integration.kafka.inbound.KafkaMessageDrivenChannelAdapter@56567e9b
+2021-01-23 23:01:33.993  INFO 73 --- [           main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 42477
+2021-01-23 23:01:34.077  INFO 73 --- [container-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-api-gateway-2, groupId=api-gateway] Cluster ID: MDliW9gpT3Cv4Xs_aqrUNg
+2021-01-23 23:01:34.122  INFO 73 --- [           main] c.s.a.controller.WebhookControllerTest   : Started WebhookControllerTest in 12.745 seconds (JVM running for 54.207)
+2021-01-23 23:01:34.197  INFO 73 --- [container-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  : [Consumer clientId=consumer-api-gateway-2, groupId=api-gateway] Discovered group coordinator 192.168.4.23:49214 (id: 2147483646 rack: null)
+2021-01-23 23:01:34.208  INFO 73 --- [container-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  : [Consumer clientId=consumer-api-gateway-2, groupId=api-gateway] (Re-)joining group
+2021-01-23 23:01:34.307  INFO 73 --- [container-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  : [Consumer clientId=consumer-api-gateway-2, groupId=api-gateway] Join group failed with org.apache.kafka.common.errors.MemberIdRequiredException: The group member needs to have a valid member id before actually entering a consumer group.
+2021-01-23 23:01:34.307  INFO 73 --- [container-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  : [Consumer clientId=consumer-api-gateway-2, groupId=api-gateway] (Re-)joining group
+2021-01-23 23:01:34.373  INFO 73 --- [container-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-api-gateway-2, groupId=api-gateway] Finished assignment for group at generation 1: {consumer-api-gateway-2-c28a3851-7c2a-4b36-a7c8-911d66171a14=Assignment(partitions=[LOCAL_EVENTS-0])}
+2021-01-23 23:01:34.471  INFO 73 --- [container-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  : [Consumer clientId=consumer-api-gateway-2, groupId=api-gateway] Successfully joined group with generation 1
+2021-01-23 23:01:34.476  INFO 73 --- [container-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-api-gateway-2, groupId=api-gateway] Notifying assignor about the new Assignment(partitions=[LOCAL_EVENTS-0])
+2021-01-23 23:01:34.482  INFO 73 --- [container-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-api-gateway-2, groupId=api-gateway] Adding newly assigned partitions: LOCAL_EVENTS-0
+2021-01-23 23:01:34.571  INFO 73 --- [container-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-api-gateway-2, groupId=api-gateway] Found no committed offset for partition LOCAL_EVENTS-0
+2021-01-23 23:01:34.594  INFO 73 --- [container-0-C-1] o.a.k.c.c.internals.SubscriptionState    : [Consumer clientId=consumer-api-gateway-2, groupId=api-gateway] Resetting offset for partition LOCAL_EVENTS-0 to offset 0.
+2021-01-23 23:01:34.596  INFO 73 --- [container-0-C-1] o.s.c.s.b.k.KafkaMessageChannelBinder$2  : api-gateway: partitions assigned: [LOCAL_EVENTS-0]
+Request method:	POST
+Request URI:	http://localhost:42477/*******
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "event": "entry.update",
+    "created_at": "2021-01-02T15:49:35.918Z",
+    "model": "blog",
+    "entry": {
+        "published": true,
+        "tags": [
+            {
+                "_id": "5e495da7bc8d7d001ddbd7c5",
+                "name": "Kubernetes",
+                "createdAt": "2020-02-16T15:20:07.909Z",
+                "updatedAt": "2020-02-16T22:04:13.013Z",
+                "__v": 0,
+                "id": "5e495da7bc8d7d001ddbd7c5"
+            },
+            {
+                "_id": "5f02da709d8081001fd38fa4",
+                "name": "Jenkins",
+                "createdAt": "2020-07-06T08:01:52.572Z",
+                "updatedAt": "2020-07-06T08:01:52.572Z",
+                "__v": 0,
+                "id": "5f02da709d8081001fd38fa4"
+            },
+            {
+                "_id": "5f03901b9d8081001fd38fa7",
+                "name": "Strapi",
+                "createdAt": "2020-07-06T20:56:59.818Z",
+                "updatedAt": "2020-07-06T20:56:59.818Z",
+                "__v": 0,
+                "id": "5f03901b9d8081001fd38fa7"
+            },
+            {
+                "_id": "5f0390249d8081001fd38fa8",
+                "name": "TLS",
+                "createdAt": "2020-07-06T20:57:08.354Z",
+                "updatedAt": "2020-07-06T20:57:08.354Z",
+                "__v": 0,
+                "id": "5f0390249d8081001fd38fa8"
+            },
+            {
+                "_id": "5f0390329d8081001fd38fa9",
+                "name": "MongoDB",
+                "createdAt": "2020-07-06T20:57:22.633Z",
+                "updatedAt": "2020-07-06T20:57:22.633Z",
+                "__v": 0,
+                "id": "5f0390329d8081001fd38fa9"
+            },
+            {
+                "_id": "5f0390499d8081001fd38faa",
+                "name": "React",
+                "createdAt": "2020-07-06T20:57:45.054Z",
+                "updatedAt": "2020-07-06T20:57:45.054Z",
+                "__v": 0,
+                "id": "5f0390499d8081001fd38faa"
+            }
+        ],
+        "skills": [
+            {
+                "_id": "5f635b6a5ee4c9001d2b9632",
+                "name": "Spring Boot",
+                "rating": 9.7,
+                "order": 1,
+                "createdAt": "2020-09-17T12:49:46.739Z",
+                "updatedAt": "2020-09-21T21:05:20.308Z",
+                "__v": 0,
+                "created_by": "5e4839cd1c2d53001dcc0696",
+                "updated_by": "5e4839cd1c2d53001dcc0696",
+                "image": {
+                    "_id": "5f6851a85ee4c9001d2b96af",
+                    "name": "spring-boot.jpeg",
+                    "alternativeText": "",
+                    "caption": "",
+                    "hash": "spring_boot_5ee37de4c1",
+                    "ext": ".jpeg",
+                    "mime": "image/png",
+                    "size": 7.98,
+                    "width": 400,
+                    "height": 400,
+                    "url": "/uploads/spring_boot_5ee37de4c1.jpeg",
+                    "formats": {
+                        "thumbnail": {
+                            "name": "thumbnail_spring-boot.jpeg",
+                            "hash": "thumbnail_spring_boot_5ee37de4c1",
+                            "ext": ".jpeg",
+                            "mime": "image/png",
+                            "width": 156,
+                            "height": 156,
+                            "size": 5.21,
+                            "path": null,
+                            "url": "/uploads/thumbnail_spring_boot_5ee37de4c1.jpeg"
+                        }
+                    },
+                    "provider": "local",
+                    "related": [
+                        "5f635b6a5ee4c9001d2b9632",
+                        "5feed4c667bdd6001e9c12d0"
+                    ],
+                    "createdAt": "2020-09-21T07:09:28.458Z",
+                    "updatedAt": "2021-01-01T21:02:32.991Z",
+                    "__v": 0,
+                    "created_by": "5e4839cd1c2d53001dcc0696",
+                    "updated_by": "5e4839cd1c2d53001dcc0696",
+                    "id": "5f6851a85ee4c9001d2b96af"
+                },
+                "description": "Spring Boot makes it easy to create stand-alone, production-grade Spring based Applications that you can \"just run\".\n\n- Embed Tomcat, Jetty or Undertow directly (no need to deploy WAR files)\n- Provide opinionated 'starter' dependencies to simplify your build configuration\n- Automatically configure Spring and 3rd party libraries whenever possible\n- Provide production-ready features such as metrics, health checks, and externalized configuration",
+                "id": "5f635b6a5ee4c9001d2b9632"
+            },
+            {
+                "_id": "5f635b555ee4c9001d2b9631",
+                "name": "Kotlin",
+                "rating": 8,
+                "createdAt": "2020-09-17T12:49:25.636Z",
+                "updatedAt": "2020-09-21T21:01:54.939Z",
+                "__v": 0,
+                "created_by": "5e4839cd1c2d53001dcc0696",
+                "updated_by": "5e4839cd1c2d53001dcc0696",
+                "image": {
+                    "_id": "5f65ec765ee4c9001d2b9676",
+                    "name": "kotlin_250x250.png",
+                    "alternativeText": "",
+                    "caption": "",
+                    "hash": "kotlin_250x250_dfc086e243",
+                    "ext": ".png",
+                    "mime": "image/png",
+                    "size": 3.69,
+                    "width": 250,
+                    "height": 250,
+                    "url": "/uploads/kotlin_250x250_dfc086e243.png",
+                    "formats": {
+                        "thumbnail": {
+                            "name": "thumbnail_kotlin_250x250.png",
+                            "hash": "thumbnail_kotlin_250x250_dfc086e243",
+                            "ext": ".png",
+                            "mime": "image/png",
+                            "width": 156,
+                            "height": 156,
+                            "size": 6.89,
+                            "path": null,
+                            "url": "/uploads/thumbnail_kotlin_250x250_dfc086e243.png"
+                        }
+                    },
+                    "provider": "local",
+                    "related": [
+                        "5f6359c55ee4c9001d2b9627",
+                        "5f635b555ee4c9001d2b9631"
+                    ],
+                    "createdAt": "2020-09-19T11:33:10.896Z",
+                    "updatedAt": "2020-09-21T06:17:06.069Z",
+                    "__v": 0,
+                    "created_by": "5e4839cd1c2d53001dcc0696",
+                    "updated_by": "5e4839cd1c2d53001dcc0696",
+                    "id": "5f65ec765ee4c9001d2b9676"
+                },
+                "description": "- Lambda expressions + Inline functions = performant custom control structures\n- Extension functions\n- Null-safety\n- Smart casts\n- String templates\n- Properties\n- Primary constructors\n- First-class delegation\n- Type inference for variable and property types\n- Singletons\n- Declaration-site variance & Type projections\n- Range expressions\n- Operator overloading\n- Companion objects\n- Data classes\n- Separate interfaces for read-only and mutable collections\n- Coroutines",
+                "id": "5f635b555ee4c9001d2b9631"
+            },
+            {
+                "_id": "5f635c2e5ee4c9001d2b963c",
+                "name": "Jenkins Pipeline",
+                "rating": 8,
+                "createdAt": "2020-09-17T12:53:02.588Z",
+                "updatedAt": "2020-09-22T06:41:07.845Z",
+                "__v": 0,
+                "created_by": "5e4839cd1c2d53001dcc0696",
+                "updated_by": "5e4839cd1c2d53001dcc0696",
+                "image": {
+                    "_id": "5f65ed105ee4c9001d2b967c",
+                    "name": "jenkins-5-569553.png",
+                    "alternativeText": "",
+                    "caption": "",
+                    "hash": "jenkins_5_569553_cb54b85a4c",
+                    "ext": ".png",
+                    "mime": "image/png",
+                    "size": 12.15,
+                    "width": 256,
+                    "height": 256,
+                    "url": "/uploads/jenkins_5_569553_cb54b85a4c.png",
+                    "formats": {
+                        "thumbnail": {
+                            "name": "thumbnail_jenkins-5-569553.png",
+                            "hash": "thumbnail_jenkins_5_569553_cb54b85a4c",
+                            "ext": ".png",
+                            "mime": "image/png",
+                            "width": 156,
+                            "height": 156,
+                            "size": 16.21,
+                            "path": null,
+                            "url": "/uploads/thumbnail_jenkins_5_569553_cb54b85a4c.png"
+                        }
+                    },
+                    "provider": "local",
+                    "related": [
+                        "5f635a195ee4c9001d2b962a",
+                        "5f635c2e5ee4c9001d2b963c"
+                    ],
+                    "createdAt": "2020-09-19T11:35:44.624Z",
+                    "updatedAt": "2020-09-21T07:16:50.216Z",
+                    "__v": 0,
+                    "created_by": "5e4839cd1c2d53001dcc0696",
+                    "updated_by": "5e4839cd1c2d53001dcc0696",
+                    "id": "5f65ed105ee4c9001d2b967c"
+                },
+                "description": "Pipeline is a suite of plugins that supports implementing and integrating continuous delivery pipelines into Jenkins. Pipeline provides an extensible set of tools for modelling simple-to-complex delivery pipelines \"as code\" via the Pipeline DSL (groovy). ",
+                "id": "5f635c2e5ee4c9001d2b963c"
+            },
+            {
+                "_id": "5f635c375ee4c9001d2b963d",
+                "name": "Jenkins X",
+                "rating": 9,
+                "createdAt": "2020-09-17T12:53:11.954Z",
+                "updatedAt": "2020-09-22T21:19:16.887Z",
+                "__v": 0,
+                "created_by": "5e4839cd1c2d53001dcc0696",
+                "updated_by": "5e4839cd1c2d53001dcc0696",
+                "image": {
+                    "_id": "5f6616545ee4c9001d2b9690",
+                    "name": "jenkinsx.png",
+                    "alternativeText": "",
+                    "caption": "",
+                    "hash": "jenkinsx_d56c6fea15",
+                    "ext": ".png",
+                    "mime": "image/png",
+                    "size": 25.16,
+                    "width": 696,
+                    "height": 398,
+                    "url": "/uploads/jenkinsx_d56c6fea15.png",
+                    "formats": {
+                        "thumbnail": {
+                            "name": "thumbnail_jenkinsx.png",
+                            "hash": "thumbnail_jenkinsx_d56c6fea15",
+                            "ext": ".png",
+                            "mime": "image/png",
+                            "width": 245,
+                            "height": 140,
+                            "size": 9.18,
+                            "path": null,
+                            "url": "/uploads/thumbnail_jenkinsx_d56c6fea15.png"
+                        },
+                        "small": {
+                            "name": "small_jenkinsx.png",
+                            "hash": "small_jenkinsx_d56c6fea15",
+                            "ext": ".png",
+                            "mime": "image/png",
+                            "width": 500,
+                            "height": 286,
+                            "size": 22.51,
+                            "path": null,
+                            "url": "/uploads/small_jenkinsx_d56c6fea15.png"
+                        }
+                    },
+                    "provider": "local",
+                    "related": [
+                        "5f0413739d8081001fd38fb6",
+                        "5f635c375ee4c9001d2b963d"
+                    ],
+                    "createdAt": "2020-09-19T14:31:48.129Z",
+                    "updatedAt": "2020-09-21T07:17:01.500Z",
+                    "__v": 0,
+                    "created_by": "5e4839cd1c2d53001dcc0696",
+                    "updated_by": "5e4839cd1c2d53001dcc0696",
+                    "id": "5f6616545ee4c9001d2b9690"
+                },
+                "description": "Jenkins X provides pipeline automation, built-in GitOps, and preview environments to help teams collaborate and accelerate their software delivery at any scale. Jenkins X builds upon the following core components:\n- Kubernetes and Docker\n- Helm and Draft",
+                "id": "5f635c375ee4c9001d2b963d"
+            },
+            {
+                "_id": "5f635f8f5ee4c9001d2b966c",
+                "name": "Helm",
+                "rating": 8,
+                "createdAt": "2020-09-17T13:07:27.527Z",
+                "updatedAt": "2020-09-30T06:20:10.213Z",
+                "__v": 0,
+                "created_by": "5e4839cd1c2d53001dcc0696",
+                "updated_by": "5e4839cd1c2d53001dcc0696",
+                "image": {
+                    "_id": "5f6854785ee4c9001d2b96cf",
+                    "name": "helm.jpg",
+                    "alternativeText": "",
+                    "caption": "",
+                    "hash": "helm_9127651c35",
+                    "ext": ".jpg",
+                    "mime": "image/jpeg",
+                    "size": 12.82,
+                    "width": 366,
+                    "height": 366,
+                    "url": "/uploads/helm_9127651c35.jpg",
+                    "formats": {
+                        "thumbnail": {
+                            "name": "thumbnail_helm.jpg",
+                            "hash": "thumbnail_helm_9127651c35",
+                            "ext": ".jpg",
+                            "mime": "image/jpeg",
+                            "width": 156,
+                            "height": 156,
+                            "size": 5.11,
+                            "path": null,
+                            "url": "/uploads/thumbnail_helm_9127651c35.jpg"
+                        }
+                    },
+                    "provider": "local",
+                    "related": [
+                        "5f635f8f5ee4c9001d2b966c"
+                    ],
+                    "createdAt": "2020-09-21T07:21:28.306Z",
+                    "updatedAt": "2020-09-21T07:21:30.887Z",
+                    "__v": 0,
+                    "created_by": "5e4839cd1c2d53001dcc0696",
+                    "updated_by": "5e4839cd1c2d53001dcc0696",
+                    "id": "5f6854785ee4c9001d2b96cf"
+                },
+                "description": "Helm is a tool that streamlines installing and managing Kubernetes applications. ... A single chart might be used to deploy something simple, like a memcached pod, or something complex, like a full web app stack with HTTP servers, databases, caches, etc,",
+                "id": "5f635f8f5ee4c9001d2b966c"
+            },
+            {
+                "_id": "5f635f995ee4c9001d2b966d",
+                "name": "Chart Museum",
+                "rating": 7,
+                "createdAt": "2020-09-17T13:07:37.145Z",
+                "updatedAt": "2020-09-30T06:22:03.609Z",
+                "__v": 0,
+                "created_by": "5e4839cd1c2d53001dcc0696",
+                "updated_by": "5e4839cd1c2d53001dcc0696",
+                "image": {
+                    "_id": "5f6854c05ee4c9001d2b96d1",
+                    "name": "chart-museum.png",
+                    "alternativeText": "",
+                    "caption": "",
+                    "hash": "chart_museum_a56509005a",
+                    "ext": ".png",
+                    "mime": "image/png",
+                    "size": 72.28,
+                    "width": 500,
+                    "height": 225,
+                    "url": "/uploads/chart_museum_a56509005a.png",
+                    "formats": {
+                        "thumbnail": {
+                            "name": "thumbnail_chart-museum.png",
+                            "hash": "thumbnail_chart_museum_a56509005a",
+                            "ext": ".png",
+                            "mime": "image/png",
+                            "width": 245,
+                            "height": 110,
+                            "size": 29.64,
+                            "path": null,
+                            "url": "/uploads/thumbnail_chart_museum_a56509005a.png"
+                        }
+                    },
+                    "provider": "local",
+                    "related": [
+                        "5f635f995ee4c9001d2b966d"
+                    ],
+                    "createdAt": "2020-09-21T07:22:40.798Z",
+                    "updatedAt": "2020-09-21T07:22:43.401Z",
+                    "__v": 0,
+                    "created_by": "5e4839cd1c2d53001dcc0696",
+                    "updated_by": "5e4839cd1c2d53001dcc0696",
+                    "id": "5f6854c05ee4c9001d2b96d1"
+                },
+                "description": "ChartMuseum is an open-source Helm Chart Repository written in Go (Golang), with support for cloud storage backends, including Google Cloud Storage, Amazon S3, Microsoft Azure Blob Storage, Alibaba Cloud OSS Storage and Openstack Object Storage.",
+                "id": "5f635f995ee4c9001d2b966d"
+            },
+            {
+                "_id": "5f635c185ee4c9001d2b963a",
+                "name": "Maven",
+                "rating": 9.6,
+                "createdAt": "2020-09-17T12:52:40.922Z",
+                "updatedAt": "2020-09-22T06:36:50.576Z",
+                "__v": 0,
+                "created_by": "5e4839cd1c2d53001dcc0696",
+                "updated_by": "5e4839cd1c2d53001dcc0696",
+                "image": {
+                    "_id": "5f6853265ee4c9001d2b96bf",
+                    "name": "maven.png",
+                    "alternativeText": "",
+                    "caption": "",
+                    "hash": "maven_8510b1d6fa",
+                    "ext": ".png",
+                    "mime": "image/png",
+                    "size": 30.77,
+                    "width": 1280,
+                    "height": 324,
+                    "url": "/uploads/maven_8510b1d6fa.png",
+                    "formats": {
+                        "thumbnail": {
+                            "name": "thumbnail_maven.png",
+                            "hash": "thumbnail_maven_8510b1d6fa",
+                            "ext": ".png",
+                            "mime": "image/png",
+                            "width": 245,
+                            "height": 62,
+                            "size": 10.07,
+                            "path": null,
+                            "url": "/uploads/thumbnail_maven_8510b1d6fa.png"
+                        },
+                        "large": {
+                            "name": "large_maven.png",
+                            "hash": "large_maven_8510b1d6fa",
+                            "ext": ".png",
+                            "mime": "image/png",
+                            "width": 1000,
+                            "height": 253,
+                            "size": 68.02,
+                            "path": null,
+                            "url": "/uploads/large_maven_8510b1d6fa.png"
+                        },
+                        "medium": {
+                            "name": "medium_maven.png",
+                            "hash": "medium_maven_8510b1d6fa",
+                            "ext": ".png",
+                            "mime": "image/png",
+                            "width": 750,
+                            "height": 190,
+                            "size": 46.3,
+                            "path": null,
+                            "url": "/uploads/medium_maven_8510b1d6fa.png"
+                        },
+                        "small": {
+                            "name": "small_maven.png",
+                            "hash": "small_maven_8510b1d6fa",
+                            "ext": ".png",
+                            "mime": "image/png",
+                            "width": 500,
+                            "height": 127,
+                            "size": 27.01,
+                            "path": null,
+                            "url": "/uploads/small_maven_8510b1d6fa.png"
+                        }
+                    },
+                    "provider": "local",
+                    "related": [
+                        "5f635c185ee4c9001d2b963a"
+                    ],
+                    "createdAt": "2020-09-21T07:15:50.288Z",
+                    "updatedAt": "2020-09-21T07:15:57.208Z",
+                    "__v": 0,
+                    "created_by": "5e4839cd1c2d53001dcc0696",
+                    "updated_by": "5e4839cd1c2d53001dcc0696",
+                    "id": "5f6853265ee4c9001d2b96bf"
+                },
+                "description": "Maven is a build automation tool used primarily for Java projects. Maven can also be used to build and manage projects written in C#, Ruby, Scala, and other languages. \n\nMaven addresses two aspects of building software: how software is built, and its dependencies. An XML file describes the software project being built, its dependencies on other external modules and components, the build order, directories, and required plug-ins. ",
+                "id": "5f635c185ee4c9001d2b963a"
+            },
+            {
+                "_id": "5f635c4f5ee4c9001d2b963f",
+                "name": "Tekton",
+                "createdAt": "2020-09-17T12:53:35.722Z",
+                "updatedAt": "2020-09-22T21:20:48.795Z",
+                "__v": 0,
+                "created_by": "5e4839cd1c2d53001dcc0696",
+                "updated_by": "5e4839cd1c2d53001dcc0696",
+                "rating": 8,
+                "image": {
+                    "_id": "5f6853a55ee4c9001d2b96c7",
+                    "name": "tekton.jpeg",
+                    "alternativeText": "",
+                    "caption": "",
+                    "hash": "tekton_8b8bad63e8",
+                    "ext": ".jpeg",
+                    "mime": "image/jpeg",
+                    "size": 13.24,
+                    "width": 213,
+                    "height": 237,
+                    "url": "/uploads/tekton_8b8bad63e8.jpeg",
+                    "formats": {
+                        "thumbnail": {
+                            "name": "thumbnail_tekton.jpeg",
+                            "hash": "thumbnail_tekton_8b8bad63e8",
+                            "ext": ".jpeg",
+                            "mime": "image/jpeg",
+                            "width": 140,
+                            "height": 156,
+                            "size": 7.5,
+                            "path": null,
+                            "url": "/uploads/thumbnail_tekton_8b8bad63e8.jpeg"
+                        }
+                    },
+                    "provider": "local",
+                    "related": [
+                        "5f635c4f5ee4c9001d2b963f"
+                    ],
+                    "createdAt": "2020-09-21T07:17:57.258Z",
+                    "updatedAt": "2020-09-21T07:17:59.250Z",
+                    "__v": 0,
+                    "created_by": "5e4839cd1c2d53001dcc0696",
+                    "updated_by": "5e4839cd1c2d53001dcc0696",
+                    "id": "5f6853a55ee4c9001d2b96c7"
+                },
+                "description": "The Tekton Pipelines project provides k8s-style resources for declaring CI/CD-style pipelines.\n\nTekton Pipelines are Cloud Native:\n\n- Run on Kubernetes\n- Have Kubernetes clusters as a first class type\n- Use containers as their building blocks\n",
+                "id": "5f635c4f5ee4c9001d2b963f"
+            },
+            {
+                "_id": "5f635ca45ee4c9001d2b9643",
+                "name": "Kubernetes",
+                "rating": 8,
+                "createdAt": "2020-09-17T12:55:00.632Z",
+                "updatedAt": "2020-09-22T21:28:44.327Z",
+                "__v": 0,
+                "created_by": "5e4839cd1c2d53001dcc0696",
+                "updated_by": "5e4839cd1c2d53001dcc0696",
+                "image": {
+                    "_id": "5f66163d5ee4c9001d2b968e",
+                    "name": "kubernetes.jpeg",
+                    "alternativeText": "",
+                    "caption": "",
+                    "hash": "kubernetes_c13e33fa8c",
+                    "ext": ".jpeg",
+                    "mime": "image/jpeg",
+                    "size": 17.62,
+                    "width": 400,
+                    "height": 388,
+                    "url": "/uploads/kubernetes_c13e33fa8c.jpeg",
+                    "formats": {
+                        "thumbnail": {
+                            "name": "thumbnail_kubernetes.jpeg",
+                            "hash": "thumbnail_kubernetes_c13e33fa8c",
+                            "ext": ".jpeg",
+                            "mime": "image/jpeg",
+                            "width": 161,
+                            "height": 156,
+                            "size": 6.17,
+                            "path": null,
+                            "url": "/uploads/thumbnail_kubernetes_c13e33fa8c.jpeg"
+                        }
+                    },
+                    "provider": "local",
+                    "related": [
+                        "5f0408c59d8081001fd38fb1",
+                        "5f635ca45ee4c9001d2b9643"
+                    ],
+                    "createdAt": "2020-09-19T14:31:25.284Z",
+                    "updatedAt": "2020-09-21T12:08:28.703Z",
+                    "__v": 0,
+                    "created_by": "5e4839cd1c2d53001dcc0696",
+                    "updated_by": "5e4839cd1c2d53001dcc0696",
+                    "id": "5f66163d5ee4c9001d2b968e"
+                },
+                "description": "Kubernetes is a portable, extensible, open-source platform for managing containerized workloads and services, that facilitates both declarative configuration and automation. It has a large, rapidly growing ecosystem. Kubernetes provides you with:\n\n- **Service discovery and load balancing**\n- **Automated rollouts and rollbacks**: You provide Kubernetes with a cluster of nodes that it can use to run containerized tasks. You tell Kubernetes how much CPU and memory (RAM) each container needs. Kubernetes can fit containers onto your nodes to make the best use of your resources.\n- **Self-healing** Kubernetes restarts containers that fail, replaces containers, kills containers that don't respond to your user-defined health check, and doesn't advertise them to clients until they are ready to serve.\n- **Secret and configuration management** ",
+                "id": "5f635ca45ee4c9001d2b9643"
+            },
+            {
+                "_id": "5f635e935ee4c9001d2b9665",
+                "name": "Typescript",
+                "rating": 7.5,
+                "createdAt": "2020-09-17T13:03:15.410Z",
+                "updatedAt": "2020-09-27T08:10:06.054Z",
+                "__v": 0,
+                "created_by": "5e4839cd1c2d53001dcc0696",
+                "updated_by": "5e4839cd1c2d53001dcc0696",
+                "image": {
+                    "_id": "5f689aee76320d001e515e8b",
+                    "name": "ts.jpg",
+                    "alternativeText": "",
+                    "caption": "",
+                    "hash": "ts_1c7c89d06d",
+                    "ext": ".jpg",
+                    "mime": "image/jpeg",
+                    "size": 11.59,
+                    "width": 400,
+                    "height": 400,
+                    "url": "/uploads/ts_1c7c89d06d.jpg",
+                    "formats": {
+                        "thumbnail": {
+                            "name": "thumbnail_ts.jpg",
+                            "hash": "thumbnail_ts_1c7c89d06d",
+                            "ext": ".jpg",
+                            "mime": "image/jpeg",
+                            "width": 156,
+                            "height": 156,
+                            "size": 4.38,
+                            "path": null,
+                            "url": "/uploads/thumbnail_ts_1c7c89d06d.jpg"
+                        }
+                    },
+                    "provider": "local",
+                    "related": [
+                        "5f635e935ee4c9001d2b9665"
+                    ],
+                    "createdAt": "2020-09-21T12:22:06.356Z",
+                    "updatedAt": "2020-09-21T12:22:08.459Z",
+                    "__v": 0,
+                    "created_by": "5e4839cd1c2d53001dcc0696",
+                    "updated_by": "5e4839cd1c2d53001dcc0696",
+                    "id": "5f689aee76320d001e515e8b"
+                },
+                "description": "TypeScript is an open-source programming language developed and maintained by Microsoft. It is a strict syntactical superset of JavaScript and adds optional static typing to the language. TypeScript is designed for development of large applications and transcompiles to JavaScript",
+                "id": "5f635e935ee4c9001d2b9665"
+            },
+            {
+                "_id": "5f635e625ee4c9001d2b9660",
+                "name": "React",
+                "rating": 8.5,
+                "createdAt": "2020-09-17T13:02:26.277Z",
+                "updatedAt": "2020-09-27T08:07:00.023Z",
+                "__v": 0,
+                "created_by": "5e4839cd1c2d53001dcc0696",
+                "updated_by": "5e4839cd1c2d53001dcc0696",
+                "image": {
+                    "_id": "5f66167a5ee4c9001d2b9692",
+                    "name": "react.jpeg",
+                    "alternativeText": "",
+                    "caption": "",
+                    "hash": "react_56f28418d3",
+                    "ext": ".jpeg",
+                    "mime": "image/jpeg",
+                    "size": 11.98,
+                    "width": 500,
+                    "height": 353,
+                    "url": "/uploads/react_56f28418d3.jpeg",
+                    "formats": {
+                        "thumbnail": {
+                            "name": "thumbnail_react.jpeg",
+                            "hash": "thumbnail_react_56f28418d3",
+                            "ext": ".jpeg",
+                            "mime": "image/jpeg",
+                            "width": 221,
+                            "height": 156,
+                            "size": 4.08,
+                            "path": null,
+                            "url": "/uploads/thumbnail_react_56f28418d3.jpeg"
+                        }
+                    },
+                    "provider": "local",
+                    "related": [
+                        "5f04152d9d8081001fd38fb9",
+                        "5f635e625ee4c9001d2b9660"
+                    ],
+                    "createdAt": "2020-09-19T14:32:26.690Z",
+                    "updatedAt": "2020-09-21T12:19:36.732Z",
+                    "__v": 0,
+                    "created_by": "5e4839cd1c2d53001dcc0696",
+                    "updated_by": "5e4839cd1c2d53001dcc0696",
+                    "id": "5f66167a5ee4c9001d2b9692"
+                },
+                "description": "React.js is an open-source JavaScript library that is used for building user interfaces specifically for single-page applications. It’s used for handling the view layer for web and mobile apps.\n\nReact allows developers to create large web applications that can change data, without reloading the page. The main purpose of React is to be fast, scalable, and simple. It works only on user interfaces in the application",
+                "id": "5f635e625ee4c9001d2b9660"
+            }
+        ],
+        "_id": "5f0215c69d8081001fd38fa1",
+        "title": "Creating a rich web app that can be hosted from home",
+        "shortDescription": "A quick introduction into the various components of my personal website including jenkinsx, kubernetes, letsencrypt and more.",
+        "createdAt": "2020-07-05T18:02:46.731Z",
+        "updatedAt": "2021-01-02T15:49:35.901Z",
+        "__v": 0,
+        "image": {
+            "_id": "5f6616045ee4c9001d2b968a",
+            "name": "Website Icon.jpeg",
+            "alternativeText": "",
+            "caption": "",
+            "hash": "Website_Icon_727b161f01",
+            "ext": ".jpeg",
+            "mime": "image/jpeg",
+            "size": 29.24,
+            "width": 801,
+            "height": 401,
+            "url": "/uploads/Website_Icon_727b161f01.jpeg",
+            "formats": {
+                "thumbnail": {
+                    "name": "thumbnail_Website Icon.jpeg",
+                    "hash": "thumbnail_Website_Icon_727b161f01",
+                    "ext": ".jpeg",
+                    "mime": "image/jpeg",
+                    "width": 245,
+                    "height": 123,
+                    "size": 6.52,
+                    "path": null,
+                    "url": "/uploads/thumbnail_Website_Icon_727b161f01.jpeg"
+                },
+                "medium": {
+                    "name": "medium_Website Icon.jpeg",
+                    "hash": "medium_Website_Icon_727b161f01",
+                    "ext": ".jpeg",
+                    "mime": "image/jpeg",
+                    "width": 750,
+                    "height": 375,
+                    "size": 27.25,
+                    "path": null,
+                    "url": "/uploads/medium_Website_Icon_727b161f01.jpeg"
+                },
+                "small": {
+                    "name": "small_Website Icon.jpeg",
+                    "hash": "small_Website_Icon_727b161f01",
+                    "ext": ".jpeg",
+                    "mime": "image/jpeg",
+                    "width": 500,
+                    "height": 250,
+                    "size": 16.14,
+                    "path": null,
+                    "url": "/uploads/small_Website_Icon_727b161f01.jpeg"
+                }
+            },
+            "provider": "local",
+            "related": [
+                "5f0215c69d8081001fd38fa1"
+            ],
+            "createdAt": "2020-09-19T14:30:28.441Z",
+            "updatedAt": "2020-09-19T14:30:33.163Z",
+            "__v": 0,
+            "created_by": "5e4839cd1c2d53001dcc0696",
+            "updated_by": "5e4839cd1c2d53001dcc0696",
+            "id": "5f6616045ee4c9001d2b968a"
+        },
+        "content": "I'm the kind of person that learns by doing - the more I do, the more it sinks in. Whilst attempting to keep my skills up to date, I had the idea of building a rich web application which would serve up my CV, and it could also double as a place to hone and demonstrate my skillsets in certain technologies. Eventually, I could even start blogging about these experiences. \n\nThe first thing I decided I would need would be a CMS (Content Management System). The content of my website would have to be dynamic, as I would like to keep my CV and blog up to date.  There were many options available here, but I finally settled on a headless CMS named ([strapi](https://strapi.io/)). Strapi would also require some sort of persistence layer, and  [mongodb](https://www.mongodb.com/ seemed to be a sensible choice.\n\nFor the web interface itself, there was a bit of competition between React and Angular. After spending years commercially working on Angular projects, I decided that React could be a good thing to learn and went with that.  \n\n```npx create-react-app my-app --template typescript``` is the command used to boostrap my react SPA (single page application) and I found a boostrap template from [here](https://wrapbootstrap.com/).\n\nSo far so good right ? I had picked the basic building blocks for building this dynamic CV/blog, but where would I run it ? I had a perfectly good iMac that was unused, and a fast enough internet connection. This app doesnt need to be highly available, as its just a little hobby app so this would suit well. I could use [ngrok](https://ngrok.com/) to make my app available to the internet, and I could use [Route 53](https://aws.amazon.com/route53/) to set up and configure my domain.\n\nKubernetes is a very popular way or running cloud native apps, so this was a pretty easy choice, the only issue was what flavour of it would work best on a mac. I started off with minikube, but started to have issues with persistent volumes, so eventually went with [kind (kubernetes in docker)](https://kind.sigs.k8s.io/). I could easily install nginx ingress controller, and it was super easy to configure.\n\nThe last thing to consider was how to deploy the individual components or services to the kubernetes cluster. One of my requirements was that I would want to make continual improvments to my app, so the deployment process must be as simple as possible. I would want to have git projects for each service,  build a container image, and deploy a helm chart (a helm chart is a collection of files that describe a related set of Kubernetes resources).  [Jenkins X](https://jenkins-x.io/) describes itself as *Jenkins X provides pipeline automation, built-in GitOps, and preview environments to help teams collaborate and accelerate their software delivery at any scale*. There was out of the box support for kubernetes flavours such as GKE (google cloud) and EKS (amazon web services), but a bit of customisation would be required if i wanted to run this on my local kubernetes cluster. This was easy enough and I was able to configure the following:\n- [Harbor](https://goharbor.io/) as the container registry of choice\n- [Cert Manager](https://cert-manager.io/) - configure cert manager to generate lets encrpt certificates using ACME challennges based on my use of AWS Route 53 for dns.\n- Installed MongoDB in the control plane.\n\nOverall my initial architecture looked something like this:\n\n![Website V1](/uploads/Website_V1_c3889a1afa.jpeg)\n\n\n*All source code for this app can be found here: (https://github.com/simonjamesrowe)*",
+        "updated_by": {
+            "isActive": true,
+            "blocked": false,
+            "roles": [
+                "5f6314095ee4c9001d2b959f"
+            ],
+            "_id": "5e4839cd1c2d53001dcc0696",
+            "username": "simon.rowe@gmail.com",
+            "email": "simon.rowe@gmail.com",
+            "createdAt": "2020-02-15T18:34:53.155Z",
+            "updatedAt": "2020-09-17T07:45:13.526Z",
+            "__v": 0,
+            "id": "5e4839cd1c2d53001dcc0696"
+        },
+        "id": "5f0215c69d8081001fd38fa1"
+    }
+}
+2021-01-23 23:01:37.994  INFO 73 --- [or-http-epoll-3] o.s.c.s.binder.DefaultBinderFactory      : Retrieving cached binder: kafka
+2021-01-23 23:01:38.006  INFO 73 --- [or-http-epoll-3] o.s.c.s.b.k.p.KafkaTopicProvisioner      : Using kafka topic for outbound: LOCAL_EVENTS
+2021-01-23 23:01:38.006  INFO 73 --- [or-http-epoll-3] o.a.k.clients.*****.AdminClientConfig    : AdminClientConfig values: 
+	bootstrap.servers = [192.168.4.23:49214]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2021-01-23 23:01:38.011  INFO 73 --- [or-http-epoll-3] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 2.6.0
+2021-01-23 23:01:38.011  INFO 73 --- [or-http-epoll-3] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 62abe01bee039651
+2021-01-23 23:01:38.011  INFO 73 --- [or-http-epoll-3] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1611442898011
+2021-01-23 23:01:38.176  INFO 73 --- [or-http-epoll-3] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+	acks = 1
+	batch.size = 16384
+	bootstrap.servers = [192.168.4.23:49214]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = false
+	interceptor.classes = []
+	internal.auto.downgrade.txn.commit = true
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class com.simonjamesrowe.model.serialization.EventSerializer
+
+2021-01-23 23:01:38.285  INFO 73 --- [or-http-epoll-3] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 2.6.0
+2021-01-23 23:01:38.286  INFO 73 --- [or-http-epoll-3] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 62abe01bee039651
+2021-01-23 23:01:38.290  INFO 73 --- [or-http-epoll-3] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1611442898285
+2021-01-23 23:01:38.301  INFO 73 --- [ad | producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=producer-1] Cluster ID: MDliW9gpT3Cv4Xs_aqrUNg
+2021-01-23 23:01:38.384  INFO 73 --- [or-http-epoll-3] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 30000 ms.
+2021-01-23 23:01:38.404  INFO 73 --- [or-http-epoll-3] o.s.c.s.m.DirectWithAttributesChannel    : Channel 'unknown.channel.name' has 1 subscriber(s).
+2021-01-23 23:01:38.475  INFO 73 --- [or-http-epoll-3] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+	acks = 1
+	batch.size = 16384
+	bootstrap.servers = [192.168.4.23:49214]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-2
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = false
+	interceptor.classes = []
+	internal.auto.downgrade.txn.commit = true
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class com.simonjamesrowe.model.serialization.EventSerializer
+
+2021-01-23 23:01:38.492  INFO 73 --- [or-http-epoll-3] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 2.6.0
+2021-01-23 23:01:38.495  INFO 73 --- [or-http-epoll-3] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 62abe01bee039651
+2021-01-23 23:01:38.495  INFO 73 --- [or-http-epoll-3] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1611442898492
+2021-01-23 23:01:38.512  INFO 73 --- [ad | producer-2] org.apache.kafka.clients.Metadata        : [Producer clientId=producer-2] Cluster ID: MDliW9gpT3Cv4Xs_aqrUNg
+HTTP/1.1 200 OK
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-XSS-Protection: 1 ; mode=block
+Referrer-Policy: no-referrer
+content-length: 0
+Request method:	POST
+Request URI:	http://localhost:42477/*******
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 401 Unauthorized
+WWW-Authenticate: Basic realm="Realm"
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-XSS-Protection: 1 ; mode=block
+Referrer-Policy: no-referrer
+content-length: 0
+2021-01-23 23:01:39.581  INFO 73 --- [           main] w.o.e.jetty.server.AbstractConnector     : Stopped NetworkTrafficServerConnector@4b330722{HTTP/1.1, (http/1.1)}{0.0.0.0:10484}
+2021-01-23 23:01:39.583  INFO 73 --- [           main] w.o.e.jetty.server.AbstractConnector     : Stopped NetworkTrafficServerConnector@7356f0e0{SSL, (ssl, alpn, h2, http/1.1)}{0.0.0.0:14742}
+2021-01-23 23:01:39.583  INFO 73 --- [           main] w.o.e.j.server.handler.ContextHandler    : Stopped w.o.e.j.s.ServletContextHandler@45bf1b4e{/,null,UNAVAILABLE}
+2021-01-23 23:01:39.583  INFO 73 --- [           main] w.o.e.j.server.handler.ContextHandler    : Stopped w.o.e.j.s.ServletContextHandler@2939bfa0{/__*****,null,UNAVAILABLE}
+2021-01-23 23:01:39.583  INFO 73 --- [           main] w.org.eclipse.jetty.server.Server        : jetty-9.4.30.v20200611; built: 2020-06-11T12:34:51.929Z; git: 271836e4c1f4612f12b7bb13ef5a92a927634b0d; jvm 11.0.2+9
+2021-01-23 23:01:39.588  INFO 73 --- [           main] w.o.e.j.server.handler.ContextHandler    : Started w.o.e.j.s.ServletContextHandler@2939bfa0{/__*****,null,AVAILABLE}
+2021-01-23 23:01:39.589  INFO 73 --- [           main] w.o.e.j.server.handler.ContextHandler    : Started w.o.e.j.s.ServletContextHandler@45bf1b4e{/,null,AVAILABLE}
+2021-01-23 23:01:39.591  INFO 73 --- [           main] w.o.e.jetty.server.AbstractConnector     : Started NetworkTrafficServerConnector@4b330722{HTTP/1.1, (http/1.1)}{0.0.0.0:10484}
+2021-01-23 23:01:39.592  INFO 73 --- [           main] w.o.e.jetty.util.ssl.SslContextFactory   : x509=X509@5e0fbfb6(wiremock,h=[],w=[]) for Server@109fa8e2[provider=Conscrypt,keyStore=null,trustStore=null]
+2021-01-23 23:01:39.592  INFO 73 --- [           main] w.o.e.jetty.util.ssl.SslContextFactory   : Unable to get KeyManagerFactory instance for algorithm [SunX509] on provider [Conscrypt], using default
+2021-01-23 23:01:39.672  INFO 73 --- [           main] w.o.e.jetty.server.AbstractConnector     : Started NetworkTrafficServerConnector@7356f0e0{SSL, (ssl, alpn, h2, http/1.1)}{0.0.0.0:14742}
+2021-01-23 23:01:39.672  INFO 73 --- [           main] w.org.eclipse.jetty.server.Server        : Started @59757ms
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 18.298 s - in com.simonjamesrowe.apigateway.controller.WebhookControllerTest
+2021-01-23 23:01:39.772  INFO 73 --- [       Thread-0] c.s.c.test.TestContainersExtension       : Cleaning up test container resources
+2021-01-23 23:01:39.805  INFO 73 --- [extShutdownHook] w.o.e.jetty.server.AbstractConnector     : Stopped NetworkTrafficServerConnector@c2ddfeb{HTTP/1.1, (http/1.1)}{0.0.0.0:11336}
+2021-01-23 23:01:39.872  INFO 73 --- [extShutdownHook] w.o.e.jetty.server.AbstractConnector     : Stopped NetworkTrafficServerConnector@4a9d6eb9{SSL, (ssl, alpn, h2, http/1.1)}{0.0.0.0:14872}
+2021-01-23 23:01:39.874  INFO 73 --- [extShutdownHook] w.o.e.j.server.handler.ContextHandler    : Stopped w.o.e.j.s.ServletContextHandler@6c289070{/,null,UNAVAILABLE}
+2021-01-23 23:01:39.875  INFO 73 --- [extShutdownHook] w.o.e.j.server.handler.ContextHandler    : Stopped w.o.e.j.s.ServletContextHandler@6e200307{/__*****,null,UNAVAILABLE}
+2021-01-23 23:01:39.876  INFO 73 --- [container-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-api-gateway-2, groupId=api-gateway] Revoke previously assigned partitions LOCAL_EVENTS-0
+2021-01-23 23:01:39.877  INFO 73 --- [extShutdownHook] o.s.i.endpoint.EventDrivenConsumer       : Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2021-01-23 23:01:39.878  INFO 73 --- [container-0-C-1] o.s.c.s.b.k.KafkaMessageChannelBinder$2  : api-gateway: partitions revoked: [LOCAL_EVENTS-0]
+2021-01-23 23:01:39.879  INFO 73 --- [extShutdownHook] o.s.i.channel.PublishSubscribeChannel    : Channel 'application.errorChannel' has 0 subscriber(s).
+2021-01-23 23:01:39.879  INFO 73 --- [extShutdownHook] o.s.i.endpoint.EventDrivenConsumer       : stopped bean '_org.springframework.integration.errorLogger'
+2021-01-23 23:01:39.882  INFO 73 --- [container-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  : [Consumer clientId=consumer-api-gateway-2, groupId=api-gateway] Member consumer-api-gateway-2-c28a3851-7c2a-4b36-a7c8-911d66171a14 sending LeaveGroup request to coordinator 192.168.4.23:49214 (id: 2147483646 rack: null) due to the consumer unsubscribed from all topics
+2021-01-23 23:01:39.905  INFO 73 --- [container-0-C-1] o.a.kafka.clients.FetchSessionHandler    : [Consumer clientId=consumer-api-gateway-2, groupId=api-gateway] Error sending fetch request (sessionId=357050510, epoch=10) to node 1:
+
+org.apache.kafka.common.errors.DisconnectException: null
+
+2021-01-23 23:01:39.905  INFO 73 --- [container-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  : [Consumer clientId=consumer-api-gateway-2, groupId=api-gateway] Group coordinator 192.168.4.23:49214 (id: 2147483646 rack: null) is unavailable or invalid, will attempt rediscovery
+2021-01-23 23:01:39.906  INFO 73 --- [container-0-C-1] o.a.k.clients.consumer.KafkaConsumer     : [Consumer clientId=consumer-api-gateway-2, groupId=api-gateway] Unsubscribed all topics or patterns and assigned partitions
+2021-01-23 23:01:39.906  INFO 73 --- [container-0-C-1] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService
+2021-01-23 23:01:39.975  INFO 73 --- [extShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2021-01-23 23:01:39.977  INFO 73 --- [container-0-C-1] essageListenerContainer$ListenerConsumer : api-gateway: Consumer stopped
+2021-01-23 23:01:39.979  INFO 73 --- [extShutdownHook] s.i.k.i.KafkaMessageDrivenChannelAdapter : stopped org.springframework.integration.kafka.inbound.KafkaMessageDrivenChannelAdapter@56567e9b
+2021-01-23 23:01:40.002  WARN 73 --- [ad | producer-2] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-2] Connection to node 1 (/192.168.4.23:49214) could not be established. Broker may not be available.
+2021-01-23 23:01:40.081  INFO 73 --- [extShutdownHook] o.s.c.stream.binder.BinderErrorChannel   : Channel 'application.LOCAL_EVENTS.api-gateway.errors' has 1 subscriber(s).
+2021-01-23 23:01:40.082  INFO 73 --- [extShutdownHook] o.s.c.stream.binder.BinderErrorChannel   : Channel 'application.LOCAL_EVENTS.api-gateway.errors' has 0 subscriber(s).
+2021-01-23 23:01:40.087  INFO 73 --- [extShutdownHook] w.o.e.jetty.server.AbstractConnector     : Stopped NetworkTrafficServerConnector@4b330722{HTTP/1.1, (http/1.1)}{0.0.0.0:10484}
+2021-01-23 23:01:40.091  INFO 73 --- [extShutdownHook] w.o.e.jetty.server.AbstractConnector     : Stopped NetworkTrafficServerConnector@7356f0e0{SSL, (ssl, alpn, h2, http/1.1)}{0.0.0.0:14742}
+2021-01-23 23:01:40.097  INFO 73 --- [extShutdownHook] w.o.e.j.server.handler.ContextHandler    : Stopped w.o.e.j.s.ServletContextHandler@45bf1b4e{/,null,UNAVAILABLE}
+2021-01-23 23:01:40.098  INFO 73 --- [extShutdownHook] w.o.e.j.server.handler.ContextHandler    : Stopped w.o.e.j.s.ServletContextHandler@2939bfa0{/__*****,null,UNAVAILABLE}
+2021-01-23 23:01:40.101  INFO 73 --- [extShutdownHook] o.s.i.endpoint.EventDrivenConsumer       : Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2021-01-23 23:01:40.102  INFO 73 --- [extShutdownHook] o.s.i.channel.PublishSubscribeChannel    : Channel 'application.errorChannel' has 0 subscriber(s).
+2021-01-23 23:01:40.102  INFO 73 --- [extShutdownHook] o.s.i.endpoint.EventDrivenConsumer       : stopped bean '_org.springframework.integration.errorLogger'
+2021-01-23 23:01:40.170  WARN 73 --- [ad | producer-2] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-2] Connection to node 1 (/192.168.4.23:49214) could not be established. Broker may not be available.
+2021-01-23 23:01:40.182  INFO 73 --- [extShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2021-01-23 23:01:40.374  WARN 73 --- [ad | producer-2] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-2] Connection to node 1 (/192.168.4.23:49214) could not be established. Broker may not be available.
+2021-01-23 23:01:40.827  WARN 73 --- [ad | producer-2] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-2] Connection to node 1 (/192.168.4.23:49214) could not be established. Broker may not be available.
+2021-01-23 23:01:41.535  WARN 73 --- [ad | producer-2] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-2] Connection to node 1 (/192.168.4.23:49214) could not be established. Broker may not be available.
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- maven-jar-plugin:3.2.0:jar (default-jar) @ api-gateway ---
+[INFO] Building jar: /workspace/source/target/api-gateway-0.0.28.jar
+[INFO] 
+[INFO] --- spring-boot-maven-plugin:2.4.2:repackage (repackage) @ api-gateway ---
+[INFO] Replacing main artifact with repackaged archive
+[INFO] 
+[INFO] <<< spring-boot-maven-plugin:2.4.2:build-image (default-cli) < package @ api-gateway <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot-maven-plugin:2.4.2:build-image (default-cli) @ api-gateway ---
+[INFO] Building image 'harbor.simonjamesrowe.com/simonjamesrowe/api-gateway:0.0.28'
+[INFO] 
+[INFO]  > Pulling builder image '*********/paketobuildpacks/builder:base' 100%
+[INFO]  > Pulled builder image 'paketobuildpacks/builder@sha256:862843892f136824a33c540461ad7fe3e8369c3aa4ebf21a5fdc961727eb1b48'
+[INFO]  > Pulling run image '*********/paketobuildpacks/run:base-cnb' 100%
+[INFO]  > Pulled run image 'paketobuildpacks/run@sha256:79bd9986ae32d62e8339e602b61ca6288df8434d5e2972bed5d7644d6b8ed0d0'
+[INFO]  > Executing lifecycle version v0.10.1
+[INFO]  > Using build cache volume 'pack-cache-4168ed94e2c7.build'
+[INFO] 
+[INFO]  > Running creator
+[INFO]     [creator]     ===> DETECTING
+[INFO]     [creator]     5 of 18 buildpacks participating
+[INFO]     [creator]     paketo-buildpacks/ca-certificates   1.0.1
+[INFO]     [creator]     paketo-buildpacks/bellsoft-liberica 6.2.0
+[INFO]     [creator]     paketo-buildpacks/executable-jar    3.1.3
+[INFO]     [creator]     paketo-buildpacks/dist-zip          2.2.2
+[INFO]     [creator]     paketo-buildpacks/spring-boot       3.5.0
+[INFO]     [creator]     ===> ANALYZING
+[INFO]     [creator]     Previous image with name "harbor.simonjamesrowe.com/simonjamesrowe/api-gateway:0.0.28" not found
+[INFO]     [creator]     ===> RESTORING
+[INFO]     [creator]     ===> BUILDING
+[INFO]     [creator]     
+[INFO]     [creator]     Paketo CA Certificates Buildpack 1.0.1
+[INFO]     [creator]       https://github.com/paketo-buildpacks/ca-certificates
+[INFO]     [creator]       Launch Helper: Contributing to layer
+[INFO]     [creator]         Creating /layers/paketo-buildpacks_ca-certificates/helper/exec.d/ca-certificates-helper
+[INFO]     [creator]         Writing profile.d/helper
+[INFO]     [creator]     
+[INFO]     [creator]     Paketo BellSoft Liberica Buildpack 6.2.0
+[INFO]     [creator]       https://github.com/paketo-buildpacks/bellsoft-liberica
+[INFO]     [creator]       Build Configuration:
+[INFO]     [creator]         $BP_JVM_VERSION              11.*            the Java version
+[INFO]     [creator]       Launch Configuration:
+[INFO]     [creator]         $BPL_JVM_HEAD_ROOM           0               the headroom in memory calculation
+[INFO]     [creator]         $BPL_JVM_LOADED_CLASS_COUNT  35% of classes  the number of loaded classes in memory calculation
+[INFO]     [creator]         $BPL_JVM_THREAD_COUNT        250             the number of threads in memory calculation
+[INFO]     [creator]         $JAVA_TOOL_OPTIONS                           the JVM launch flags
+[INFO]     [creator]       BellSoft Liberica JRE 11.0.10: Contributing to layer
+[INFO]     [creator]         Downloading from https://github.com/bell-sw/Liberica/releases/download/11.0.10+9/bellsoft-jre11.0.10+9-linux-amd64.tar.gz
+[INFO]     [creator]         Verifying checksum
+[INFO]     [creator]         Expanding to /layers/paketo-buildpacks_bellsoft-liberica/jre
+[INFO]     [creator]         Adding 138 container CA certificates to JVM truststore
+[INFO]     [creator]         Writing env.launch/BPI_APPLICATION_PATH.default
+[INFO]     [creator]         Writing env.launch/BPI_JVM_CACERTS.default
+[INFO]     [creator]         Writing env.launch/BPI_JVM_CLASS_COUNT.default
+[INFO]     [creator]         Writing env.launch/BPI_JVM_SECURITY_PROVIDERS.default
+[INFO]     [creator]         Writing env.launch/JAVA_HOME.default
+[INFO]     [creator]         Writing env.launch/MALLOC_ARENA_MAX.default
+[INFO]     [creator]       Launch Helper: Contributing to layer
+[INFO]     [creator]         Creating /layers/paketo-buildpacks_bellsoft-liberica/helper/exec.d/active-processor-count
+[INFO]     [creator]         Creating /layers/paketo-buildpacks_bellsoft-liberica/helper/exec.d/java-opts
+[INFO]     [creator]         Creating /layers/paketo-buildpacks_bellsoft-liberica/helper/exec.d/link-local-dns
+[INFO]     [creator]         Creating /layers/paketo-buildpacks_bellsoft-liberica/helper/exec.d/memory-calculator
+[INFO]     [creator]         Creating /layers/paketo-buildpacks_bellsoft-liberica/helper/exec.d/openssl-certificate-loader
+[INFO]     [creator]         Creating /layers/paketo-buildpacks_bellsoft-liberica/helper/exec.d/security-providers-configurer
+[INFO]     [creator]         Creating /layers/paketo-buildpacks_bellsoft-liberica/helper/exec.d/security-providers-classpath-9
+[INFO]     [creator]         Writing profile.d/helper
+[INFO]     [creator]       JVMKill Agent 1.16.0: Contributing to layer
+[INFO]     [creator]         Downloading from https://github.com/cloudfoundry/jvmkill/releases/download/v1.16.0.RELEASE/jvmkill-1.16.0-RELEASE.so
+[INFO]     [creator]         Verifying checksum
+[INFO]     [creator]         Copying to /layers/paketo-buildpacks_bellsoft-liberica/jvmkill
+[INFO]     [creator]         Writing env.launch/JAVA_TOOL_OPTIONS.append
+[INFO]     [creator]         Writing env.launch/JAVA_TOOL_OPTIONS.delim
+[INFO]     [creator]       Java Security Properties: Contributing to layer
+[INFO]     [creator]         Writing env.launch/JAVA_SECURITY_PROPERTIES.default
+[INFO]     [creator]         Writing env.launch/JAVA_TOOL_OPTIONS.append
+[INFO]     [creator]         Writing env.launch/JAVA_TOOL_OPTIONS.delim
+[INFO]     [creator]     
+[INFO]     [creator]     Paketo Executable JAR Buildpack 3.1.3
+[INFO]     [creator]       https://github.com/paketo-buildpacks/executable-jar
+[INFO]     [creator]         Writing env.launch/CLASSPATH.delim
+[INFO]     [creator]         Writing env.launch/CLASSPATH.prepend
+[INFO]     [creator]       Process types:
+[INFO]     [creator]         executable-jar: java org.springframework.boot.loader.JarLauncher
+[INFO]     [creator]         task:           java org.springframework.boot.loader.JarLauncher
+[INFO]     [creator]         web:            java org.springframework.boot.loader.JarLauncher
+[INFO]     [creator]     
+[INFO]     [creator]     Paketo Spring Boot Buildpack 3.5.0
+[INFO]     [creator]       https://github.com/paketo-buildpacks/spring-boot
+[INFO]     [creator]       Creating slices from layers index
+[INFO]     [creator]         dependencies
+[INFO]     [creator]         spring-boot-loader
+[INFO]     [creator]         snapshot-dependencies
+[INFO]     [creator]         application
+[INFO]     [creator]       Launch Helper: Contributing to layer
+[INFO]     [creator]         Creating /layers/paketo-buildpacks_spring-boot/helper/exec.d/spring-cloud-bindings
+[INFO]     [creator]         Writing profile.d/helper
+[INFO]     [creator]       Web Application Type: Contributing to layer
+[INFO]     [creator]         Reactive web application detected
+[INFO]     [creator]         Writing env.launch/BPL_JVM_THREAD_COUNT.default
+[INFO]     [creator]       Spring Cloud Bindings 1.7.0: Contributing to layer
+[INFO]     [creator]         Downloading from https://repo.spring.io/release/org/springframework/cloud/spring-cloud-bindings/1.7.0/spring-cloud-bindings-1.7.0.jar
+[INFO]     [creator]         Verifying checksum
+[INFO]     [creator]         Copying to /layers/paketo-buildpacks_spring-boot/spring-cloud-bindings
+[INFO]     [creator]       4 application slices
+[INFO]     [creator]       Image labels:
+[INFO]     [creator]         org.opencontainers.image.title
+[INFO]     [creator]         org.opencontainers.image.version
+[INFO]     [creator]         org.springframework.boot.spring-configuration-metadata.json
+[INFO]     [creator]         org.springframework.boot.version
+[INFO]     [creator]     ===> EXPORTING
+[INFO]     [creator]     Adding layer 'paketo-buildpacks/ca-certificates:helper'
+[INFO]     [creator]     Adding layer 'paketo-buildpacks/bellsoft-liberica:helper'
+[INFO]     [creator]     Adding layer 'paketo-buildpacks/bellsoft-liberica:java-security-properties'
+[INFO]     [creator]     Adding layer 'paketo-buildpacks/bellsoft-liberica:jre'
+[INFO]     [creator]     Adding layer 'paketo-buildpacks/bellsoft-liberica:jvmkill'
+[INFO]     [creator]     Adding layer 'paketo-buildpacks/executable-jar:class-path'
+[INFO]     [creator]     Adding layer 'paketo-buildpacks/spring-boot:helper'
+[INFO]     [creator]     Adding layer 'paketo-buildpacks/spring-boot:spring-cloud-bindings'
+[INFO]     [creator]     Adding layer 'paketo-buildpacks/spring-boot:web-application-type'
+[INFO]     [creator]     Adding 5/5 app layer(s)
+[INFO]     [creator]     Adding layer 'launcher'
+[INFO]     [creator]     Adding layer 'config'
+[INFO]     [creator]     Adding layer 'process-types'
+[INFO]     [creator]     Adding label 'io.buildpacks.lifecycle.metadata'
+[INFO]     [creator]     Adding label 'io.buildpacks.build.metadata'
+[INFO]     [creator]     Adding label 'io.buildpacks.project.metadata'
+[INFO]     [creator]     Adding label 'org.opencontainers.image.title'
+[INFO]     [creator]     Adding label 'org.opencontainers.image.version'
+[INFO]     [creator]     Adding label 'org.springframework.boot.spring-configuration-metadata.json'
+[INFO]     [creator]     Adding label 'org.springframework.boot.version'
+[INFO]     [creator]     Setting default process type 'web'
+[INFO]     [creator]     *** Images (8fbe7c871504):
+[INFO]     [creator]           harbor.simonjamesrowe.com/simonjamesrowe/api-gateway:0.0.28
+[INFO] 
+[INFO] Successfully built image 'harbor.simonjamesrowe.com/simonjamesrowe/api-gateway:0.0.28'
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  02:24 min
+[INFO] Finished at: 2021-01-23T23:02:12Z
+[INFO] ------------------------------------------------------------------------
+
+Showing logs for build [32msimonjamesrowe-api-gateway-mast-tw6qt-23[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-push[0m
+docker image push harbor.simonjamesrowe.com//api-gateway:0.0.28
+invalid reference format
+[31m
+Pipeline failed on stage 'from-build-pack' : container 'step-build-container-push'. The execution of the pipeline has stopped.[0m
