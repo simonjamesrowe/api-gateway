@@ -136,7 +136,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
                     <image>
-                        <name>harbor.simonjamesrowe.com/simonjamesrowe/library/${project.artifactId}:${project.version}</name>
+                        <name>harbor.simonjamesrowe.com/simonjamesrowe/${project.artifactId}:${project.version}</name>
                     </image>
                 </configuration>
             </plugin>
