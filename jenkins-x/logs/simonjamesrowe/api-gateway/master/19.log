@@ -1,0 +1,32 @@
+
+Showing logs for build [32msimonjamesrowe-api-gateway-mast-tgnx6-19[0m stage [32mfrom-build-pack[0m and container [32mcredential-initializer[0m
+{"level":"info","ts":1611440824.472916,"caller":"creds-init/main.go:44","msg":"Credentials initialized."}
+
+Showing logs for build [32msimonjamesrowe-api-gateway-mast-tgnx6-19[0m stage [32mfrom-build-pack[0m and container [32mworking-dir-initializer[0m
+
+Showing logs for build [32msimonjamesrowe-api-gateway-mast-tgnx6-19[0m stage [32mfrom-build-pack[0m and container [32mplace-tools[0m
+
+Showing logs for build [32msimonjamesrowe-api-gateway-mast-tgnx6-19[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-simonjamesrowe-api-gateway-mast-tgnx6-2f29q[0m
+{"level":"info","ts":1611440834.2296615,"caller":"git/git.go:105","msg":"Successfully cloned https://github.com/simonjamesrowe/api-gateway.git @ v0.0.24 in path /workspace/source"}
+{"level":"warn","ts":1611440834.229964,"caller":"git/git.go:152","msg":"Unexpected error: creating symlink: symlink /tekton/home/.ssh /****/.ssh: file exists"}
+{"level":"info","ts":1611440834.2817206,"caller":"git/git.go:133","msg":"Successfully initialized and updated submodules in path /workspace/source"}
+
+Showing logs for build [32msimonjamesrowe-api-gateway-mast-tgnx6-19[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-builder-home[0m
+
+Showing logs for build [32msimonjamesrowe-api-gateway-mast-tgnx6-19[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32msimonjamesrowe-api-gateway-mast-tgnx6-19[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32msimonjamesrowe-api-gateway-mast-tgnx6-19[0m stage [32mfrom-build-pack[0m and container [32mstep-build-docker-config[0m
+total 4
+0 drwxrwxrwt 3 **** ****  100 Jan 23 22:27 .
+4 drwxrwxrwx 4 **** **** 4096 Jan 23 22:27 ..
+0 drwxr-xr-x 2 **** ****   60 Jan 23 22:27 ..2021_01_23_22_27_04.602340981
+0 lrwxrwxrwx 1 **** ****   18 Jan 23 22:27 config.json -> ..data/config.json
+0 lrwxrwxrwx 1 **** ****   31 Jan 23 22:27 ..data -> ..2021_01_23_22_27_04.602340981
+cat: /home/jenkins/.docker/: Is a directory
+[31m
+Pipeline failed on stage 'from-build-pack' : container 'step-build-docker-config'. The execution of the pipeline has stopped.[0m
