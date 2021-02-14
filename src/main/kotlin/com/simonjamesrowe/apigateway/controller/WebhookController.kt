@@ -2,7 +2,6 @@ package com.simonjamesrowe.apigateway.controller
 
 import com.simonjamesrowe.model.data.Event
 import org.springframework.cloud.stream.function.StreamBridge
-import org.springframework.cloud.stream.messaging.Source
 import org.springframework.kafka.support.KafkaHeaders
 import org.springframework.messaging.support.MessageBuilder
 import org.springframework.web.bind.annotation.PostMapping

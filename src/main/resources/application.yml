@@ -1,4 +1,6 @@
 spring:
+  sendgrid:
+    api-key: xxxxxx
   security:
     user:
       name: webhook
@@ -71,3 +73,11 @@ search:
 
 image:
   compressFilesLargerThanKb: 400
+
+sendgrid:
+  email:
+    from: simon@simonjamesrowe.com
+    to: simon.rowe@gmail.com
+
+
+

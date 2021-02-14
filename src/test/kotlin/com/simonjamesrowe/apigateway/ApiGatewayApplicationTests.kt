@@ -7,8 +7,8 @@ import org.junit.jupiter.api.Test
 @WithKafkaContainer
 class ApiGatewayApplicationTests : BaseComponentTest() {
 
-	@Test
-	fun contextLoads() {
-	}
+  @Test
+  fun contextLoads() {
+  }
 
 }
