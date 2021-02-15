@@ -22,7 +22,7 @@ class PreFlightCorsConfiguration {
     config.addAllowedMethod(HttpMethod.PUT)
     config.addAllowedMethod(HttpMethod.PATCH)
     config.addAllowedMethod(HttpMethod.DELETE)
-    source.registerCorsConfiguration("/**", config)
+    source.registerCorsConfiguration("/contact-us", config)
     return source
   }
 
