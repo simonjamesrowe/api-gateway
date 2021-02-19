@@ -17,7 +17,7 @@ spring:
         - id: cms-json
           uri: ${cms.url}
           predicates:
-            - Path=/jobs,/profiles,/tags,/blogs,/blogs/{id},/skills-groups,/social-medias
+            - Path=/jobs,/profiles,/tags,/blogs,/blogs/{id},/skills-groups,/social-medias,/tour-steps
         - id: search
           uri: ${search.url}
           predicates:
