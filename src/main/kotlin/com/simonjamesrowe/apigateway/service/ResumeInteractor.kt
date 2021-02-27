@@ -32,10 +32,9 @@ class ResumeInteractor(
 ) {
 
   val fontProgram: FontProgram = FontProgramFactory.createFont(ClassPathResource("OpenSans-Regular.ttf").inputStream.readAllBytes())
-  private val font = PdfFontFactory.createFont(fontProgram, PdfEncodings.UTF8, true)
-
 
   fun toPdf(): ByteArray {
+    val font = PdfFontFactory.createFont(fontProgram, PdfEncodings.UTF8, true)
     val data = resumeRepository.getResumeData()
     val byteArrayOutputStream = ByteArrayOutputStream()
     val writer = PdfWriter(byteArrayOutputStream)
@@ -47,6 +46,7 @@ class ResumeInteractor(
     addExperience(document, data.jobs, data.education)
     addHeadline(document, data.profile)
     pdfDoc.close()
+    document.close()
     return byteArrayOutputStream.toByteArray()
   }
 

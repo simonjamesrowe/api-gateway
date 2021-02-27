@@ -47,5 +47,6 @@ internal class ResumeInteractorTest : BaseComponentTest() {
   fun `resume should be generated as pdf`() {
     val bytes = resumeInteractor.toPdf()
     assertThat(bytes).isNotNull
+    resumeInteractor.toPdf()
   }
 }
