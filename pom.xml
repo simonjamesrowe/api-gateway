@@ -25,7 +25,7 @@
     <properties>
         <java.version>11</java.version>
         <kotlin.version>1.4.21</kotlin.version>
-        <spring-cloud.version>2020.0.0</spring-cloud.version>
+        <spring-cloud.version>2020.0.1</spring-cloud.version>
     </properties>
 
     <dependencies>
@@ -151,6 +151,12 @@
             <groupId>io.opentracing.contrib</groupId>
             <artifactId>opentracing-spring-cloud-starter</artifactId>
             <version>0.5.9</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>io.opentracing.contrib</groupId>
+                    <artifactId>opentracing-spring-cloud-feign-starter</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>co.elastic.apm</groupId>
