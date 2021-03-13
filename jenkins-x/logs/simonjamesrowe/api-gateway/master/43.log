@@ -1,0 +1,36 @@
+
+Showing logs for build [32mmeta-simonjamesrowe-api-gateway-2mbbq-43[0m stage [32mmeta-pipeline[0m and container [32mcredential-initializer[0m
+{"level":"info","ts":1615637158.5990343,"caller":"creds-init/main.go:44","msg":"Credentials initialized."}
+
+Showing logs for build [32mmeta-simonjamesrowe-api-gateway-2mbbq-43[0m stage [32mmeta-pipeline[0m and container [32mworking-dir-initializer[0m
+
+Showing logs for build [32mmeta-simonjamesrowe-api-gateway-2mbbq-43[0m stage [32mmeta-pipeline[0m and container [32mplace-tools[0m
+
+Showing logs for build [32mmeta-simonjamesrowe-api-gateway-2mbbq-43[0m stage [32mmeta-pipeline[0m and container [32mstep-git-source-meta-simonjamesrowe-api-gateway-2mbbq-vgf8t[0m
+{"level":"info","ts":1615637166.04682,"caller":"git/git.go:105","msg":"Successfully cloned https://github.com/simonjamesrowe/api-gateway.git @ master in path /workspace/source"}
+{"level":"warn","ts":1615637166.047121,"caller":"git/git.go:152","msg":"Unexpected error: creating symlink: symlink /tekton/home/.ssh /****/.ssh: file exists"}
+{"level":"info","ts":1615637166.1007586,"caller":"git/git.go:133","msg":"Successfully initialized and updated submodules in path /workspace/source"}
+
+Showing logs for build [32mmeta-simonjamesrowe-api-gateway-2mbbq-43[0m stage [32mmeta-pipeline[0m and container [32mstep-setup-builder-home[0m
+
+Showing logs for build [32mmeta-simonjamesrowe-api-gateway-2mbbq-43[0m stage [32mmeta-pipeline[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mmeta-simonjamesrowe-api-gateway-2mbbq-43[0m stage [32mmeta-pipeline[0m and container [32mstep-merge-pull-refs[0m
+SKIP merge-pull-refs: Nothing to merge
+
+Showing logs for build [32mmeta-simonjamesrowe-api-gateway-2mbbq-43[0m stage [32mmeta-pipeline[0m and container [32mstep-create-effective-pipeline[0m
+Effective pipeline written to jenkins-x-effective.yml
+
+Showing logs for build [32mmeta-simonjamesrowe-api-gateway-2mbbq-43[0m stage [32mmeta-pipeline[0m and container [32mstep-create-tekton-crds[0m
+running command: echo \$(**-release-version) > VERSION
+
+running command: mvn versions:set -DnewVersion=\$(cat VERSION)
+[ERROR] Error executing Maven.
+[ERROR] 1 problem was encountered while building the effective settings
+[FATAL] Non-parseable settings /****/.m2/settings.xml: end tag name </profile> must be the same as start tag <plugins> from line 75 (position: TEXT seen ...</properties>\n        </profile>... @80:19)  @ /****/.m2/settings.xml, line 80, column 19
+
+error: failed to set the version on release pipelines: failed to run '/bin/sh -c mvn versions:set -DnewVersion=$(cat VERSION)' command in directory '/workspace/source', output: ''
+[31m
+Pipeline failed on stage 'meta-pipeline' : container 'step-create-tekton-crds'. The execution of the pipeline has stopped.[0m
