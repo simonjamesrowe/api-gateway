@@ -1,4 +1,4 @@
-package com.simonjamesrowe.apigateway.controller
+package com.simonjamesrowe.apigateway.entrypoints.restcontroller
 
 
 import com.simonjamesrowe.model.cms.dto.WebhookEventDTO

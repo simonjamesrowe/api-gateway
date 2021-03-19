@@ -1,6 +1,6 @@
-package com.simonjamesrowe.apigateway.controller
+package com.simonjamesrowe.apigateway.entrypoints.restcontroller
 
-import com.simonjamesrowe.apigateway.service.ResumeInteractor
+import com.simonjamesrowe.apigateway.core.usecase.ResumeUseCase
 import org.springframework.http.HttpHeaders
 import org.springframework.http.MediaType
 import org.springframework.http.ResponseEntity
@@ -9,12 +9,12 @@ import org.springframework.web.bind.annotation.RestController
 
 @RestController
 class ResumeController(
-  private val resumeInteractor: ResumeInteractor
+  private val resumeUseCase: ResumeUseCase
 ) {
 
   @GetMapping("/resume")
-  fun resume() : ResponseEntity<ByteArray>{
-    val bytes = resumeInteractor.toPdf()
+  suspend fun resume() : ResponseEntity<ByteArray>{
+    val bytes = resumeUseCase.getResume()
     return ResponseEntity.ok()
       .contentType(MediaType.parseMediaType("application/pdf"))
       .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"Simon_Rowe_Resume.pdf\"")

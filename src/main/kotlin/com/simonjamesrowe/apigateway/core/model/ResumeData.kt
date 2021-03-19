@@ -9,7 +9,7 @@ data class ResumeData(
   val headline: String,
   val skills: List<Skill>,
   val jobs: List<Job>,
-  val education: List<Education>,
+  val education: List<Job>,
   val links: List<Link>,
 ) {
   data class Skill(
@@ -23,15 +23,6 @@ data class ResumeData(
     val link: String,
     val start: LocalDate,
     val end: LocalDate?,
-    val shortDescription: String,
-    val location: String
-  )
-
-  data class Education(
-    val degree: String,
-    val university: String,
-    val start: LocalDate,
-    val end: LocalDate,
     val shortDescription: String,
     val location: String
   )

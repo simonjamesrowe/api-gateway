@@ -14,7 +14,7 @@ class CmsResumeRepository(
   private val cmsRestApi: CmsRestApi
 ) : ResumeRepository {
 
-  override suspend fun getResumeData(): ResumeData = coroutineScope{
+  override suspend fun getResumeData(): ResumeData = coroutineScope {
     val deferredJobs = async(Dispatchers.IO) { cmsRestApi.getAllJobs().filter { it.includeOnResume } }
     val deferredProfile = async(Dispatchers.IO) { cmsRestApi.getProfiles()[0] }
     val deferredSocialMedia = async(Dispatchers.IO) { cmsRestApi.getAllSocialMedias().filter { it.includeOnResume } }
@@ -31,28 +31,16 @@ class CmsResumeRepository(
       headline = profile.headline,
       skills = deferredSkills.await().map(::toSkill),
       jobs = jobs.filter { !it.education }.sortedByDescending { it.startDate }.map(::toJob),
-      education = jobs.filter { it.education }.map(::toEducation),
+      education = jobs.filter { it.education }.map(::toJob),
       links = mutableListOf(ResumeData.Link("www.simonjamesrowe.com")) +
         deferredSocialMedia.await().filter { it.includeOnResume }.map { ResumeData.Link(it.link) }
     )
-
   }
-
-  private fun toEducation(jobResponseDTO: JobResponseDTO) =
-    ResumeData.Education(
-      degree = jobResponseDTO.title,
-      university = jobResponseDTO.company,
-      start = jobResponseDTO.startDate,
-      end = jobResponseDTO.endDate!!,
-      shortDescription = jobResponseDTO.shortDescription,
-      location = jobResponseDTO.location,
-    )
 
   private fun toSkill(skillResponseDTO: SkillResponseDTO) = ResumeData.Skill(
     name = skillResponseDTO.name,
     rating = skillResponseDTO.rating
   )
-
 
   fun toJob(response: JobResponseDTO) = ResumeData.Job(
     role = response.title,
@@ -63,6 +51,5 @@ class CmsResumeRepository(
     link = "https://www.simonjamesrowe.com/jobs/${response.id}",
     location = response.location
   )
-
 
 }

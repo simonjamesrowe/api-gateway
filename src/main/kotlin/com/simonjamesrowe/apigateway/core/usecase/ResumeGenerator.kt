@@ -1,4 +1,4 @@
-package com.simonjamesrowe.apigateway.service
+package com.simonjamesrowe.apigateway.core.usecase
 
 import com.itextpdf.io.font.FontProgram
 import com.itextpdf.io.font.FontProgramFactory
@@ -16,39 +16,35 @@ import com.itextpdf.layout.borders.SolidBorder
 import com.itextpdf.layout.element.*
 import com.itextpdf.layout.property.TextAlignment
 import com.itextpdf.layout.property.UnitValue
-import com.simonjamesrowe.apigateway.core.repository.ResumeRepository
+import com.simonjamesrowe.apigateway.core.model.ResumeData
 import org.springframework.core.io.ClassPathResource
 import org.springframework.stereotype.Service
 import java.io.ByteArrayOutputStream
 import java.time.format.DateTimeFormatter
 
-
 @Service
-class ResumeInteractor(
-  private val resumeRepository: ResumeRepository
-) {
+object ResumeGenerator {
 
-  val fontProgram: FontProgram = FontProgramFactory.createFont(ClassPathResource("OpenSans-Regular.ttf").inputStream.readAllBytes())
+  val fontProgram: FontProgram =
+    FontProgramFactory.createFont(ClassPathResource("OpenSans-Regular.ttf").inputStream.readAllBytes())
 
-  fun toPdf(): ByteArray = ByteArray(0)
-  /**{
+  suspend fun generate(data: ResumeData): ByteArray {
     val font = PdfFontFactory.createFont(fontProgram, PdfEncodings.UTF8, true)
-    val data = resumeRepository.getResumeData()
     val byteArrayOutputStream = ByteArrayOutputStream()
     val writer = PdfWriter(byteArrayOutputStream)
     val pdfDoc = PdfDocument(writer)
     pdfDoc.addNewPage()
     val document = Document(pdfDoc)
     document.setFont(font)
-    addSideBar(document, data.profile, data.skills, data.socialMedias)
-    addExperience(document, data.jobs, data.education)
-    addHeadline(document, data.profile)
+    addSideBar(document, data)
+    addExperience(document, data)
+    addHeadline(document, data)
     pdfDoc.close()
     document.close()
     return byteArrayOutputStream.toByteArray()
   }
 
-  private fun addExperience(document: Document, jobs: List<Job>, education: Job?) {
+  private fun addExperience(document: Document, data: ResumeData) {
     val div = Div().also {
       it.height = UnitValue.createPointValue(842f)
       it.width = UnitValue.createPointValue(380f)
@@ -60,10 +56,12 @@ class ResumeInteractor(
     }
     div.add(blank())
     div.add(employmentHeading("Employment History"))
-    jobs.sortedByDescending { it.startDate }.forEach { job -> div.add(jobBlock(job)) }
-    if (education != null) {
+    data.jobs.forEach { job -> div.add(jobBlock(job)) }
+    if (data.education.isNotEmpty()) {
       div.add(employmentHeading("Education"))
-      div.add(jobBlock(education))
+      data.education.forEach{
+        div.add(jobBlock(it))
+      }
     }
     document.add(div)
   }
@@ -72,7 +70,7 @@ class ResumeInteractor(
   private val FONT_9_PT = 9f
   private val FONT_8_PT = 8f
 
-  private fun jobBlock(job: Job): Div {
+  private fun jobBlock(job: ResumeData.Job): Div {
     var jobDiv = Div().also {
       it.setMarginBottom(10f)
       it.setMarginRight(20f)
@@ -86,15 +84,14 @@ class ResumeInteractor(
         it.add(
           Paragraph(
             Link(
-              "${job.title}, ${job.company}",
-              PdfAction.createURI("https://www.simonjamesrowe.com/jobs/${job.id}")
+              "${job.role}, ${job.company}",
+              PdfAction.createURI(job.link)
             )
           )
         )
         it.setBorder(Border.NO_BORDER)
         it.setFontSize(FONT_9_PT)
         it.setBold()
-
       })
       it.addCell(Cell().also {
         it.width = UnitValue.createPercentValue(20f)
@@ -107,8 +104,8 @@ class ResumeInteractor(
     jobDiv.add(table)
     jobDiv.add(
       Paragraph(
-        "${job.startDate.format(DateTimeFormatter.ofPattern("MMM-yyyy"))} to ${
-          job.endDate?.format(
+        "${job.start.format(DateTimeFormatter.ofPattern("MMM-yyyy"))} to ${
+          job.end?.format(
             DateTimeFormatter.ofPattern(
               "MMM-yyyy"
             )
@@ -134,9 +131,7 @@ class ResumeInteractor(
 
   private fun addSideBar(
     document: Document,
-    profile: Profile,
-    skills: List<Skill>,
-    socialMedias: List<SocialMedia>
+    data: ResumeData
   ) {
     val div = Div().also {
       it.height = UnitValue.createPointValue(842f)
@@ -150,19 +145,18 @@ class ResumeInteractor(
     }
     div.add(blank())
     div.add(sidebarHeading("INFO"))
-    div.add(sidebarContactInfo("phone", profile.phoneNumber))
-    div.add(sidebarContactInfo("email", profile.primaryEmail))
+    div.add(sidebarContactInfo("phone", data.phone))
+    div.add(sidebarContactInfo("email", data.email))
     div.add(sidebarHeading("Links"))
-    div.add(link("https://www.simonjamesrowe.com"))
-    socialMedias.forEach { div.add(link(it.link)) }
+    data.links.forEach { div.add(link(it.url)) }
     div.add(sidebarHeading("Skills"))
-    skills.forEach { div.add(skill(it)) }
+    data.skills.forEach { div.add(skill(it)) }
     document.add(div)
   }
 
   private val SKILLS_MARGIN_LEFT = 35f
 
-  private fun skill(skill: Skill) = Div().also {
+  private fun skill(skill: ResumeData.Skill) = Div().also {
     it.setMarginLeft(SKILLS_MARGIN_LEFT)
     it.add(Paragraph(skill.name).also {
       it.setFontSize(FONT_7_PT)
@@ -181,7 +175,7 @@ class ResumeInteractor(
     it.setMarginBottom(0f)
   }
 
-  private fun stars(rating: Double): String{
+  private fun stars(rating: Double): String {
     return (0 until ((rating).toInt())).joinToString("") { "* " }
   }
 
@@ -243,7 +237,7 @@ class ResumeInteractor(
     }
 
 
-  private fun addHeadline(document: Document, profile: Profile) {
+  private fun addHeadline(document: Document, data: ResumeData) {
     val div = Div().also {
       it.setBorder(SolidBorder(1.5f))
       it.width = UnitValue.createPercentValue(75.0f)
@@ -256,14 +250,14 @@ class ResumeInteractor(
       )
 
     }
-    val nameParagraph = Paragraph(profile.name.toUpperCase()).also {
+    val nameParagraph = Paragraph(data.name.toUpperCase()).also {
       it.addStyle(Style().also {
         it.setTextAlignment(TextAlignment.CENTER)
         it.setBold()
         it.setFontSize(20f)
       })
     }
-    val headlineParagraph = Paragraph(profile.headline.toUpperCase()).also {
+    val headlineParagraph = Paragraph(data.headline.toUpperCase()).also {
       it.addStyle(Style().also {
         it.setTextAlignment(TextAlignment.CENTER)
         it.setFontSize(11f)
@@ -273,5 +267,5 @@ class ResumeInteractor(
     div.add(headlineParagraph)
     document.add(div)
   }
-**/
+
 }

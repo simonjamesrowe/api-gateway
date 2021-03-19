@@ -1,5 +1,6 @@
-package com.simonjamesrowe.apigateway.controller
+package com.simonjamesrowe.apigateway.entrypoints.restcontroller
 
+import kotlinx.coroutines.reactive.awaitFirst
 import org.apache.commons.io.IOUtils
 import org.slf4j.LoggerFactory
 import org.springframework.beans.factory.annotation.Value
@@ -11,7 +12,6 @@ import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PathVariable
 import org.springframework.web.bind.annotation.RequestHeader
 import org.springframework.web.bind.annotation.RestController
-import reactor.core.publisher.Mono
 import java.awt.RenderingHints
 import java.awt.image.BufferedImage
 import java.io.*
@@ -20,8 +20,8 @@ import javax.imageio.ImageIO
 
 @RestController
 class UploadController(
-    @Value("\${cms.url}") private val cmsUrl: String,
-    @Value("\${image.compressFilesLargerThanKb}") private val compressionThreshold: Int
+  @Value("\${cms.url}") private val cmsUrl: String,
+  @Value("\${image.compressFilesLargerThanKb}") private val compressionThreshold: Int
 ) {
   companion object {
     val logger = LoggerFactory.getLogger(UploadController::class.java)
@@ -31,13 +31,13 @@ class UploadController(
   }
 
   @GetMapping("/uploads/{file}")
-  fun proxy(
-      @PathVariable file: String,
-      @RequestHeader headers: HttpHeaders,
-      proxy: ProxyExchange<ByteArray?>
-  ): Mono<ResponseEntity<ByteArray?>>? {
+  suspend fun proxy(
+    @PathVariable file: String,
+    @RequestHeader headers: HttpHeaders,
+    proxy: ProxyExchange<ByteArray?>
+  ): ResponseEntity<ByteArray?>? {
     if (!isImage(file)) {
-      return proxy.uri("${cmsUrl}uploads/$file").get()
+      return proxy.uri("${cmsUrl}uploads/$file").get().awaitFirst()
     }
 
     logger.debug("Request for file has been made $file")
@@ -45,25 +45,21 @@ class UploadController(
 
     if (imageCache.containsKey(file)) {
       logger.debug("Image is in the cache!")
-      return Mono.just(
-          ResponseEntity(imageCache[file], imageHeadersCache[file], HttpStatus.OK) as ResponseEntity<ByteArray?>
-      )
+      return ResponseEntity(imageCache[file], imageHeadersCache[file], HttpStatus.OK) as ResponseEntity<ByteArray?>
 
     }
 
-    return proxy.uri("${cmsUrl}uploads/$file").get().map {
+    return proxy.uri("${cmsUrl}uploads/$file").get().awaitFirst().run {
       var tmpFile = File(tmpDir, file)
-      IOUtils.copyLarge(ByteArrayInputStream(it.body), FileOutputStream(tmpFile))
-      imageCache[file] = compress(tmpFile, it.body!!.size)
-      imageHeadersCache[file] = it.headers
+      IOUtils.copyLarge(ByteArrayInputStream(body), FileOutputStream(tmpFile))
+      imageCache[file] = compress(tmpFile, body!!.size)
+      imageHeadersCache[file] = headers
       ResponseEntity(imageCache[file], imageHeadersCache[file], HttpStatus.OK) as ResponseEntity<ByteArray?>
     }
 
   }
 
-
   private fun isImage(file: String) = file.endsWith(".jpg") || file.endsWith(".png")
-
 
   fun compress(file: File, size: Int): ByteArray? {
     if (size < 1024 * compressionThreshold) {
@@ -77,8 +73,8 @@ class UploadController(
     val scaledHeight: Int = ((original.height * .5).toInt())
     // creates output image
     val outputImage = BufferedImage(
-        scaledWidth,
-        scaledHeight, original.type
+      scaledWidth,
+      scaledHeight, original.type
     )
 
     // scales the input image to the output image
@@ -86,7 +82,6 @@ class UploadController(
     g2d.setRenderingHint(RenderingHints.KEY_INTERPOLATION, RenderingHints.VALUE_INTERPOLATION_BICUBIC);
     g2d.drawImage(original, 0, 0, scaledWidth, scaledHeight, null)
     g2d.dispose()
-
 
     var compressedBytes = ByteArrayOutputStream(1024)
     // writes to output file

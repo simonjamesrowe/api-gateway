@@ -39,7 +39,7 @@ internal class CmsResumeRepositoryTest {
   }
 
   @Test
-  fun `should return correct resume data`() = runBlocking {
+  fun `should return correct resume data`() = runBlocking<Unit> {
     val result = cmsResumeRepository.getResumeData()
     assertThat(result.name).isEqualTo("Simon Rowe")
     assertThat(result.phone).isEqualTo("+447909083522")
@@ -55,14 +55,12 @@ internal class CmsResumeRepositoryTest {
     assertThat(result.jobs[0]).hasFieldOrPropertyWithValue("start", LocalDate.parse("2020-05-04"))
     assertThat(result.jobs[0]).hasFieldOrPropertyWithValue("location", "London")
     assertThat(result.education).hasSize(1)
-    assertThat(result.education[0]).hasFieldOrPropertyWithValue("degree", "Computer Science")
-    assertThat(result.education[0]).hasFieldOrPropertyWithValue("university", "University of Newcastle")
+    assertThat(result.education[0]).hasFieldOrPropertyWithValue("role", "Computer Science")
+    assertThat(result.education[0]).hasFieldOrPropertyWithValue("company", "University of Newcastle")
     assertThat(result.education[0]).hasFieldOrPropertyWithValue("shortDescription", "Bachelor of Computer Science")
     assertThat(result.education[0]).hasFieldOrPropertyWithValue("start", LocalDate.parse("2002-01-01"))
     assertThat(result.education[0]).hasFieldOrPropertyWithValue("location", "Newcastle")
     assertThat(result.links).hasSize(4)
-
-    println(result)
   }
 
 
