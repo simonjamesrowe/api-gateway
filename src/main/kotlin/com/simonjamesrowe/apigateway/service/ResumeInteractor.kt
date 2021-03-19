@@ -16,10 +16,7 @@ import com.itextpdf.layout.borders.SolidBorder
 import com.itextpdf.layout.element.*
 import com.itextpdf.layout.property.TextAlignment
 import com.itextpdf.layout.property.UnitValue
-import com.simonjamesrowe.model.data.Job
-import com.simonjamesrowe.model.data.Profile
-import com.simonjamesrowe.model.data.Skill
-import com.simonjamesrowe.model.data.SocialMedia
+import com.simonjamesrowe.apigateway.core.repository.ResumeRepository
 import org.springframework.core.io.ClassPathResource
 import org.springframework.stereotype.Service
 import java.io.ByteArrayOutputStream
@@ -33,7 +30,8 @@ class ResumeInteractor(
 
   val fontProgram: FontProgram = FontProgramFactory.createFont(ClassPathResource("OpenSans-Regular.ttf").inputStream.readAllBytes())
 
-  fun toPdf(): ByteArray {
+  fun toPdf(): ByteArray = ByteArray(0)
+  /**{
     val font = PdfFontFactory.createFont(fontProgram, PdfEncodings.UTF8, true)
     val data = resumeRepository.getResumeData()
     val byteArrayOutputStream = ByteArrayOutputStream()
@@ -275,5 +273,5 @@ class ResumeInteractor(
     div.add(headlineParagraph)
     document.add(div)
   }
-
+**/
 }

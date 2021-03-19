@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 
 @Configuration
-class FeignResponseDecoderConfig {
+class FeignConfig {
   @Bean
   fun feignDecoder(): Decoder {
     val messageConverters: ObjectFactory<HttpMessageConverters> =

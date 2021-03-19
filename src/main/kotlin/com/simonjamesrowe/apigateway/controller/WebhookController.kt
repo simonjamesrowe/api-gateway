@@ -1,6 +1,7 @@
 package com.simonjamesrowe.apigateway.controller
 
-import com.simonjamesrowe.model.data.Event
+
+import com.simonjamesrowe.model.cms.dto.WebhookEventDTO
 import org.springframework.cloud.stream.function.StreamBridge
 import org.springframework.kafka.support.KafkaHeaders
 import org.springframework.messaging.support.MessageBuilder
@@ -15,7 +16,7 @@ class WebhookController(
 
   @PostMapping("/webhook")
   fun webhookPost(
-    @RequestBody event: Event
+    @RequestBody event: WebhookEventDTO
   ) {
     streamBridge.send(
       "output",
