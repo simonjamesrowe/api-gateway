@@ -1,0 +1,46 @@
+
+Showing logs for build [32mmeta-simonjamesrowe-api-gateway-t7lqk-1[0m stage [32mmeta-pipeline[0m and container [32mcredential-initializer[0m
+{"level":"info","ts":1616244933.8302844,"caller":"creds-init/main.go:44","msg":"Credentials initialized."}
+
+Showing logs for build [32mmeta-simonjamesrowe-api-gateway-t7lqk-1[0m stage [32mmeta-pipeline[0m and container [32mworking-dir-initializer[0m
+
+Showing logs for build [32mmeta-simonjamesrowe-api-gateway-t7lqk-1[0m stage [32mmeta-pipeline[0m and container [32mplace-tools[0m
+
+Showing logs for build [32mmeta-simonjamesrowe-api-gateway-t7lqk-1[0m stage [32mmeta-pipeline[0m and container [32mstep-git-source-meta-simonjamesrowe-api-gateway-t7lqk-dpttd[0m
+{"level":"info","ts":1616244942.0880985,"caller":"git/git.go:105","msg":"Successfully cloned https://github.com/simonjamesrowe/api-gateway.git @ 71fcaa4497fb0ab24fa7235e6b194b838035faa1 in path /workspace/source"}
+{"level":"warn","ts":1616244942.0883152,"caller":"git/git.go:152","msg":"Unexpected error: creating symlink: symlink /tekton/home/.ssh /****/.ssh: file exists"}
+{"level":"info","ts":1616244942.1746666,"caller":"git/git.go:133","msg":"Successfully initialized and updated submodules in path /workspace/source"}
+
+Showing logs for build [32mmeta-simonjamesrowe-api-gateway-t7lqk-1[0m stage [32mmeta-pipeline[0m and container [32mstep-setup-builder-home[0m
+
+Showing logs for build [32mmeta-simonjamesrowe-api-gateway-t7lqk-1[0m stage [32mmeta-pipeline[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:71fcaa4497fb0ab24fa7235e6b194b838035faa1,2:2147052d8d70494acd4b14f8bf0232ed48bcc608
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git fetch origin --unshallow 2147052d8d70494acd4b14f8bf0232ed48bcc608: 71fcaa4497fb0ab24fa7235e6b194b838035faa1:
+DEBUG: ran git fetch --unshallow origin 2147052d8d70494acd4b14f8bf0232ed48bcc608: 71fcaa4497fb0ab24fa7235e6b194b838035faa1: in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git branch
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git checkout master
+DEBUG: ran git checkout master in 
+DEBUG: JX_LOG_LEVEL=error LC_ALL=C git reset --hard 71fcaa4497fb0ab24fa7235e6b194b838035faa1
+DEBUG: ran git reset --hard 71fcaa4497fb0ab24fa7235e6b194b838035faa1 in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git clean -fd .
+DEBUG: ran clean --force -d . in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git merge 2147052d8d70494acd4b14f8bf0232ed48bcc608
+error: error during merge: merging 2147052d8d70494acd4b14f8bf0232ed48bcc608 into master: git output: Auto-merging src/test/kotlin/com/simonjamesrowe/apigateway/entrypoints/restcontroller/WebhookControllerTest.kt
+CONFLICT (add/add): Merge conflict in src/test/kotlin/com/simonjamesrowe/apigateway/entrypoints/restcontroller/UploadControllerTest.kt
+Auto-merging src/test/kotlin/com/simonjamesrowe/apigateway/entrypoints/restcontroller/UploadControllerTest.kt
+CONFLICT (add/add): Merge conflict in src/main/kotlin/com/simonjamesrowe/apigateway/entrypoints/restcontroller/UploadController.kt
+Auto-merging src/main/kotlin/com/simonjamesrowe/apigateway/entrypoints/restcontroller/UploadController.kt
+Auto-merging src/main/kotlin/com/simonjamesrowe/apigateway/entrypoints/restcontroller/ResumeController.kt
+Auto-merging src/main/kotlin/com/simonjamesrowe/apigateway/core/usecase/ResumeGenerator.kt
+Auto-merging src/main/kotlin/com/simonjamesrowe/apigateway/config/FeignConfig.kt
+Automatic merge failed; fix conflicts and then commit the result.: failed to run 'git merge 2147052d8d70494acd4b14f8bf0232ed48bcc608' command in directory '', output: 'Auto-merging src/test/kotlin/com/simonjamesrowe/apigateway/entrypoints/restcontroller/WebhookControllerTest.kt
+CONFLICT (add/add): Merge conflict in src/test/kotlin/com/simonjamesrowe/apigateway/entrypoints/restcontroller/UploadControllerTest.kt
+Auto-merging src/test/kotlin/com/simonjamesrowe/apigateway/entrypoints/restcontroller/UploadControllerTest.kt
+CONFLICT (add/add): Merge conflict in src/main/kotlin/com/simonjamesrowe/apigateway/entrypoints/restcontroller/UploadController.kt
+Auto-merging src/main/kotlin/com/simonjamesrowe/apigateway/entrypoints/restcontroller/UploadController.kt
+Auto-merging src/main/kotlin/com/simonjamesrowe/apigateway/entrypoints/restcontroller/ResumeController.kt
+Auto-merging src/main/kotlin/com/simonjamesrowe/apigateway/core/usecase/ResumeGenerator.kt
+Auto-merging src/main/kotlin/com/simonjamesrowe/apigateway/config/FeignConfig.kt
+Automatic merge failed; fix conflicts and then commit the result.'
+[31m
+Pipeline failed on stage 'meta-pipeline' : container 'step-git-merge'. The execution of the pipeline has stopped.[0m
