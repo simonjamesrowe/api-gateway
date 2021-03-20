@@ -15,6 +15,7 @@ import org.springframework.boot.test.autoconfigure.web.reactive.AutoConfigureWeb
 import org.springframework.boot.test.autoconfigure.web.reactive.WebFluxTest
 import org.springframework.cloud.contract.wiremock.AutoConfigureWireMock
 import org.springframework.context.annotation.Import
+import org.springframework.http.MediaType
 import org.springframework.test.context.ActiveProfiles
 import org.springframework.test.web.reactive.server.WebTestClient
 
@@ -47,13 +48,16 @@ internal class UploadControllerTest {
     val actual = webClient.get().uri("/uploads/image.png")
       .exchange()
       .expectStatus().isOk
+      .expectHeader().contentType(MediaType.IMAGE_PNG)
       .expectBody().returnResult().responseBody
+
 
     assertThat(actual).isEqualTo(compressedBytes)
 
     val cached = webClient.get().uri("/uploads/image.png")
       .exchange()
       .expectStatus().isOk
+      .expectHeader().contentType(MediaType.IMAGE_PNG)
       .expectBody().returnResult().responseBody
     assertThat(cached).isEqualTo(compressedBytes)
 
