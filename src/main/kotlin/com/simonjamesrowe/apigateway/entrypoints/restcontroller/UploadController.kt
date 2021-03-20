@@ -51,12 +51,12 @@ class UploadController(
       return ResponseEntity(imageCache[file], imageHeadersCache[file], HttpStatus.OK) as ResponseEntity<ByteArray?>
     }
 
-    return proxy.uri("${cmsUrl}uploads/$file").get().awaitFirst().run {
+    return proxy.uri("${cmsUrl}uploads/$file").get().awaitFirst().let { response ->
       withContext(IO) {
         var tmpFile = File(tmpDir, file)
-        IOUtils.copyLarge(ByteArrayInputStream(body), FileOutputStream(tmpFile))
-        imageCache[file] = compressFileUseCase.compress(tmpFile, body!!.size)
-        imageHeadersCache[file] = headers
+        IOUtils.copyLarge(ByteArrayInputStream(response.body), FileOutputStream(tmpFile))
+        imageCache[file] = compressFileUseCase.compress(tmpFile, response.body!!.size)
+        imageHeadersCache[file] = response.headers
       }
       ResponseEntity(imageCache[file], imageHeadersCache[file], HttpStatus.OK) as ResponseEntity<ByteArray?>
     }
