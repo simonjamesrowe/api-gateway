@@ -5,7 +5,6 @@ import com.github.tomakehurst.wiremock.client.WireMock
 import org.jeasy.random.EasyRandom
 import org.jeasy.random.EasyRandomParameters
 import org.springframework.core.io.ClassPathResource
-import org.springframework.util.MimeType
 import java.nio.file.Files
 import java.util.stream.Collectors
 
@@ -34,7 +33,7 @@ object TestUtils {
         WireMock.get(WireMock.urlEqualTo(uri))
           .willReturn(
             WireMock.aResponse()
-              .withHeader("Content-Type", "image/jpeg")
+              .withHeader("Content-Type", "image/png")
               .withBody(
                 Files.readAllBytes(
                   ClassPathResource(responseBodyFile).file.toPath()

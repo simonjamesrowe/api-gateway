@@ -36,7 +36,7 @@ internal class UploadControllerTest {
 
   @BeforeEach
   fun before() {
-    mockGetJpg(wireMockServer, "/uploads/big-image.jpg", "big-image.jpg")
+    mockGetJpg(wireMockServer, "/uploads/image.png", "image.png")
   }
 
   @Test
@@ -44,14 +44,14 @@ internal class UploadControllerTest {
     val compressedBytes = "Compressed".toByteArray()
     coEvery { compressFileUseCase.compress(any(), any()) } returns compressedBytes
 
-    val actual = webClient.get().uri("/uploads/big-image.jpg")
+    val actual = webClient.get().uri("/uploads/image.png")
       .exchange()
       .expectStatus().isOk
       .expectBody().returnResult().responseBody
 
     assertThat(actual).isEqualTo(compressedBytes)
 
-    val cached = webClient.get().uri("/uploads/big-image.jpg")
+    val cached = webClient.get().uri("/uploads/image.png")
       .exchange()
       .expectStatus().isOk
       .expectBody().returnResult().responseBody
