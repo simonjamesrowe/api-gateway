@@ -1,6 +1,9 @@
 package com.simonjamesrowe.apigateway.controller
 
 import com.fasterxml.jackson.databind.ObjectMapper
+import com.ninjasquad.springmockk.MockkBean
+import com.sendgrid.SendGrid
+import com.simonjamesrowe.apigateway.core.usecase.ResumeUseCase
 import com.simonjamesrowe.component.test.BaseComponentTest
 import com.simonjamesrowe.component.test.kafka.WithKafkaContainer
 import com.simonjamesrowe.model.cms.dto.BlogResponseDTO
@@ -34,6 +37,12 @@ internal class WebhookControllerTest : BaseComponentTest() {
 
   @Autowired
   lateinit var objectMapper: ObjectMapper
+
+  @MockkBean
+  lateinit var sendGrid: SendGrid
+
+  @MockkBean
+  lateinit var resumeUseCase: ResumeUseCase
 
   @BeforeEach
   fun beforeEach() {
