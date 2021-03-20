@@ -105,7 +105,7 @@
         <dependency>
             <groupId>com.simonjamesrowe</groupId>
             <artifactId>model</artifactId>
-            <version>0.0.18</version>
+            <version>0.0.19</version>
         </dependency>
         <dependency>
             <groupId>com.sendgrid</groupId>
@@ -197,6 +197,18 @@
             <version>3.0.1</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.jeasy</groupId>
+            <artifactId>easy-random-core</artifactId>
+            <version>5.0.0</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.skyscreamer</groupId>
+            <artifactId>jsonassert</artifactId>
+            <version>1.5.0</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
     <dependencyManagement>
@@ -214,6 +226,12 @@
     <build>
         <sourceDirectory>${project.basedir}/src/main/kotlin</sourceDirectory>
         <testSourceDirectory>${project.basedir}/src/test/kotlin</testSourceDirectory>
+        <testResources>
+            <testResource>
+                <directory>src/test/resources</directory>
+                <filtering>false</filtering>
+            </testResource>
+        </testResources>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
@@ -276,6 +294,7 @@
                     </execution>
                 </executions>
             </plugin>
+
 
         </plugins>
     </build>

@@ -1,10 +1,14 @@
-package com.simonjamesrowe.apigateway.controller
+package com.simonjamesrowe.apigateway.entrypoints.restcontroller
 
 import com.fasterxml.jackson.databind.ObjectMapper
+import com.ninjasquad.springmockk.MockkBean
+import com.sendgrid.SendGrid
+import com.simonjamesrowe.apigateway.core.usecase.ResumeUseCase
 import com.simonjamesrowe.component.test.BaseComponentTest
 import com.simonjamesrowe.component.test.kafka.WithKafkaContainer
-import com.simonjamesrowe.model.data.Blog
-import com.simonjamesrowe.model.data.Event
+import com.simonjamesrowe.model.cms.dto.BlogResponseDTO
+import com.simonjamesrowe.model.cms.dto.WebhookEventDTO
+import io.mockk.coVerify
 import io.restassured.RestAssured.given
 import org.assertj.core.api.Assertions.assertThat
 import org.awaitility.Awaitility.await
@@ -34,6 +38,12 @@ internal class WebhookControllerTest : BaseComponentTest() {
 
   @Autowired
   lateinit var objectMapper: ObjectMapper
+
+  @MockkBean
+  lateinit var sendGrid: SendGrid
+
+  @MockkBean(relaxed = true)
+  lateinit var resumeUseCase: ResumeUseCase
 
   @BeforeEach
   fun beforeEach() {
@@ -795,7 +805,7 @@ internal class WebhookControllerTest : BaseComponentTest() {
     }
 
     val blogEventMessage = testStreamListener.events[0]
-    val blog = objectMapper.convertValue(blogEventMessage.payload[0].entry, Blog::class.java)
+    val blog = objectMapper.convertValue(blogEventMessage.payload[0].entry, BlogResponseDTO::class.java)
     val key = (blogEventMessage.headers[KafkaHeaders.RECEIVED_MESSAGE_KEY] as List<String>)[0]
     val modelType =
       (blogEventMessage.headers[KafkaHeaders.BATCH_CONVERTED_HEADERS] as List<Map<String, String>>)[0].get("model")
@@ -817,6 +827,8 @@ internal class WebhookControllerTest : BaseComponentTest() {
     assertThat(blog.image.formats?.small).isNotNull
     assertThat(blog.image.formats?.medium).isNotNull
     assertThat(blog.image.formats?.large).isNull()
+
+    coVerify { resumeUseCase.regenerateResume() }
   }
 }
 
@@ -824,11 +836,11 @@ internal class WebhookControllerTest : BaseComponentTest() {
 @Profile("webhookControllerTest")
 class TestStreamListener {
 
-  val events: MutableList<Message<List<Event>>> = mutableListOf()
+  val events: MutableList<Message<List<WebhookEventDTO>>> = mutableListOf()
 
   @Bean
-  fun consume(): Consumer<Message<List<Event>>> =
-    Consumer<Message<List<Event>>> {
+  fun consume(): Consumer<Message<List<WebhookEventDTO>>> =
+    Consumer<Message<List<WebhookEventDTO>>> {
       events.add(it)
     }
 
