@@ -18,11 +18,9 @@ import com.itextpdf.layout.property.TextAlignment
 import com.itextpdf.layout.property.UnitValue
 import com.simonjamesrowe.apigateway.core.model.ResumeData
 import org.springframework.core.io.ClassPathResource
-import org.springframework.stereotype.Service
 import java.io.ByteArrayOutputStream
 import java.time.format.DateTimeFormatter
 
-@Service
 object ResumeGenerator {
 
   val fontProgram: FontProgram =
@@ -59,7 +57,7 @@ object ResumeGenerator {
     data.jobs.forEach { job -> div.add(jobBlock(job)) }
     if (data.education.isNotEmpty()) {
       div.add(employmentHeading("Education"))
-      data.education.forEach{
+      data.education.forEach {
         div.add(jobBlock(it))
       }
     }

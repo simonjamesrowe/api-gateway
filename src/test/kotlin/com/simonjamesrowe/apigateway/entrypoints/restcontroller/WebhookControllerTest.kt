@@ -1,4 +1,4 @@
-package com.simonjamesrowe.apigateway.controller
+package com.simonjamesrowe.apigateway.entrypoints.restcontroller
 
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.ninjasquad.springmockk.MockkBean
@@ -8,6 +8,7 @@ import com.simonjamesrowe.component.test.BaseComponentTest
 import com.simonjamesrowe.component.test.kafka.WithKafkaContainer
 import com.simonjamesrowe.model.cms.dto.BlogResponseDTO
 import com.simonjamesrowe.model.cms.dto.WebhookEventDTO
+import io.mockk.coVerify
 import io.restassured.RestAssured.given
 import org.assertj.core.api.Assertions.assertThat
 import org.awaitility.Awaitility.await
@@ -41,7 +42,7 @@ internal class WebhookControllerTest : BaseComponentTest() {
   @MockkBean
   lateinit var sendGrid: SendGrid
 
-  @MockkBean
+  @MockkBean(relaxed = true)
   lateinit var resumeUseCase: ResumeUseCase
 
   @BeforeEach
@@ -826,6 +827,8 @@ internal class WebhookControllerTest : BaseComponentTest() {
     assertThat(blog.image.formats?.small).isNotNull
     assertThat(blog.image.formats?.medium).isNotNull
     assertThat(blog.image.formats?.large).isNull()
+
+    coVerify { resumeUseCase.regenerateResume() }
   }
 }
 

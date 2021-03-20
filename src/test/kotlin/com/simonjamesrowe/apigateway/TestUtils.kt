@@ -5,6 +5,7 @@ import com.github.tomakehurst.wiremock.client.WireMock
 import org.jeasy.random.EasyRandom
 import org.jeasy.random.EasyRandomParameters
 import org.springframework.core.io.ClassPathResource
+import org.springframework.util.MimeType
 import java.nio.file.Files
 import java.util.stream.Collectors
 
@@ -21,6 +22,23 @@ object TestUtils {
                 Files.lines(
                   ClassPathResource(responseBodyFile).file.toPath()
                 ).collect(Collectors.joining(System.lineSeparator()))
+              )
+          )
+      )
+    )
+  }
+
+  fun mockGetJpg(wireMockServer: WireMockServer, uri: String, responseBodyFile: String) {
+    wireMockServer.addStubMapping(
+      WireMock.stubFor(
+        WireMock.get(WireMock.urlEqualTo(uri))
+          .willReturn(
+            WireMock.aResponse()
+              .withHeader("Content-Type", "image/jpeg")
+              .withBody(
+                Files.readAllBytes(
+                  ClassPathResource(responseBodyFile).file.toPath()
+                )
               )
           )
       )

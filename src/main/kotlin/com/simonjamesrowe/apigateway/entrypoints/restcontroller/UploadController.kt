@@ -1,6 +1,9 @@
 package com.simonjamesrowe.apigateway.entrypoints.restcontroller
 
+import com.simonjamesrowe.apigateway.core.usecase.CompressFileUseCase
+import kotlinx.coroutines.Dispatchers.IO
 import kotlinx.coroutines.reactive.awaitFirst
+import kotlinx.coroutines.withContext
 import org.apache.commons.io.IOUtils
 import org.slf4j.LoggerFactory
 import org.springframework.beans.factory.annotation.Value
@@ -21,7 +24,7 @@ import javax.imageio.ImageIO
 @RestController
 class UploadController(
   @Value("\${cms.url}") private val cmsUrl: String,
-  @Value("\${image.compressFilesLargerThanKb}") private val compressionThreshold: Int
+  private val compressFileUseCase: CompressFileUseCase
 ) {
   companion object {
     val logger = LoggerFactory.getLogger(UploadController::class.java)
@@ -46,47 +49,20 @@ class UploadController(
     if (imageCache.containsKey(file)) {
       logger.debug("Image is in the cache!")
       return ResponseEntity(imageCache[file], imageHeadersCache[file], HttpStatus.OK) as ResponseEntity<ByteArray?>
-
     }
 
     return proxy.uri("${cmsUrl}uploads/$file").get().awaitFirst().run {
-      var tmpFile = File(tmpDir, file)
-      IOUtils.copyLarge(ByteArrayInputStream(body), FileOutputStream(tmpFile))
-      imageCache[file] = compress(tmpFile, body!!.size)
-      imageHeadersCache[file] = headers
+      withContext(IO) {
+        var tmpFile = File(tmpDir, file)
+        IOUtils.copyLarge(ByteArrayInputStream(body), FileOutputStream(tmpFile))
+        imageCache[file] = compressFileUseCase.compress(tmpFile, body!!.size)
+        imageHeadersCache[file] = headers
+      }
       ResponseEntity(imageCache[file], imageHeadersCache[file], HttpStatus.OK) as ResponseEntity<ByteArray?>
     }
-
   }
 
   private fun isImage(file: String) = file.endsWith(".jpg") || file.endsWith(".png")
 
-  fun compress(file: File, size: Int): ByteArray? {
-    if (size < 1024 * compressionThreshold) {
-      var byteArray = IOUtils.toByteArray(FileInputStream(file))
-      file.delete()
-      return byteArray
-    }
-    // reads input image
-    val original = ImageIO.read(file)
-    val scaledWidth: Int = ((original.width * .5).toInt())
-    val scaledHeight: Int = ((original.height * .5).toInt())
-    // creates output image
-    val outputImage = BufferedImage(
-      scaledWidth,
-      scaledHeight, original.type
-    )
 
-    // scales the input image to the output image
-    val g2d = outputImage.createGraphics()
-    g2d.setRenderingHint(RenderingHints.KEY_INTERPOLATION, RenderingHints.VALUE_INTERPOLATION_BICUBIC);
-    g2d.drawImage(original, 0, 0, scaledWidth, scaledHeight, null)
-    g2d.dispose()
-
-    var compressedBytes = ByteArrayOutputStream(1024)
-    // writes to output file
-    ImageIO.write(outputImage, file.name.substring(file.name.indexOf(".") + 1), compressedBytes)
-    file.delete()
-    return compressedBytes.toByteArray()
-  }
 }
