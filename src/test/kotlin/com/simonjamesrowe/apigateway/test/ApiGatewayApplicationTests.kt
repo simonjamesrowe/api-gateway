@@ -1,4 +1,4 @@
-package com.simonjamesrowe.apigateway
+package com.simonjamesrowe.apigateway.test
 
 import com.simonjamesrowe.component.test.BaseComponentTest
 import com.simonjamesrowe.component.test.kafka.WithKafkaContainer

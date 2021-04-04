@@ -1,10 +1,11 @@
-package com.simonjamesrowe.apigateway.entrypoints.restcontroller
+package com.simonjamesrowe.apigateway.test.restcontroller
 
 import com.github.tomakehurst.wiremock.WireMockServer
 import com.ninjasquad.springmockk.MockkBean
-import com.simonjamesrowe.apigateway.TestUtils.mockGetJpg
+import com.simonjamesrowe.apigateway.test.TestUtils.mockGetJpg
 import com.simonjamesrowe.apigateway.config.SecurityConfig
 import com.simonjamesrowe.apigateway.core.usecase.CompressFileUseCase
+import com.simonjamesrowe.apigateway.entrypoints.restcontroller.UploadController
 import io.mockk.coEvery
 import io.mockk.coVerify
 import org.assertj.core.api.Assertions.assertThat

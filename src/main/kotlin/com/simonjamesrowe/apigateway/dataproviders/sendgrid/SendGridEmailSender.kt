@@ -8,6 +8,7 @@ import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.withContext
 import org.slf4j.LoggerFactory
 import org.springframework.beans.factory.annotation.Value
+import org.springframework.cloud.sleuth.annotation.NewSpan
 import org.springframework.stereotype.Component
 
 @Component
@@ -21,6 +22,7 @@ class SendGridEmailSender(
 
   val log = LoggerFactory.getLogger(SendGridEmailSender::class.java)
 
+  @NewSpan("sendEmail")
   override suspend fun sendEmail(email: Email) = coroutineScope {
     val mail = Mail(
       Email(fromAddress),

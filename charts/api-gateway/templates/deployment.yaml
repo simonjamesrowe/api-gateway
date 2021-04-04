@@ -25,10 +25,6 @@ spec:
 {{ toYaml .Values.podAnnotations | indent 8 }}
 {{- end }}
     spec:
-      volumes:
-      - name: logback
-        configMap:
-          name: logback
       containers:
       - name: {{ .Chart.Name }}
         image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
@@ -46,9 +42,6 @@ spec:
 {{ toYaml .Values.envFrom | indent 10 }}
         ports:
         - containerPort: {{ .Values.service.internalPort }}
-        volumeMounts:
-        - name: logback
-          mountPath: /logback
         livenessProbe:
           httpGet:
             path: {{ .Values.probePath }}

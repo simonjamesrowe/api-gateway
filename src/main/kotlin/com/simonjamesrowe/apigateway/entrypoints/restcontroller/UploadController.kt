@@ -8,6 +8,7 @@ import org.apache.commons.io.IOUtils
 import org.slf4j.LoggerFactory
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.cloud.gateway.webflux.ProxyExchange
+import org.springframework.cloud.sleuth.annotation.NewSpan
 import org.springframework.http.HttpHeaders
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
@@ -25,7 +26,7 @@ import javax.imageio.ImageIO
 class UploadController(
   @Value("\${cms.url}") private val cmsUrl: String,
   private val compressFileUseCase: CompressFileUseCase
-) {
+) : IUploadController {
   companion object {
     val logger = LoggerFactory.getLogger(UploadController::class.java)
     val imageCache = HashMap<String, ByteArray?>()
@@ -34,7 +35,8 @@ class UploadController(
   }
 
   @GetMapping("/uploads/{file}")
-  suspend fun proxy(
+  @NewSpan("GET /uploads/{file}")
+  override suspend fun proxy(
     @PathVariable file: String,
     @RequestHeader headers: HttpHeaders,
     proxy: ProxyExchange<ByteArray?>

@@ -1,4 +1,4 @@
-package com.simonjamesrowe.apigateway.entrypoints.restcontroller
+package com.simonjamesrowe.apigateway.test.restcontroller
 
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.ninjasquad.springmockk.MockkBean
@@ -15,15 +15,15 @@ import org.awaitility.Awaitility.await
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
-import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import org.springframework.context.annotation.Profile
+import org.springframework.kafka.annotation.KafkaListener
 import org.springframework.kafka.support.KafkaHeaders
 import org.springframework.messaging.Message
 import org.springframework.test.context.ActiveProfiles
+import java.lang.Thread.sleep
 import java.time.Duration
 import java.time.ZonedDateTime
-import java.util.function.Consumer
 
 @WithKafkaContainer
 @ActiveProfiles("webhookControllerTest")
@@ -65,6 +65,7 @@ internal class WebhookControllerTest : BaseComponentTest() {
 
   @Test
   fun `webhook handler should produce message to kafka topic`() {
+    sleep(10000)
     given()
       .log()
       .all()
@@ -806,9 +807,8 @@ internal class WebhookControllerTest : BaseComponentTest() {
 
     val blogEventMessage = testStreamListener.events[0]
     val blog = objectMapper.convertValue(blogEventMessage.payload[0].entry, BlogResponseDTO::class.java)
-    val key = (blogEventMessage.headers[KafkaHeaders.RECEIVED_MESSAGE_KEY] as List<String>)[0]
-    val modelType =
-      (blogEventMessage.headers[KafkaHeaders.BATCH_CONVERTED_HEADERS] as List<Map<String, String>>)[0].get("model")
+    val key = blogEventMessage.headers[KafkaHeaders.RECEIVED_MESSAGE_KEY] as String
+    val modelType =blogEventMessage.headers["model"] as String
     assertThat(modelType).isEqualTo("blog")
     assertThat(key).isEqualTo("blog-5f0215c69d8081001fd38fa1")
     assertThat(blog.title).isEqualTo("Creating a rich web app that can be hosted from home")
@@ -838,10 +838,6 @@ class TestStreamListener {
 
   val events: MutableList<Message<List<WebhookEventDTO>>> = mutableListOf()
 
-  @Bean
-  fun consume(): Consumer<Message<List<WebhookEventDTO>>> =
-    Consumer<Message<List<WebhookEventDTO>>> {
-      events.add(it)
-    }
-
+  @KafkaListener(topics = ["\${namespace:LOCAL}_EVENTS"])
+  fun consume(it: Message<List<WebhookEventDTO>>) = events.add(it)
 }

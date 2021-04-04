@@ -1,8 +1,10 @@
-package com.simonjamesrowe.apigateway.core.usecase
+package com.simonjamesrowe.apigateway.test.usecase
 
-import com.simonjamesrowe.apigateway.TestUtils.randomObject
+import com.simonjamesrowe.apigateway.test.TestUtils.randomObject
 import com.simonjamesrowe.apigateway.core.model.ResumeData
 import com.simonjamesrowe.apigateway.core.repository.ResumeRepository
+import com.simonjamesrowe.apigateway.core.usecase.ResumeGenerator
+import com.simonjamesrowe.apigateway.core.usecase.ResumeUseCase
 import io.mockk.clearAllMocks
 import io.mockk.coEvery
 import io.mockk.impl.annotations.RelaxedMockK

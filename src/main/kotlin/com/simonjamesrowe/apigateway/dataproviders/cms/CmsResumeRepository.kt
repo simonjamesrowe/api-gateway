@@ -7,6 +7,7 @@ import com.simonjamesrowe.model.cms.dto.SkillResponseDTO
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async
 import kotlinx.coroutines.coroutineScope
+import org.springframework.cloud.sleuth.annotation.NewSpan
 import org.springframework.stereotype.Repository
 
 @Repository
@@ -14,6 +15,7 @@ class CmsResumeRepository(
   private val cmsRestApi: CmsRestApi
 ) : ResumeRepository {
 
+  @NewSpan("getResumeData")
   override suspend fun getResumeData(): ResumeData = coroutineScope {
     val deferredJobs = async(Dispatchers.IO) { cmsRestApi.getAllJobs().filter { it.includeOnResume } }
     val deferredProfile = async(Dispatchers.IO) { cmsRestApi.getProfiles()[0] }

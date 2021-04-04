@@ -1,5 +1,6 @@
-package com.simonjamesrowe.apigateway.core.usecase
+package com.simonjamesrowe.apigateway.test.usecase
 
+import com.simonjamesrowe.apigateway.core.usecase.CompressFileUseCase
 import kotlinx.coroutines.runBlocking
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test

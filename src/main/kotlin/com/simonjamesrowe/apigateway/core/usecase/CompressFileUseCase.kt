@@ -2,6 +2,7 @@ package com.simonjamesrowe.apigateway.core.usecase
 
 import org.apache.commons.io.IOUtils
 import org.springframework.beans.factory.annotation.Value
+import org.springframework.cloud.sleuth.annotation.NewSpan
 import org.springframework.stereotype.Service
 import java.awt.RenderingHints
 import java.awt.image.BufferedImage
@@ -13,9 +14,10 @@ import javax.imageio.ImageIO
 @Service
 class CompressFileUseCase(
   @Value("\${image.compressFilesLargerThanKb}") private val compressionThreshold: Int
-) {
+) : ICompressFileUseCase {
 
-  suspend fun compress(file: File, size: Int): ByteArray? {
+  @NewSpan("compressFile")
+  override suspend fun compress(file: File, size: Int): ByteArray? {
     if (size < 1024 * compressionThreshold) {
       return IOUtils.toByteArray(FileInputStream(file))
     }

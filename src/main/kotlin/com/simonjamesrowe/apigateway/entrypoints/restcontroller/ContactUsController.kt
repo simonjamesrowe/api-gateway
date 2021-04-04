@@ -3,6 +3,7 @@ package com.simonjamesrowe.apigateway.entrypoints.restcontroller
 import com.simonjamesrowe.apigateway.core.model.ContactUsRequest
 import com.simonjamesrowe.apigateway.core.usecase.ContactUseCase
 import org.slf4j.LoggerFactory
+import org.springframework.cloud.sleuth.annotation.NewSpan
 import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestBody
 import org.springframework.web.bind.annotation.RequestHeader
@@ -14,12 +15,13 @@ import javax.validation.constraints.NotBlank
 @RestController
 class ContactUsController(
   private val contactUseCase: ContactUseCase
-) {
+) : IContactUsController {
 
   val log = LoggerFactory.getLogger(ContactUsController::class.java)
 
   @PostMapping("/contact-us")
-  suspend fun webhookPost(
+  @NewSpan("POST /contact-us")
+  override suspend fun contactUs(
     @RequestBody @Valid contactUs: ContactUs,
     @RequestHeader(value = "Referer", required = false) referer: String?
   ) {
