@@ -1,8 +1,9 @@
-package com.simonjamesrowe.apigateway.dataproviders.cms
+package com.simonjamesrowe.apigateway.test.dataproviders.cms
 
 import com.github.tomakehurst.wiremock.WireMockServer
-import com.simonjamesrowe.apigateway.TestUtils.mockGet
+import com.simonjamesrowe.apigateway.test.TestUtils.mockGet
 import com.simonjamesrowe.apigateway.config.FeignConfig
+import com.simonjamesrowe.apigateway.dataproviders.cms.CmsResumeRepository
 import kotlinx.coroutines.runBlocking
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.BeforeEach

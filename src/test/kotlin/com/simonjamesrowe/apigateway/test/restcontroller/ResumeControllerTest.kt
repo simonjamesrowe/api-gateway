@@ -1,8 +1,10 @@
-package com.simonjamesrowe.apigateway.entrypoints.restcontroller
+package com.simonjamesrowe.apigateway.test.restcontroller
 
 import com.ninjasquad.springmockk.MockkBean
 import com.simonjamesrowe.apigateway.config.SecurityConfig
+import com.simonjamesrowe.apigateway.core.usecase.IResumeUseCase
 import com.simonjamesrowe.apigateway.core.usecase.ResumeUseCase
+import com.simonjamesrowe.apigateway.entrypoints.restcontroller.ResumeController
 import io.mockk.coEvery
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
@@ -18,7 +20,7 @@ import java.nio.file.Files
 internal class ResumeControllerTest {
 
   @MockkBean
-  lateinit var resumeUseCase: ResumeUseCase
+  lateinit var resumeUseCase: IResumeUseCase
 
   @Autowired
   private lateinit var webClient: WebTestClient

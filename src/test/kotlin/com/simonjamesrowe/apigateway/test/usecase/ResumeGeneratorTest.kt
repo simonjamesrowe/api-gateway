@@ -1,8 +1,10 @@
-package com.simonjamesrowe.apigateway.core.usecase
+package com.simonjamesrowe.apigateway.test.usecase
 
 import com.simonjamesrowe.apigateway.core.model.ResumeData
+import com.simonjamesrowe.apigateway.core.usecase.ResumeGenerator
 import kotlinx.coroutines.runBlocking
 import org.assertj.core.api.Assertions.assertThat
+import org.assertj.core.data.Percentage
 import org.junit.jupiter.api.Test
 import org.springframework.core.io.ClassPathResource
 import java.nio.file.Files
@@ -62,6 +64,6 @@ internal class ResumeGeneratorTest {
     )
     val result = ResumeGenerator.generate(testData)
     val expected = Files.readAllBytes(ClassPathResource("resume.pdf").file.toPath())
-    assertThat(result.size).isEqualTo(expected.size)
+    assertThat(result.size).isCloseTo(expected.size, Percentage.withPercentage(10.0))
   }
 }

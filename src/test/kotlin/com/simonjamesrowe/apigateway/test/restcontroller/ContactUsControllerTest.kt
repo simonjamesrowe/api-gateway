@@ -1,9 +1,10 @@
-package com.simonjamesrowe.apigateway.entrypoints.restcontroller
+package com.simonjamesrowe.apigateway.test.restcontroller
 
 import com.ninjasquad.springmockk.MockkBean
 import com.simonjamesrowe.apigateway.config.SecurityConfig
 import com.simonjamesrowe.apigateway.core.model.ContactUsRequest
 import com.simonjamesrowe.apigateway.core.usecase.ContactUseCase
+import com.simonjamesrowe.apigateway.entrypoints.restcontroller.ContactUsController
 import io.mockk.coVerify
 import kotlinx.coroutines.runBlocking
 import org.junit.jupiter.api.Test

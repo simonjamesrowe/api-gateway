@@ -19,7 +19,7 @@ class ContactUsController(
   val log = LoggerFactory.getLogger(ContactUsController::class.java)
 
   @PostMapping("/contact-us")
-  suspend fun webhookPost(
+  suspend fun contactUs(
     @RequestBody @Valid contactUs: ContactUs,
     @RequestHeader(value = "Referer", required = false) referer: String?
   ) {

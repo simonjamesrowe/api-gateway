@@ -1,9 +1,10 @@
-package com.simonjamesrowe.apigateway.dataproviders.sendgrid
+package com.simonjamesrowe.apigateway.test.dataproviders.sendgrid
 
 import com.sendgrid.Method
 import com.sendgrid.Request
 import com.sendgrid.SendGrid
 import com.simonjamesrowe.apigateway.core.model.Email
+import com.simonjamesrowe.apigateway.dataproviders.sendgrid.SendGridEmailSender
 import io.mockk.every
 import io.mockk.impl.annotations.RelaxedMockK
 import io.mockk.junit5.MockKExtension
