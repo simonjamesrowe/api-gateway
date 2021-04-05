@@ -1,0 +1,1022 @@
+
+Showing logs for build [32msimonjamesrowe-api-gateway-mast-vsgw6-56[0m stage [32mfrom-build-pack[0m and container [32mcredential-initializer[0m
+{"level":"info","ts":1617623847.63303,"caller":"creds-init/main.go:44","msg":"Credentials initialized."}
+
+Showing logs for build [32msimonjamesrowe-api-gateway-mast-vsgw6-56[0m stage [32mfrom-build-pack[0m and container [32mworking-dir-initializer[0m
+
+Showing logs for build [32msimonjamesrowe-api-gateway-mast-vsgw6-56[0m stage [32mfrom-build-pack[0m and container [32mplace-tools[0m
+
+Showing logs for build [32msimonjamesrowe-api-gateway-mast-vsgw6-56[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-simonjamesrowe-api-gateway-mast-vsgw6-k9tk8[0m
+{"level":"info","ts":1617623943.671384,"caller":"git/git.go:105","msg":"Successfully cloned https://github.com/simonjamesrowe/api-gateway.git @ v0.0.60 in path /workspace/source"}
+{"level":"warn","ts":1617623943.671542,"caller":"git/git.go:152","msg":"Unexpected error: creating symlink: symlink /tekton/home/.ssh /****/.ssh: file exists"}
+{"level":"info","ts":1617623943.7319622,"caller":"git/git.go:133","msg":"Successfully initialized and updated submodules in path /workspace/source"}
+
+Showing logs for build [32msimonjamesrowe-api-gateway-mast-vsgw6-56[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-builder-home[0m
+
+Showing logs for build [32msimonjamesrowe-api-gateway-mast-vsgw6-56[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:aed3bc36d6eda5f667bb4dbca87810e141e44118
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32msimonjamesrowe-api-gateway-mast-vsgw6-56[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32msimonjamesrowe-api-gateway-mast-vsgw6-56[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+[DEBUG] http-outgoing-0 << HTTP/1.1 200 OK
+[DEBUG] http-outgoing-0 << Api-Version: 1.41
+[DEBUG] http-outgoing-0 << Content-Type: application/json
+[DEBUG] http-outgoing-0 << Date: Mon, 05 Apr 2021 12:08:53 GMT
+[DEBUG] http-outgoing-0 << Docker-Experimental: true
+[DEBUG] http-outgoing-0 << Ostype: linux
+[DEBUG] http-outgoing-0 << Server: Docker/20.10.5 (linux)
+[DEBUG] http-outgoing-0 << Transfer-Encoding: chunked
+[DEBUG] Connection can be kept alive indefinitely
+[DEBUG] Releasing connection 
+[DEBUG] http-outgoing-0: set socket timeout to 0
+[DEBUG] Connection can be kept alive indefinitely
+[DEBUG] CookieSpec selected: default
+[DEBUG] Auth cache not set in the context
+[DEBUG] Get connection for route {}->docker://localhost:2376
+[DEBUG] http-outgoing-0: set socket timeout to 0
+[DEBUG] Executing request GET /v1.24/images/*********/paketobuildpacks/run@sha256:18ef014232fbdb393b4670b698f60482fb29cf143bed0da849d8c89db9e23ed3/json HTTP/1.1
+[DEBUG] Target auth state: UNCHALLENGED
+[DEBUG] Proxy auth state: UNCHALLENGED
+[DEBUG] http-outgoing-0 >> GET /v1.24/images/*********/paketobuildpacks/run@sha256:18ef014232fbdb393b4670b698f60482fb29cf143bed0da849d8c89db9e23ed3/json HTTP/1.1
+[DEBUG] http-outgoing-0 >> Host: localhost
+[DEBUG] http-outgoing-0 >> Connection: Keep-Alive
+[DEBUG] http-outgoing-0 >> User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.10)
+[DEBUG] http-outgoing-0 >> Accept-Encoding: gzip,deflate
+[DEBUG] http-outgoing-0 << HTTP/1.1 200 OK
+[DEBUG] http-outgoing-0 << Api-Version: 1.41
+[DEBUG] http-outgoing-0 << Content-Type: application/json
+[DEBUG] http-outgoing-0 << Date: Mon, 05 Apr 2021 12:08:53 GMT
+[DEBUG] http-outgoing-0 << Docker-Experimental: true
+[DEBUG] http-outgoing-0 << Ostype: linux
+[DEBUG] http-outgoing-0 << Server: Docker/20.10.5 (linux)
+[DEBUG] http-outgoing-0 << Transfer-Encoding: chunked
+[DEBUG] Connection can be kept alive indefinitely
+[DEBUG] Releasing connection 
+[DEBUG] http-outgoing-0: set socket timeout to 0
+[DEBUG] Connection can be kept alive indefinitely
+[INFO]  > Pulling run image '*********/paketobuildpacks/run:tiny-cnb' 100%
+[INFO]  > Pulled run image 'paketobuildpacks/run@sha256:18ef014232fbdb393b4670b698f60482fb29cf143bed0da849d8c89db9e23ed3'
+[DEBUG] CookieSpec selected: default
+[DEBUG] Auth cache not set in the context
+[DEBUG] Get connection for route {}->docker://localhost:2376
+[DEBUG] http-outgoing-0: set socket timeout to 0
+[DEBUG] Executing request POST /v1.24/images/load HTTP/1.1
+[DEBUG] Target auth state: UNCHALLENGED
+[DEBUG] Proxy auth state: UNCHALLENGED
+[DEBUG] http-outgoing-0 >> POST /v1.24/images/load HTTP/1.1
+[DEBUG] http-outgoing-0 >> Transfer-Encoding: chunked
+[DEBUG] http-outgoing-0 >> Content-Type: application/x-tar
+[DEBUG] http-outgoing-0 >> Host: localhost
+[DEBUG] http-outgoing-0 >> Connection: Keep-Alive
+[DEBUG] http-outgoing-0 >> User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.10)
+[DEBUG] http-outgoing-0 >> Accept-Encoding: gzip,deflate
+[DEBUG] http-outgoing-0 << HTTP/1.1 200 OK
+[DEBUG] http-outgoing-0 << Api-Version: 1.41
+[DEBUG] http-outgoing-0 << Content-Type: application/json
+[DEBUG] http-outgoing-0 << Date: Mon, 05 Apr 2021 12:08:53 GMT
+[DEBUG] http-outgoing-0 << Docker-Experimental: true
+[DEBUG] http-outgoing-0 << Ostype: linux
+[DEBUG] http-outgoing-0 << Server: Docker/20.10.5 (linux)
+[DEBUG] http-outgoing-0 << Transfer-Encoding: chunked
+[DEBUG] Connection can be kept alive indefinitely
+[DEBUG] Releasing connection 
+[DEBUG] http-outgoing-0: set socket timeout to 0
+[DEBUG] Connection can be kept alive indefinitely
+[INFO]  > Executing lifecycle version v0.11.1
+[INFO]  > Using build cache volume 'pack-cache-a859678df4a.build'
+[INFO] 
+[INFO]  > Running creator
+[DEBUG] CookieSpec selected: default
+[DEBUG] Auth cache not set in the context
+[DEBUG] Get connection for route {}->docker://localhost:2376
+[DEBUG] http-outgoing-0: set socket timeout to 0
+[DEBUG] Executing request POST /v1.24/containers/create HTTP/1.1
+[DEBUG] Target auth state: UNCHALLENGED
+[DEBUG] Proxy auth state: UNCHALLENGED
+[DEBUG] http-outgoing-0 >> POST /v1.24/containers/create HTTP/1.1
+[DEBUG] http-outgoing-0 >> Content-Length: 720
+[DEBUG] http-outgoing-0 >> Content-Type: application/json
+[DEBUG] http-outgoing-0 >> Host: localhost
+[DEBUG] http-outgoing-0 >> Connection: Keep-Alive
+[DEBUG] http-outgoing-0 >> User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.10)
+[DEBUG] http-outgoing-0 >> Accept-Encoding: gzip,deflate
+[DEBUG] http-outgoing-0 << HTTP/1.1 201 Created
+[DEBUG] http-outgoing-0 << Api-Version: 1.41
+[DEBUG] http-outgoing-0 << Content-Type: application/json
+[DEBUG] http-outgoing-0 << Date: Mon, 05 Apr 2021 12:08:54 GMT
+[DEBUG] http-outgoing-0 << Docker-Experimental: true
+[DEBUG] http-outgoing-0 << Ostype: linux
+[DEBUG] http-outgoing-0 << Server: Docker/20.10.5 (linux)
+[DEBUG] http-outgoing-0 << Transfer-Encoding: chunked
+[DEBUG] Connection can be kept alive indefinitely
+[DEBUG] Releasing connection 
+[DEBUG] http-outgoing-0: set socket timeout to 0
+[DEBUG] Connection can be kept alive indefinitely
+[DEBUG] CookieSpec selected: default
+[DEBUG] Auth cache not set in the context
+[DEBUG] Get connection for route {}->docker://localhost:2376
+[DEBUG] http-outgoing-0: set socket timeout to 0
+[DEBUG] Executing request PUT /v1.24/containers/82ce1ccb96e2a03886058863143566a9e13334da18b65576f54dd0e16c6fe63f/archive?path=%2Fworkspace HTTP/1.1
+[DEBUG] Target auth state: UNCHALLENGED
+[DEBUG] Proxy auth state: UNCHALLENGED
+[DEBUG] http-outgoing-0 >> PUT /v1.24/containers/82ce1ccb96e2a03886058863143566a9e13334da18b65576f54dd0e16c6fe63f/archive?path=%2Fworkspace HTTP/1.1
+[DEBUG] http-outgoing-0 >> Transfer-Encoding: chunked
+[DEBUG] http-outgoing-0 >> Content-Type: application/x-tar
+[DEBUG] http-outgoing-0 >> Host: localhost
+[DEBUG] http-outgoing-0 >> Connection: Keep-Alive
+[DEBUG] http-outgoing-0 >> User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.10)
+[DEBUG] http-outgoing-0 >> Accept-Encoding: gzip,deflate
+[DEBUG] http-outgoing-0 << HTTP/1.1 200 OK
+[DEBUG] http-outgoing-0 << Api-Version: 1.41
+[DEBUG] http-outgoing-0 << Date: Mon, 05 Apr 2021 12:08:57 GMT
+[DEBUG] http-outgoing-0 << Docker-Experimental: true
+[DEBUG] http-outgoing-0 << Ostype: linux
+[DEBUG] http-outgoing-0 << Server: Docker/20.10.5 (linux)
+[DEBUG] http-outgoing-0 << Transfer-Encoding: chunked
+[DEBUG] Connection can be kept alive indefinitely
+[DEBUG] http-outgoing-0: Close connection
+[DEBUG] Connection discarded
+[DEBUG] Releasing connection [Not bound]
+[DEBUG] CookieSpec selected: default
+[DEBUG] Auth cache not set in the context
+[DEBUG] Get connection for route {}->docker://localhost:2376
+[DEBUG] http-outgoing-1: set socket timeout to 0
+[DEBUG] Opening connection {}->docker://localhost:2376
+[DEBUG] Connecting to localhost/127.0.0.1:2376
+[DEBUG] Connection established 
+[DEBUG] Executing request POST /v1.24/containers/82ce1ccb96e2a03886058863143566a9e13334da18b65576f54dd0e16c6fe63f/start HTTP/1.1
+[DEBUG] Target auth state: UNCHALLENGED
+[DEBUG] Proxy auth state: UNCHALLENGED
+[DEBUG] http-outgoing-1 >> POST /v1.24/containers/82ce1ccb96e2a03886058863143566a9e13334da18b65576f54dd0e16c6fe63f/start HTTP/1.1
+[DEBUG] http-outgoing-1 >> Content-Length: 0
+[DEBUG] http-outgoing-1 >> Host: localhost
+[DEBUG] http-outgoing-1 >> Connection: Keep-Alive
+[DEBUG] http-outgoing-1 >> User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.10)
+[DEBUG] http-outgoing-1 >> Accept-Encoding: gzip,deflate
+[DEBUG] http-outgoing-1 << HTTP/1.1 204 No Content
+[DEBUG] http-outgoing-1 << Api-Version: 1.41
+[DEBUG] http-outgoing-1 << Date: Mon, 05 Apr 2021 12:08:58 GMT
+[DEBUG] http-outgoing-1 << Docker-Experimental: true
+[DEBUG] http-outgoing-1 << Ostype: linux
+[DEBUG] http-outgoing-1 << Server: Docker/20.10.5 (linux)
+[DEBUG] Connection can be kept alive indefinitely
+[DEBUG] Releasing connection 
+[DEBUG] http-outgoing-1: set socket timeout to 0
+[DEBUG] Connection can be kept alive indefinitely
+[DEBUG] CookieSpec selected: default
+[DEBUG] Auth cache not set in the context
+[DEBUG] Get connection for route {}->docker://localhost:2376
+[DEBUG] http-outgoing-1: set socket timeout to 0
+[DEBUG] Executing request GET /v1.24/containers/82ce1ccb96e2a03886058863143566a9e13334da18b65576f54dd0e16c6fe63f/logs?stdout=1&stderr=1&follow=1 HTTP/1.1
+[DEBUG] Target auth state: UNCHALLENGED
+[DEBUG] Proxy auth state: UNCHALLENGED
+[DEBUG] http-outgoing-1 >> GET /v1.24/containers/82ce1ccb96e2a03886058863143566a9e13334da18b65576f54dd0e16c6fe63f/logs?stdout=1&stderr=1&follow=1 HTTP/1.1
+[DEBUG] http-outgoing-1 >> Host: localhost
+[DEBUG] http-outgoing-1 >> Connection: Keep-Alive
+[DEBUG] http-outgoing-1 >> User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.10)
+[DEBUG] http-outgoing-1 >> Accept-Encoding: gzip,deflate
+[DEBUG] http-outgoing-1 << HTTP/1.1 200 OK
+[DEBUG] http-outgoing-1 << Api-Version: 1.41
+[DEBUG] http-outgoing-1 << Date: Mon, 05 Apr 2021 12:08:58 GMT
+[DEBUG] http-outgoing-1 << Docker-Experimental: true
+[DEBUG] http-outgoing-1 << Ostype: linux
+[DEBUG] http-outgoing-1 << Server: Docker/20.10.5 (linux)
+[DEBUG] http-outgoing-1 << Transfer-Encoding: chunked
+[DEBUG] Connection can be kept alive indefinitely
+[INFO]     [creator]     ===> DETECTING
+[INFO]     [creator]     4 of 11 buildpacks participating
+[INFO]     [creator]     paketo-buildpacks/graalvm        6.0.0
+[INFO]     [creator]     paketo-buildpacks/executable-jar 5.0.0
+[INFO]     [creator]     paketo-buildpacks/spring-boot    4.2.0
+[INFO]     [creator]     paketo-buildpacks/native-image   4.0.0
+[INFO]     [creator]     ===> ANALYZING
+[INFO]     [creator]     Previous image with name "harbor.simonjamesrowe.com/simonjamesrowe/api-gateway:0.0.60" not found
+[INFO]     [creator]     ===> RESTORING
+[INFO]     [creator]     ===> BUILDING
+[INFO]     [creator]     
+[INFO]     [creator]     Paketo GraalVM Buildpack 6.0.0
+[INFO]     [creator]       https://github.com/paketo-buildpacks/graalvm
+[INFO]     [creator]       Build Configuration:
+[INFO]     [creator]         $BP_JVM_VERSION              11.*            the Java version
+[INFO]     [creator]       Launch Configuration:
+[INFO]     [creator]         $BPL_JVM_HEAD_ROOM           0               the headroom in memory calculation
+[INFO]     [creator]         $BPL_JVM_LOADED_CLASS_COUNT  35% of classes  the number of loaded classes in memory calculation
+[INFO]     [creator]         $BPL_JVM_THREAD_COUNT        250             the number of threads in memory calculation
+[INFO]     [creator]         $JAVA_TOOL_OPTIONS                           the JVM launch flags
+[INFO]     [creator]       GraalVM JDK 11.0.10: Contributing to layer
+[INFO]     [creator]         Downloading from https://github.com/graalvm/graalvm-ce-builds/releases/download/vm-21.0.0.2/graalvm-ce-java11-linux-amd64-21.0.0.2.tar.gz
+[INFO]     [creator]         Verifying checksum
+[INFO]     [creator]         Expanding to /layers/paketo-buildpacks_graalvm/jdk
+[INFO]     [creator]         Adding 129 container CA certificates to JVM truststore
+[INFO]     [creator]       GraalVM Native Image Substrate VM 11.0.10
+[INFO]     [creator]         Downloading from https://github.com/graalvm/graalvm-ce-builds/releases/download/vm-21.0.0.2/native-image-installable-svm-java11-linux-amd64-21.0.0.2.jar
+[INFO]     [creator]         Verifying checksum
+[INFO]     [creator]         Installing substrate VM
+[INFO]     [creator]     Processing Component archive: /tmp/24e5a08e2714aee343b22c266285090721ff882ab0a31b7e8e4a68585c38f421/native-image-installable-svm-java11-linux-amd64-21.0.0.2.jar
+[INFO]     [creator]     Installing new component: Native Image (org.graalvm.native-image, version 21.0.0.2)
+[INFO]     [creator]         Writing env.build/JAVA_HOME.override
+[INFO]     [creator]         Writing env.build/JDK_HOME.override
+[INFO]     [creator]     
+[INFO]     [creator]     Paketo Executable JAR Buildpack 5.0.0
+[INFO]     [creator]       https://github.com/paketo-buildpacks/executable-jar
+[INFO]     [creator]       Class Path: Contributing to layer
+[INFO]     [creator]         Writing env.build/CLASSPATH.delim
+[INFO]     [creator]         Writing env.build/CLASSPATH.prepend
+[INFO]     [creator]     
+[INFO]     [creator]     Paketo Spring Boot Buildpack 4.2.0
+[INFO]     [creator]       https://github.com/paketo-buildpacks/spring-boot
+[INFO]     [creator]       Class Path: Contributing to layer
+[INFO]     [creator]         Writing env.build/CLASSPATH.append
+[INFO]     [creator]         Writing env.build/CLASSPATH.delim
+[INFO]     [creator]       Image labels:
+[INFO]     [creator]         org.opencontainers.image.title
+[INFO]     [creator]         org.opencontainers.image.version
+[INFO]     [creator]         org.springframework.boot.spring-configuration-metadata.json
+[INFO]     [creator]         org.springframework.boot.version
+[INFO]     [creator]     
+[INFO]     [creator]     Paketo Native Image Buildpack 4.0.0
+[INFO]     [creator]       https://github.com/paketo-buildpacks/native-image
+[INFO]     [creator]       Build Configuration:
+[INFO]     [creator]         $BP_NATIVE_IMAGE                  true                                                                                                                                                   enable native image build
+[INFO]     [creator]         $BP_NATIVE_IMAGE_BUILD_ARGUMENTS  --allow-incomplete-classpath --initialize-at-build-time=sun.instrument.InstrumentationImpl
+[INFO]     [creator]                     -H:+AddAllCharsets --enable-url-protocols=http  arguments to pass to the native-image command
+[INFO]     [creator]       Native Image: Contributing to layer
+[INFO]     [creator]         GraalVM Version 21.0.0.2 (Java Version 11.0.10+8-jvmci-21.0-b06)
+[INFO]     [creator]         Executing native-image --allow-incomplete-classpath --initialize-at-build-time=sun.instrument.InstrumentationImpl -H:+AddAllCharsets --enable-url-protocols=http -H:+StaticExecutableWithDynamicLibC -H:Name=/layers/paketo-buildpacks_native-image/native-image/com.simonjamesrowe.apigateway.ApiGatewayApplicationKt -cp /workspace:/workspace/BOOT-INF/classes:/workspace/BOOT-INF/lib/spring-native-0.9.2-SNAPSHOT.jar:/workspace/BOOT-INF/lib/spring-boot-2.4.4.jar:/workspace/BOOT-INF/lib/spring-boot-autoconfigure-2.4.4.jar:/workspace/BOOT-INF/lib/log4j-to-slf4j-2.13.3.jar:/workspace/BOOT-INF/lib/log4j-api-2.13.3.jar:/workspace/BOOT-INF/lib/jul-to-slf4j-1.7.30.jar:/workspace/BOOT-INF/lib/jakarta.annotation-api-1.3.5.jar:/workspace/BOOT-INF/lib/snakeyaml-1.27.jar:/workspace/BOOT-INF/lib/spring-boot-actuator-autoconfigure-2.4.4.jar:/workspace/BOOT-INF/lib/spring-boot-actuator-2.4.4.jar:/workspace/BOOT-INF/lib/jackson-datatype-jsr310-2.11.4.jar:/workspace/BOOT-INF/lib/micrometer-core-1.6.5.jar:/workspace/BOOT-INF/lib/HdrHistogram-2.1.12.jar:/workspace/BOOT-INF/lib/LatencyUtils-2.0.3.jar:/workspace/BOOT-INF/lib/spring-aop-5.3.5.jar:/workspace/BOOT-INF/lib/spring-beans-5.3.5.jar:/workspace/BOOT-INF/lib/spring-security-config-5.4.5.jar:/workspace/BOOT-INF/lib/spring-security-core-5.4.5.jar:/workspace/BOOT-INF/lib/spring-security-web-5.4.5.jar:/workspace/BOOT-INF/lib/spring-expression-5.3.5.jar:/workspace/BOOT-INF/lib/jackson-datatype-jdk8-2.11.4.jar:/workspace/BOOT-INF/lib/jackson-module-parameter-names-2.11.4.jar:/workspace/BOOT-INF/lib/reactor-netty-http-1.0.5.jar:/workspace/BOOT-INF/lib/netty-codec-http-4.1.60.Final.jar:/workspace/BOOT-INF/lib/netty-common-4.1.60.Final.jar:/workspace/BOOT-INF/lib/netty-buffer-4.1.60.Final.jar:/workspace/BOOT-INF/lib/netty-transport-4.1.60.Final.jar:/workspace/BOOT-INF/lib/netty-codec-4.1.60.Final.jar:/workspace/BOOT-INF/lib/netty-handler-4.1.60.Final.jar:/workspace/BOOT-INF/lib/netty-codec-http2-4.1.60.Final.jar:/workspace/BOOT-INF/lib/netty-resolver-dns-4.1.60.Final.jar:/workspace/BOOT-INF/lib/netty-resolver-4.1.60.Final.jar:/workspace/BOOT-INF/lib/netty-codec-dns-4.1.60.Final.jar:/workspace/BOOT-INF/lib/netty-resolver-dns-native-macos-4.1.60.Final-osx-x86_64.jar:/workspace/BOOT-INF/lib/netty-transport-native-unix-common-4.1.60.Final.jar:/workspace/BOOT-INF/lib/netty-transport-native-epoll-4.1.60.Final-linux-x86_64.jar:/workspace/BOOT-INF/lib/reactor-netty-core-1.0.5.jar:/workspace/BOOT-INF/lib/netty-handler-proxy-4.1.60.Final.jar:/workspace/BOOT-INF/lib/netty-codec-socks-4.1.60.Final.jar:/workspace/BOOT-INF/lib/spring-web-5.3.5.jar:/workspace/BOOT-INF/lib/spring-webflux-5.3.5.jar:/workspace/BOOT-INF/lib/openapi-generator-for-spring-starter-1.0.1.jar:/workspace/BOOT-INF/lib/openapi-generator-for-spring-webmvc-1.0.1.jar:/workspace/BOOT-INF/lib/openapi-generator-for-spring-autoconfigure-1.0.1.jar:/workspace/BOOT-INF/lib/openapi-generator-for-spring-web-1.0.1.jar:/workspace/BOOT-INF/lib/openapi-generator-for-spring-webflux-1.0.1.jar:/workspace/BOOT-INF/lib/openapi-generator-for-spring-ui-1.0.1.jar:/workspace/BOOT-INF/lib/openapi-generator-for-spring-common-1.0.1.jar:/workspace/BOOT-INF/lib/openapi-generator-for-spring-api-1.0.1.jar:/workspace/BOOT-INF/lib/openapi-generator-for-spring-model-1.0.1.jar:/workspace/BOOT-INF/lib/swagger-annotations-2.1.4.jar:/workspace/BOOT-INF/lib/openapi-generator-for-spring-shaded-1.0.1.jar:/workspace/BOOT-INF/lib/jackson-dataformat-yaml-2.11.4.jar:/workspace/BOOT-INF/lib/jsr305-3.0.2.jar:/workspace/BOOT-INF/lib/spring-cloud-starter-sleuth-3.0.2.jar:/workspace/BOOT-INF/lib/spring-cloud-starter-3.0.2.jar:/workspace/BOOT-INF/lib/spring-cloud-context-3.0.2.jar:/workspace/BOOT-INF/lib/spring-security-rsa-1.0.9.RELEASE.jar:/workspace/BOOT-INF/lib/aspectjweaver-1.9.6.jar:/workspace/BOOT-INF/lib/spring-cloud-sleuth-autoconfigure-3.0.2.jar:/workspace/BOOT-INF/lib/aspectjrt-1.9.6.jar:/workspace/BOOT-INF/lib/spring-cloud-sleuth-brave-3.0.2.jar:/workspace/BOOT-INF/lib/brave-5.13.2.jar:/workspace/BOOT-INF/lib/brave-context-slf4j-5.13.2.jar:/workspace/BOOT-IN
+F/lib/brave-instrumentation-messaging-5.13.2.jar:/workspace/BOOT-INF/lib/brave-instrumentation-rpc-5.13.2.jar:/workspace/BOOT-INF/lib/brave-instrumentation-spring-rabbit-5.13.2.jar:/workspace/BOOT-INF/lib/brave-instrumentation-kafka-clients-5.13.2.jar:/workspace/BOOT-INF/lib/brave-instrumentation-kafka-streams-5.13.2.jar:/workspace/BOOT-INF/lib/brave-instrumentation-httpclient-5.13.2.jar:/workspace/BOOT-INF/lib/brave-instrumentation-http-5.13.2.jar:/workspace/BOOT-INF/lib/brave-instrumentation-httpasyncclient-5.13.2.jar:/workspace/BOOT-INF/lib/brave-instrumentation-jms-5.13.2.jar:/workspace/BOOT-INF/lib/brave-instrumentation-mongodb-5.13.2.jar:/workspace/BOOT-INF/lib/brave-propagation-aws-0.21.3.jar:/workspace/BOOT-INF/lib/zipkin-reporter-metrics-micrometer-2.16.1.jar:/workspace/BOOT-INF/lib/spring-cloud-sleuth-zipkin-3.0.2.jar:/workspace/BOOT-INF/lib/spring-cloud-sleuth-instrumentation-3.0.2.jar:/workspace/BOOT-INF/lib/spring-cloud-sleuth-api-3.0.2.jar:/workspace/BOOT-INF/lib/spring-cloud-commons-3.0.2.jar:/workspace/BOOT-INF/lib/spring-security-crypto-5.4.5.jar:/workspace/BOOT-INF/lib/zipkin-2.23.0.jar:/workspace/BOOT-INF/lib/zipkin-reporter-2.16.1.jar:/workspace/BOOT-INF/lib/zipkin-reporter-brave-2.16.1.jar:/workspace/BOOT-INF/lib/zipkin-sender-kafka-2.16.1.jar:/workspace/BOOT-INF/lib/zipkin-sender-activemq-client-2.16.1.jar:/workspace/BOOT-INF/lib/zipkin-sender-amqp-client-2.16.1.jar:/workspace/BOOT-INF/lib/spring-kafka-2.6.7.jar:/workspace/BOOT-INF/lib/spring-context-5.3.5.jar:/workspace/BOOT-INF/lib/spring-messaging-5.3.5.jar:/workspace/BOOT-INF/lib/spring-tx-5.3.5.jar:/workspace/BOOT-INF/lib/spring-retry-1.3.1.jar:/workspace/BOOT-INF/lib/javax.annotation-api-1.3.2.jar:/workspace/BOOT-INF/lib/kafka-clients-2.6.0.jar:/workspace/BOOT-INF/lib/zstd-jni-1.4.4-7.jar:/workspace/BOOT-INF/lib/lz4-java-1.7.1.jar:/workspace/BOOT-INF/lib/snappy-java-1.1.7.3.jar:/workspace/BOOT-INF/lib/jackson-module-kotlin-2.11.4.jar:/workspace/BOOT-INF/lib/jackson-databind-2.11.4.jar:/workspace/BOOT-INF/lib/jackson-annotations-2.11.4.jar:/workspace/BOOT-INF/lib/reactor-kotlin-extensions-1.1.3.jar:/workspace/BOOT-INF/lib/reactor-core-3.4.4.jar:/workspace/BOOT-INF/lib/reactive-streams-1.0.3.jar:/workspace/BOOT-INF/lib/kotlin-reflect-1.4.30.jar:/workspace/BOOT-INF/lib/kotlin-stdlib-1.4.30.jar:/workspace/BOOT-INF/lib/kotlin-stdlib-common-1.4.30.jar:/workspace/BOOT-INF/lib/annotations-13.0.jar:/workspace/BOOT-INF/lib/kotlin-stdlib-jdk8-1.4.30.jar:/workspace/BOOT-INF/lib/kotlin-stdlib-jdk7-1.4.30.jar:/workspace/BOOT-INF/lib/kotlinx-coroutines-reactor-1.4.3.jar:/workspace/BOOT-INF/lib/kotlinx-coroutines-core-jvm-1.4.3.jar:/workspace/BOOT-INF/lib/kotlinx-coroutines-reactive-1.4.3.jar:/workspace/BOOT-INF/lib/spring-cloud-starter-gateway-3.0.2.jar:/workspace/BOOT-INF/lib/spring-cloud-gateway-server-3.0.2.jar:/workspace/BOOT-INF/lib/jakarta.el-3.0.3.jar:/workspace/BOOT-INF/lib/reactor-extra-3.4.2.jar:/workspace/BOOT-INF/lib/spring-cloud-gateway-webflux-3.0.2.jar:/workspace/BOOT-INF/lib/spring-cloud-starter-openfeign-3.0.2.jar:/workspace/BOOT-INF/lib/spring-cloud-openfeign-core-3.0.2.jar:/workspace/BOOT-INF/lib/feign-form-spring-3.8.0.jar:/workspace/BOOT-INF/lib/feign-form-3.8.0.jar:/workspace/BOOT-INF/lib/commons-fileupload-1.4.jar:/workspace/BOOT-INF/lib/feign-core-10.10.1.jar:/workspace/BOOT-INF/lib/feign-slf4j-10.10.1.jar:/workspace/BOOT-INF/lib/feign-jackson-11.0.jar:/workspace/BOOT-INF/lib/commons-io-2.7.jar:/workspace/BOOT-INF/lib/model-0.0.19.jar:/workspace/BOOT-INF/lib/sendgrid-java-4.0.1.jar:/workspace/BOOT-INF/lib/java-http-client-4.1.0.jar:/workspace/BOOT-INF/lib/httpcore-4.4.14.jar:/workspace/BOOT-INF/lib/httpclient-4.5.13.jar:/workspace/BOOT-INF/lib/commons-codec-1.15.jar:/workspace/BOOT-INF/lib/jackson-core-2.11.4.jar:/workspace/BOOT-INF/lib/hibernate-validator-6.2.0.Final.jar:/workspace/BOOT-INF/lib/jakarta.validation-api-2.0.2.jar:/workspace/BOOT-INF/lib/jboss-logging-3.4.1.Final.jar:/workspace/BOOT-INF/lib/classmate-1.5.1.jar:/workspace/BOOT-INF/lib/pdfa-7.1.14.jar:/workspace/BOOT-INF/lib/kernel-7.1.14.jar:/workspace/BOOT-INF/lib/io-7.1
+.14.jar:/workspace/BOOT-INF/lib/bcpkix-jdk15on-1.67.jar:/workspace/BOOT-INF/lib/bcprov-jdk15on-1.67.jar:/workspace/BOOT-INF/lib/slf4j-api-1.7.30.jar:/workspace/BOOT-INF/lib/layout-7.1.14.jar:/workspace/BOOT-INF/lib/font-asian-7.1.14.jar:/workspace/BOOT-INF/lib/logstash-logback-encoder-6.6.jar:/workspace/BOOT-INF/lib/logback-classic-1.2.3.jar:/workspace/BOOT-INF/lib/logback-core-1.2.3.jar:/workspace/BOOT-INF/lib/mockito-core-3.6.28.jar:/workspace/BOOT-INF/lib/byte-buddy-1.10.22.jar:/workspace/BOOT-INF/lib/byte-buddy-agent-1.10.22.jar:/workspace/BOOT-INF/lib/spring-core-5.3.5.jar:/workspace/BOOT-INF/lib/spring-jcl-5.3.5.jar:/workspace/BOOT-INF/lib/commons-lang3-3.11.jar:/workspace/BOOT-INF/lib/objenesis-3.1.jar:/workspace/BOOT-INF/lib/classgraph-4.8.90.jar:/workspace/BOOT-INF/lib/spring-boot-jarmode-layertools-2.4.4.jar com.simonjamesrowe.apigateway.ApiGatewayApplicationKt
+[INFO]     [creator]     [/layers/paketo-buildpacks_native-image/native-image/com.simonjamesrowe.apigateway.ApiGatewayApplicationKt:172]    classlist:  50,439.45 ms,  1.69 GB
+[INFO]     [creator]     12:10:26.451 [ForkJoinPool-4-worker-3] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+[INFO]     [creator]     12:10:26.458 [ForkJoinPool-4-worker-3] INFO org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.0.Final
+[INFO]     [creator]     WARNING: Could not resolve org.apache.maven.surefire.booter.ForkedBooter for reflection configuration. Reason: java.lang.ClassNotFoundException: org.apache.maven.surefire.booter.ForkedBooter.
+[INFO]     [creator]     [/layers/paketo-buildpacks_native-image/native-image/com.simonjamesrowe.apigateway.ApiGatewayApplicationKt:172]        (cap):     979.11 ms,  1.69 GB
+[INFO]     [creator]     WARNING: Could not resolve com.github.tomakehurst.wiremock.WireMockServer[] for reflection configuration. Reason: java.lang.ClassNotFoundException: com.github.tomakehurst.wiremock.WireMockServer.
+[INFO]     [creator]     WARNING: Could not resolve com.simonjamesrowe.apigateway.ApiGatewayApplication$$EnhancerBySpringCGLIB$$ddf65fed for reflection configuration. Reason: java.lang.ClassNotFoundException: com.simonjamesrowe.apigateway.ApiGatewayApplication$$EnhancerBySpringCGLIB$$ddf65fed.
+[INFO]     [creator]     WARNING: Could not resolve com.simonjamesrowe.apigateway.config.FeignConfig$$EnhancerBySpringCGLIB$$1c180446 for reflection configuration. Reason: java.lang.ClassNotFoundException: com.simonjamesrowe.apigateway.config.FeignConfig$$EnhancerBySpringCGLIB$$1c180446.
+[INFO]     [creator]     WARNING: Could not resolve com.simonjamesrowe.apigateway.config.FeignConfig$$EnhancerBySpringCGLIB$$1c180446$$FastClassBySpringCGLIB$$8c9d4d55 for reflection configuration. Reason: java.lang.ClassNotFoundException: com.simonjamesrowe.apigateway.config.FeignConfig$$EnhancerBySpringCGLIB$$1c180446$$FastClassBySpringCGLIB$$8c9d4d55.
+[INFO]     [creator]     WARNING: Could not resolve com.simonjamesrowe.apigateway.config.FeignConfig$$FastClassBySpringCGLIB$$59bf0e43 for reflection configuration. Reason: java.lang.ClassNotFoundException: com.simonjamesrowe.apigateway.config.FeignConfig$$FastClassBySpringCGLIB$$59bf0e43.
+[INFO]     [creator]     WARNING: Could not resolve com.simonjamesrowe.apigateway.config.PreFlightCorsConfiguration$$EnhancerBySpringCGLIB$$bd7a0149 for reflection configuration. Reason: java.lang.ClassNotFoundException: com.simonjamesrowe.apigateway.config.PreFlightCorsConfiguration$$EnhancerBySpringCGLIB$$bd7a0149.
+[INFO]     [creator]     WARNING: Could not resolve com.simonjamesrowe.apigateway.config.PreFlightCorsConfiguration$$EnhancerBySpringCGLIB$$bd7a0149$$FastClassBySpringCGLIB$$e4ea6c25 for reflection configuration. Reason: java.lang.ClassNotFoundException: com.simonjamesrowe.apigateway.config.PreFlightCorsConfiguration$$EnhancerBySpringCGLIB$$bd7a0149$$FastClassBySpringCGLIB$$e4ea6c25.
+[INFO]     [creator]     WARNING: Could not resolve com.simonjamesrowe.apigateway.config.PreFlightCorsConfiguration$$FastClassBySpringCGLIB$$f4e4de6 for reflection configuration. Reason: java.lang.ClassNotFoundException: com.simonjamesrowe.apigateway.config.PreFlightCorsConfiguration$$FastClassBySpringCGLIB$$f4e4de6.
+[INFO]     [creator]     WARNING: Could not resolve com.simonjamesrowe.apigateway.config.SecurityConfig$$EnhancerBySpringCGLIB$$ed4897d5 for reflection configuration. Reason: java.lang.ClassNotFoundException: com.simonjamesrowe.apigateway.config.SecurityConfig$$EnhancerBySpringCGLIB$$ed4897d5.
+[INFO]     [creator]     WARNING: Could not resolve com.simonjamesrowe.apigateway.config.SecurityConfig$$EnhancerBySpringCGLIB$$ed4897d5$$FastClassBySpringCGLIB$$9d0b5959 for reflection configuration. Reason: java.lang.ClassNotFoundException: com.simonjamesrowe.apigateway.config.SecurityConfig$$EnhancerBySpringCGLIB$$ed4897d5$$FastClassBySpringCGLIB$$9d0b5959.
+[INFO]     [creator]     WARNING: Could not resolve com.simonjamesrowe.apigateway.config.SecurityConfig$$FastClassBySpringCGLIB$$34301ef2 for reflection configuration. Reason: java.lang.ClassNotFoundException: com.simonjamesrowe.apigateway.config.SecurityConfig$$FastClassBySpringCGLIB$$34301ef2.
+[INFO]     [creator]     WARNING: Could not resolve com.simonjamesrowe.apigateway.core.usecase.ICompressFileUseCase$Subclass3 for reflection configuration. Reason: java.lang.ClassNotFoundException: com.simonjamesrowe.apigateway.core.usecase.ICompressFileUseCase$Subclass3.
+[INFO]     [creator]     WARNING: Could not resolve com.simonjamesrowe.apigateway.core.usecase.IResumeUseCase$Subclass2 for reflection configuration. Reason: java.lang.ClassNotFoundException: com.simonjamesrowe.apigateway.core.usecase.IResumeUseCase$Subclass2.
+[INFO]     [creator]     WARNING: Could not resolve com.simonjamesrowe.apigateway.test.dataproviders.sendgrid.SendGridEmailSenderTest[] for reflection configuration. Reason: java.lang.ClassNotFoundException: com.simonjamesrowe.apigateway.test.dataproviders.sendgrid.SendGridEmailSenderTest.
+[INFO]     [creator]     WARNING: Could not resolve com.simonjamesrowe.model.config.JacksonConfig$$EnhancerBySpringCGLIB$$770a5b9 for reflection configuration. Reason: java.lang.ClassNotFoundException: com.simonjamesrowe.model.config.JacksonConfig$$EnhancerBySpringCGLIB$$770a5b9.
+[INFO]     [creator]     WARNING: Could not resolve com.simonjamesrowe.model.config.JacksonConfig$$EnhancerBySpringCGLIB$$770a5b9$$FastClassBySpringCGLIB$$5e409958 for reflection configuration. Reason: java.lang.ClassNotFoundException: com.simonjamesrowe.model.config.JacksonConfig$$EnhancerBySpringCGLIB$$770a5b9$$FastClassBySpringCGLIB$$5e409958.
+[INFO]     [creator]     WARNING: Could not resolve com.simonjamesrowe.model.config.JacksonConfig$$FastClassBySpringCGLIB$$4b3ad456 for reflection configuration. Reason: java.lang.ClassNotFoundException: com.simonjamesrowe.model.config.JacksonConfig$$FastClassBySpringCGLIB$$4b3ad456.
+[INFO]     [creator]     WARNING: Could not resolve de.qaware.openapigeneratorforspring.autoconfigure.OpenApiGeneratorAutoConfiguration$$EnhancerBySpringCGLIB$$a9220a1 for reflection configuration. Reason: java.lang.ClassNotFoundException: de.qaware.openapigeneratorforspring.autoconfigure.OpenApiGeneratorAutoConfiguration$$EnhancerBySpringCGLIB$$a9220a1.
+[INFO]     [creator]     WARNING: Could not resolve de.qaware.openapigeneratorforspring.autoconfigure.OpenApiGeneratorAutoConfiguration$$EnhancerBySpringCGLIB$$a9220a1$$FastClassBySpringCGLIB$$527327cd for reflection configuration. Reason: java.lang.ClassNotFoundException: de.qaware.openapigeneratorforspring.autoconfigure.OpenApiGeneratorAutoConfiguration$$EnhancerBySpringCGLIB$$a9220a1$$FastClassBySpringCGLIB$$527327cd.
+[INFO]     [creator]     WARNING: Could not resolve de.qaware.openapigeneratorforspring.autoconfigure.OpenApiGeneratorAutoConfiguration$$FastClassBySpringCGLIB$$408da3e for reflection configuration. Reason: java.lang.ClassNotFoundException: de.qaware.openapigeneratorforspring.autoconfigure.OpenApiGeneratorAutoConfiguration$$FastClassBySpringCGLIB$$408da3e.
+[INFO]     [creator]     WARNING: Could not resolve de.qaware.openapigeneratorforspring.autoconfigure.OpenApiGeneratorReferenceCallbackAutoConfiguration$$Lambda$1591/0x0000000840c82840 for reflection configuration. Reason: java.lang.ClassNotFoundException: de.qaware.openapigeneratorforspring.autoconfigure.OpenApiGeneratorReferenceCallbackAutoConfiguration$$Lambda$1591/0x0000000840c82840.
+[INFO]     [creator]     WARNING: Could not resolve de.qaware.openapigeneratorforspring.autoconfigure.OpenApiGeneratorReferenceCallbackAutoConfiguration$$Lambda$1594/0x0000000840cb0840 for reflection configuration. Reason: java.lang.ClassNotFoundException: de.qaware.openapigeneratorforspring.autoconfigure.OpenApiGeneratorReferenceCallbackAutoConfiguration$$Lambda$1594/0x0000000840cb0840.
+[INFO]     [creator]     WARNING: Could not resolve de.qaware.openapigeneratorforspring.autoconfigure.OpenApiGeneratorReferenceCallbackAutoConfiguration$$Lambda$1597/0x0000000840cb1440 for reflection configuration. Reason: java.lang.ClassNotFoundException: de.qaware.openapigeneratorforspring.autoconfigure.OpenApiGeneratorReferenceCallbackAutoConfiguration$$Lambda$1597/0x0000000840cb1440.
+[INFO]     [creator]     WARNING: Could not resolve de.qaware.openapigeneratorforspring.autoconfigure.OpenApiGeneratorReferenceExampleAutoConfiguration$$Lambda$1599/0x0000000840cb1c40 for reflection configuration. Reason: java.lang.ClassNotFoundException: de.qaware.openapigeneratorforspring.autoconfigure.OpenApiGeneratorReferenceExampleAutoConfiguration$$Lambda$1599/0x0000000840cb1c40.
+[INFO]     [creator]     WARNING: Could not resolve de.qaware.openapigeneratorforspring.autoconfigure.OpenApiGeneratorReferenceExampleAutoConfiguration$$Lambda$1601/0x0000000840cb2440 for reflection configuration. Reason: java.lang.ClassNotFoundException: de.qaware.openapigeneratorforspring.autoconfigure.OpenApiGeneratorReferenceExampleAutoConfiguration$$Lambda$1601/0x0000000840cb2440.
+[INFO]     [creator]     WARNING: Could not resolve de.qaware.openapigeneratorforspring.autoconfigure.OpenApiGeneratorReferenceExampleAutoConfiguration$$Lambda$1603/0x0000000840cb2c40 for reflection configuration. Reason: java.lang.ClassNotFoundException: de.qaware.openapigeneratorforspring.autoconfigure.OpenApiGeneratorReferenceExampleAutoConfiguration$$Lambda$1603/0x0000000840cb2c40.
+[INFO]     [creator]     WARNING: Could not resolve de.qaware.openapigeneratorforspring.autoconfigure.OpenApiGeneratorReferenceHeaderAutoConfiguration$$Lambda$1605/0x0000000840cb3440 for reflection configuration. Reason: java.lang.ClassNotFoundException: de.qaware.openapigeneratorforspring.autoconfigure.OpenApiGeneratorReferenceHeaderAutoConfiguration$$Lambda$1605/0x0000000840cb3440.
+[INFO]     [creator]     WARNING: Could not resolve de.qaware.openapigeneratorforspring.autoconfigure.OpenApiGeneratorReferenceHeaderAutoConfiguration$$Lambda$1607/0x0000000840cb3c40 for reflection configuration. Reason: java.lang.ClassNotFoundException: de.qaware.openapigeneratorforspring.autoconfigure.OpenApiGeneratorReferenceHeaderAutoConfiguration$$Lambda$1607/0x0000000840cb3c40.
+[INFO]     [creator]     WARNING: Could not resolve de.qaware.openapigeneratorforspring.autoconfigure.OpenApiGeneratorReferenceHeaderAutoConfiguration$$Lambda$1609/0x0000000840cb4440 for reflection configuration. Reason: java.lang.ClassNotFoundException: de.qaware.openapigeneratorforspring.autoconfigure.OpenApiGeneratorReferenceHeaderAutoConfiguration$$Lambda$1609/0x0000000840cb4440.
+[INFO]     [creator]     WARNING: Could not resolve de.qaware.openapigeneratorforspring.autoconfigure.OpenApiGeneratorReferenceLinkAutoConfiguration$$Lambda$1611/0x0000000840cb4c40 for reflection configuration. Reason: java.lang.ClassNotFoundException: de.qaware.openapigeneratorforspring.autoconfigure.OpenApiGeneratorReferenceLinkAutoConfiguration$$Lambda$1611/0x0000000840cb4c40.
+[INFO]     [creator]     WARNING: Could not resolve de.qaware.openapigeneratorforspring.autoconfigure.OpenApiGeneratorReferenceLinkAutoConfiguration$$Lambda$1613/0x0000000840cb5440 for reflection configuration. Reason: java.lang.ClassNotFoundException: de.qaware.openapigeneratorforspring.autoconfigure.OpenApiGeneratorReferenceLinkAutoConfiguration$$Lambda$1613/0x0000000840cb5440.
+[INFO]     [creator]     WARNING: Could not resolve de.qaware.openapigeneratorforspring.autoconfigure.OpenApiGeneratorReferenceLinkAutoConfiguration$$Lambda$1615/0x0000000840cb5c40 for reflection configuration. Reason: java.lang.ClassNotFoundException: de.qaware.openapigeneratorforspring.autoconfigure.OpenApiGeneratorReferenceLinkAutoConfiguration$$Lambda$1615/0x0000000840cb5c40.
+[INFO]     [creator]     WARNING: Could not resolve de.qaware.openapigeneratorforspring.autoconfigure.OpenApiGeneratorReferenceParameterAutoConfiguration$$Lambda$1617/0x0000000840cb6440 for reflection configuration. Reason: java.lang.ClassNotFoundException: de.qaware.openapigeneratorforspring.autoconfigure.OpenApiGeneratorReferenceParameterAutoConfiguration$$Lambda$1617/0x0000000840cb6440.
+[INFO]     [creator]     WARNING: Could not resolve de.qaware.openapigeneratorforspring.autoconfigure.OpenApiGeneratorReferenceParameterAutoConfiguration$$Lambda$1619/0x0000000840cb6c40 for reflection configuration. Reason: java.lang.ClassNotFoundException: de.qaware.openapigeneratorforspring.autoconfigure.OpenApiGeneratorReferenceParameterAutoConfiguration$$Lambda$1619/0x0000000840cb6c40.
+[INFO]     [creator]     WARNING: Could not resolve de.qaware.openapigeneratorforspring.autoconfigure.OpenApiGeneratorReferenceParameterAutoConfiguration$$Lambda$1621/0x0000000840cb7440 for reflection configuration. Reason: java.lang.ClassNotFoundException: de.qaware.openapigeneratorforspring.autoconfigure.OpenApiGeneratorReferenceParameterAutoConfiguration$$Lambda$1621/0x0000000840cb7440.
+[INFO]     [creator]     WARNING: Could not resolve de.qaware.openapigeneratorforspring.autoconfigure.OpenApiGeneratorReferenceRequestBodyAutoConfiguration$$Lambda$1623/0x0000000840cb7c40 for reflection configuration. Reason: java.lang.ClassNotFoundException: de.qaware.openapigeneratorforspring.autoconfigure.OpenApiGeneratorReferenceRequestBodyAutoConfiguration$$Lambda$1623/0x0000000840cb7c40.
+[INFO]     [creator]     WARNING: Could not resolve de.qaware.openapigeneratorforspring.autoconfigure.OpenApiGeneratorReferenceRequestBodyAutoConfiguration$$Lambda$1625/0x0000000840cb8440 for reflection configuration. Reason: java.lang.ClassNotFoundException: de.qaware.openapigeneratorforspring.autoconfigure.OpenApiGeneratorReferenceRequestBodyAutoConfiguration$$Lambda$1625/0x0000000840cb8440.
+[INFO]     [creator]     WARNING: Could not resolve de.qaware.openapigeneratorforspring.autoconfigure.OpenApiGeneratorReferenceRequestBodyAutoConfiguration$$Lambda$1627/0x0000000840cb8c40 for reflection configuration. Reason: java.lang.ClassNotFoundException: de.qaware.openapigeneratorforspring.autoconfigure.OpenApiGeneratorReferenceRequestBodyAutoConfiguration$$Lambda$1627/0x0000000840cb8c40.
+[INFO]     [creator]     WARNING: Could not resolve de.qaware.openapigeneratorforspring.autoconfigure.OpenApiGeneratorReferenceResponseAutoConfiguration$$Lambda$1629/0x0000000840cb9440 for reflection configuration. Reason: java.lang.ClassNotFoundException: de.qaware.openapigeneratorforspring.autoconfigure.OpenApiGeneratorReferenceResponseAutoConfiguration$$Lambda$1629/0x0000000840cb9440.
+[INFO]     [creator]     WARNING: Could not resolve de.qaware.openapigeneratorforspring.autoconfigure.OpenApiGeneratorReferenceResponseAutoConfiguration$$Lambda$1631/0x0000000840cb9c40 for reflection configuration. Reason: java.lang.ClassNotFoundException: de.qaware.openapigeneratorforspring.autoconfigure.OpenApiGeneratorReferenceResponseAutoConfiguration$$Lambda$1631/0x0000000840cb9c40.
+[INFO]     [creator]     WARNING: Could not resolve de.qaware.openapigeneratorforspring.autoconfigure.OpenApiGeneratorReferenceSchemaAutoConfiguration$$Lambda$1633/0x0000000840cba440 for reflection configuration. Reason: java.lang.ClassNotFoundException: de.qaware.openapigeneratorforspring.autoconfigure.OpenApiGeneratorReferenceSchemaAutoConfiguration$$Lambda$1633/0x0000000840cba440.
+[INFO]     [creator]     WARNING: Could not resolve de.qaware.openapigeneratorforspring.autoconfigure.OpenApiGeneratorUtilAutoConfiguration$$Lambda$1634/0x0000000840cba840 for reflection configuration. Reason: java.lang.ClassNotFoundException: de.qaware.openapigeneratorforspring.autoconfigure.OpenApiGeneratorUtilAutoConfiguration$$Lambda$1634/0x0000000840cba840.
+[INFO]     [creator]     WARNING: Could not resolve de.qaware.openapigeneratorforspring.autoconfigure.OpenApiGeneratorWebFluxAutoConfiguration$$Lambda$1637/0x0000000840cbb440 for reflection configuration. Reason: java.lang.ClassNotFoundException: de.qaware.openapigeneratorforspring.autoconfigure.OpenApiGeneratorWebFluxAutoConfiguration$$Lambda$1637/0x0000000840cbb440.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.AWSElasticBlockStoreVolumeSource for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.AWSElasticBlockStoreVolumeSource.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.Affinity for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.Affinity.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.AzureDiskVolumeSource for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.AzureDiskVolumeSource.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.AzureFileVolumeSource for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.AzureFileVolumeSource.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.CSIVolumeSource for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.CSIVolumeSource.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.Capabilities for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.Capabilities.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.CephFSVolumeSource for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.CephFSVolumeSource.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.CinderVolumeSource for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.CinderVolumeSource.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.Config for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.Config.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.ConfigBuilder for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.ConfigBuilder.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.ConfigMapEnvSource for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.ConfigMapEnvSource.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.ConfigMapKeySelector for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.ConfigMapKeySelector.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.ConfigMapProjection for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.ConfigMapProjection.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.ConfigMapVolumeSource for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.ConfigMapVolumeSource.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.Container for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.Container.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.ContainerPort for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.ContainerPort.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.ContainerState for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.ContainerState.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.ContainerStateRunning for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.ContainerStateRunning.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.ContainerStateTerminated for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.ContainerStateTerminated.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.ContainerStateWaiting for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.ContainerStateWaiting.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.ContainerStatus for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.ContainerStatus.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.Context for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.Context.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.DownwardAPIProjection for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.DownwardAPIProjection.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.DownwardAPIVolumeFile for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.DownwardAPIVolumeFile.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.DownwardAPIVolumeSource for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.DownwardAPIVolumeSource.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.EmptyDirVolumeSource for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.EmptyDirVolumeSource.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.EnvFromSource for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.EnvFromSource.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.EnvVar for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.EnvVar.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.EnvVarSource for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.EnvVarSource.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.EphemeralContainer for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.EphemeralContainer.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.EphemeralVolumeSource for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.EphemeralVolumeSource.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.ExecAction for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.ExecAction.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.ExecConfig for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.ExecConfig.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.ExecEnvVar for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.ExecEnvVar.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.FCVolumeSource for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.FCVolumeSource.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.FieldsV1 for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.FieldsV1.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.FlexVolumeSource for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.FlexVolumeSource.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.FlockerVolumeSource for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.FlockerVolumeSource.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.GCEPersistentDiskVolumeSource for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.GCEPersistentDiskVolumeSource.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.GitRepoVolumeSource for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.GitRepoVolumeSource.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.GlusterfsVolumeSource for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.GlusterfsVolumeSource.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.HTTPGetAction for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.HTTPGetAction.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.HTTPHeader for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.HTTPHeader.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.Handler for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.Handler.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.HasMetadata for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.HasMetadata.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.HostAlias for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.HostAlias.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.HostPathVolumeSource for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.HostPathVolumeSource.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.ISCSIVolumeSource for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.ISCSIVolumeSource.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.IntOrString$Deserializer for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.IntOrString$Deserializer.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.KeyToPath for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.KeyToPath.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.KubernetesResource for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.KubernetesResource.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.KubernetesResourceList for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.KubernetesResourceList.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.LabelSelector for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.LabelSelector.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.LabelSelectorRequirement for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.LabelSelectorRequirement.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.Lifecycle for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.Lifecycle.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.LocalObjectReference for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.LocalObjectReference.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.ManagedFieldsEntry for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.ManagedFieldsEntry.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.NFSVolumeSource for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.NFSVolumeSource.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.NamedContext for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.NamedContext.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.Namespaced for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.Namespaced.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.NodeAffinity for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.NodeAffinity.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.NodeSelector for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.NodeSelector.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.NodeSelectorRequirement for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.NodeSelectorRequirement.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.NodeSelectorTerm for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.NodeSelectorTerm.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.ObjectFieldSelector for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.ObjectFieldSelector.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.ObjectMeta for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.ObjectMeta.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.OwnerReference for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.OwnerReference.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.PersistentVolumeClaimSpec for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.PersistentVolumeClaimSpec.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.PersistentVolumeClaimTemplate for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.PersistentVolumeClaimTemplate.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.PersistentVolumeClaimVolumeSource for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.PersistentVolumeClaimVolumeSource.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.PhotonPersistentDiskVolumeSource for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.PhotonPersistentDiskVolumeSource.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.Pod for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.Pod.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.PodAffinity for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.PodAffinity.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.PodAffinityTerm for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.PodAffinityTerm.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.PodAntiAffinity for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.PodAntiAffinity.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.PodCondition for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.PodCondition.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.PodDNSConfig for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.PodDNSConfig.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.PodDNSConfigOption for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.PodDNSConfigOption.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.PodIP for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.PodIP.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.PodReadinessGate for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.PodReadinessGate.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.PodSecurityContext for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.PodSecurityContext.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.PodSpec for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.PodSpec.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.PodStatus for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.PodStatus.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.PortworxVolumeSource for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.PortworxVolumeSource.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.PreferredSchedulingTerm for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.PreferredSchedulingTerm.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.Probe for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.Probe.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.ProjectedVolumeSource for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.ProjectedVolumeSource.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.Quantity$Deserializer for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.Quantity$Deserializer.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.QuobyteVolumeSource for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.QuobyteVolumeSource.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.RBDVolumeSource for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.RBDVolumeSource.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.ResourceFieldSelector for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.ResourceFieldSelector.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.ResourceRequirements for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.ResourceRequirements.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.RootPaths for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.RootPaths.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.SELinuxOptions for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.SELinuxOptions.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.ScaleIOVolumeSource for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.ScaleIOVolumeSource.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.SeccompProfile for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.SeccompProfile.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.SecretEnvSource for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.SecretEnvSource.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.SecretKeySelector for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.SecretKeySelector.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.SecretProjection for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.SecretProjection.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.SecretVolumeSource for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.SecretVolumeSource.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.SecurityContext for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.SecurityContext.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.ServiceAccountTokenProjection for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.ServiceAccountTokenProjection.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.StorageOSVolumeSource for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.StorageOSVolumeSource.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.Sysctl for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.Sysctl.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.TCPSocketAction for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.TCPSocketAction.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.Toleration for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.Toleration.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.TopologySpreadConstraint for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.TopologySpreadConstraint.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.TypedLocalObjectReference for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.TypedLocalObjectReference.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.Volume for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.Volume.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.VolumeDevice for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.VolumeDevice.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.VolumeMount for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.VolumeMount.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.VolumeProjection for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.VolumeProjection.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.VsphereVirtualDiskVolumeSource for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.VsphereVirtualDiskVolumeSource.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.WeightedPodAffinityTerm for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.WeightedPodAffinityTerm.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.WindowsSecurityContextOptions for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.WindowsSecurityContextOptions.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.api.model.apiextensions.v1beta1.CustomResourceDefinition for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.api.model.apiextensions.v1beta1.CustomResourceDefinition.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.client.AdmissionRegistrationAPIGroupDSL for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.client.AdmissionRegistrationAPIGroupDSL.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.client.BaseClient for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.client.BaseClient.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.client.Client for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.client.Client.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.client.Config for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.client.Config.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.client.Config$ExecCredential for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.client.Config$ExecCredential.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.client.ConfigAware for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.client.ConfigAware.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.client.DefaultKubernetesClient for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.client.DefaultKubernetesClient.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.client.GenericKubernetesClient for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.client.GenericKubernetesClient.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.client.HttpClientAware for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.client.HttpClientAware.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.client.KubernetesClient for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.client.KubernetesClient.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.client.NamespacedKubernetesClient for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.client.NamespacedKubernetesClient.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.client.OAuthTokenProvider for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.client.OAuthTokenProvider.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.client.RequestConfig for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.client.RequestConfig.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.client.VersionInfo for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.client.VersionInfo.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.client.dsl.AnyNamespaceable for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.client.dsl.AnyNamespaceable.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.client.dsl.ApiextensionsAPIGroupDSL for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.client.dsl.ApiextensionsAPIGroupDSL.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.client.dsl.AppsAPIGroupDSL for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.client.dsl.AppsAPIGroupDSL.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.client.dsl.AuthorizationAPIGroupDSL for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.client.dsl.AuthorizationAPIGroupDSL.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.client.dsl.AutoscalingAPIGroupDSL for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.client.dsl.AutoscalingAPIGroupDSL.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.client.dsl.BatchAPIGroupDSL for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.client.dsl.BatchAPIGroupDSL.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.client.dsl.Createable for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.client.dsl.Createable.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.client.dsl.ExtensionsAPIGroupDSL for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.client.dsl.ExtensionsAPIGroupDSL.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.client.dsl.FunctionCallable for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.client.dsl.FunctionCallable.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.client.dsl.KubernetesListMixedOperation for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.client.dsl.KubernetesListMixedOperation.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.client.dsl.MetricAPIGroupDSL for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.client.dsl.MetricAPIGroupDSL.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.client.dsl.MixedOperation for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.client.dsl.MixedOperation.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.client.dsl.NamespaceListVisitFromServerGetDeleteRecreateWaitApplicable for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.client.dsl.NamespaceListVisitFromServerGetDeleteRecreateWaitApplicable.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.client.dsl.NamespaceVisitFromServerGetWatchDeleteRecreateWaitApplicable for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.client.dsl.NamespaceVisitFromServerGetWatchDeleteRecreateWaitApplicable.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.client.dsl.Namespaceable for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.client.dsl.Namespaceable.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.client.dsl.NetworkAPIGroupDSL for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.client.dsl.NetworkAPIGroupDSL.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.client.dsl.NonNamespaceOperation for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.client.dsl.NonNamespaceOperation.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.client.dsl.ParameterNamespaceListVisitFromServerGetDeleteRecreateWaitApplicable for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.client.dsl.ParameterNamespaceListVisitFromServerGetDeleteRecreateWaitApplicable.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.client.dsl.PolicyAPIGroupDSL for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.client.dsl.PolicyAPIGroupDSL.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.client.dsl.RbacAPIGroupDSL for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.client.dsl.RbacAPIGroupDSL.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.client.dsl.RequestConfigurable for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.client.dsl.RequestConfigurable.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.client.dsl.Resource for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.client.dsl.Resource.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.client.dsl.SchedulingAPIGroupDSL for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.client.dsl.SchedulingAPIGroupDSL.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.client.dsl.SettingsAPIGroupDSL for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.client.dsl.SettingsAPIGroupDSL.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.client.dsl.StorageAPIGroupDSL for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.client.dsl.StorageAPIGroupDSL.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.client.dsl.V1APIGroupDSL for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.client.dsl.V1APIGroupDSL.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.client.dsl.base.CustomResourceDefinitionContext for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.client.dsl.base.CustomResourceDefinitionContext.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.client.dsl.internal.RawCustomResourceOperationsImpl for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.client.dsl.internal.RawCustomResourceOperationsImpl.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.client.extended.leaderelection.LeaderElectorBuilder for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.client.extended.leaderelection.LeaderElectorBuilder.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.client.extended.run.RunOperations for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.client.extended.run.RunOperations.
+[INFO]     [creator]     WARNING: Could not resolve io.fabric8.kubernetes.client.informers.SharedInformerFactory for reflection configuration. Reason: java.lang.ClassNotFoundException: io.fabric8.kubernetes.client.informers.SharedInformerFactory.
+[INFO]     [creator]     WARNING: Could not resolve java.lang.ClassLoader$ByteBuddyAccessor$aV97DysU for reflection configuration. Reason: java.lang.ClassNotFoundException: java.lang.ClassLoader$ByteBuddyAccessor$aV97DysU.
+[INFO]     [creator]     WARNING: Could not resolve javax.xml.bind.Binder for reflection configuration. Reason: java.lang.ClassNotFoundException: javax.xml.bind.Binder.
+[INFO]     [creator]     WARNING: Could not resolve okhttp3.Authenticator for reflection configuration. Reason: java.lang.ClassNotFoundException: okhttp3.Authenticator.
+[INFO]     [creator]     WARNING: Could not resolve okhttp3.Cache for reflection configuration. Reason: java.lang.ClassNotFoundException: okhttp3.Cache.
+[INFO]     [creator]     WARNING: Could not resolve okhttp3.CertificatePinner for reflection configuration. Reason: java.lang.ClassNotFoundException: okhttp3.CertificatePinner.
+[INFO]     [creator]     WARNING: Could not resolve okhttp3.ConnectionPool for reflection configuration. Reason: java.lang.ClassNotFoundException: okhttp3.ConnectionPool.
+[INFO]     [creator]     WARNING: Could not resolve okhttp3.CookieJar for reflection configuration. Reason: java.lang.ClassNotFoundException: okhttp3.CookieJar.
+[INFO]     [creator]     WARNING: Could not resolve okhttp3.Dispatcher for reflection configuration. Reason: java.lang.ClassNotFoundException: okhttp3.Dispatcher.
+[INFO]     [creator]     WARNING: Could not resolve okhttp3.Dns for reflection configuration. Reason: java.lang.ClassNotFoundException: okhttp3.Dns.
+[INFO]     [creator]     WARNING: Could not resolve okhttp3.EventListener for reflection configuration. Reason: java.lang.ClassNotFoundException: okhttp3.EventListener.
+[INFO]     [creator]     WARNING: Could not resolve okhttp3.EventListener$Factory for reflection configuration. Reason: java.lang.ClassNotFoundException: okhttp3.EventListener$Factory.
+[INFO]     [creator]     WARNING: Could not resolve okhttp3.Interceptor for reflection configuration. Reason: java.lang.ClassNotFoundException: okhttp3.Interceptor.
+[INFO]     [creator]     WARNING: Could not resolve okhttp3.OkHttpClient for reflection configuration. Reason: java.lang.ClassNotFoundException: okhttp3.OkHttpClient.
+[INFO]     [creator]     WARNING: Could not resolve okhttp3.OkHttpClient$Builder for reflection configuration. Reason: java.lang.ClassNotFoundException: okhttp3.OkHttpClient$Builder.
+[INFO]     [creator]     WARNING: Could not resolve okhttp3.TlsVersion for reflection configuration. Reason: java.lang.ClassNotFoundException: okhttp3.TlsVersion.
+[INFO]     [creator]     WARNING: Could not resolve org.apache.kafka.streams.KafkaStreams for reflection configuration. Reason: java.lang.ClassNotFoundException: org.apache.kafka.streams.KafkaStreams.
+[INFO]     [creator]     WARNING: Could not resolve org.apache.kafka.streams.StreamsBuilder for reflection configuration. Reason: java.lang.ClassNotFoundException: org.apache.kafka.streams.StreamsBuilder.
+[INFO]     [creator]     WARNING: Could not resolve org.apache.maven.surefire.booter.ForkedBooter for reflection configuration. Reason: java.lang.ClassNotFoundException: org.apache.maven.surefire.booter.ForkedBooter.
+[INFO]     [creator]     WARNING: Could not resolve org.apache.maven.surefire.junitplatform.JUnitPlatformProvider for reflection configuration. Reason: java.lang.ClassNotFoundException: org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.
+[INFO]     [creator]     WARNING: Could not resolve org.apiguardian.api.API for reflection configuration. Reason: java.lang.ClassNotFoundException: org.apiguardian.api.API.
+[INFO]     [creator]     WARNING: Could not resolve org.apiguardian.api.API$Status for reflection configuration. Reason: java.lang.ClassNotFoundException: org.apiguardian.api.API$Status.
+[INFO]     [creator]     WARNING: Could not resolve org.springframework.boot.actuate.autoconfigure.metrics.KafkaMetricsAutoConfiguration$$Lambda$1361/0x0000000840a3e040 for reflection configuration. Reason: java.lang.ClassNotFoundException: org.springframework.boot.actuate.autoconfigure.metrics.KafkaMetricsAutoConfiguration$$Lambda$1361/0x0000000840a3e040.
+[INFO]     [creator]     WARNING: Could not resolve org.springframework.boot.actuate.autoconfigure.metrics.KafkaMetricsAutoConfiguration$$Lambda$1648/0x0000000840cbe440 for reflection configuration. Reason: java.lang.ClassNotFoundException: org.springframework.boot.actuate.autoconfigure.metrics.KafkaMetricsAutoConfiguration$$Lambda$1648/0x0000000840cbe440.
+[INFO]     [creator]     WARNING: Could not resolve org.springframework.boot.actuate.autoconfigure.metrics.KafkaMetricsAutoConfiguration$KafkaStreamsMetricsConfiguration$$Lambda$1647/0x0000000840cbe040 for reflection configuration. Reason: java.lang.ClassNotFoundException: org.springframework.boot.actuate.autoconfigure.metrics.KafkaMetricsAutoConfiguration$KafkaStreamsMetricsConfiguration$$Lambda$1647/0x0000000840cbe040.
+[INFO]     [creator]     WARNING: Could not resolve org.springframework.boot.autoconfigure.http.codec.CodecsAutoConfiguration$DefaultCodecsConfiguration$$Lambda$1142/0x000000084094b840 for reflection configuration. Reason: java.lang.ClassNotFoundException: org.springframework.boot.autoconfigure.http.codec.CodecsAutoConfiguration$DefaultCodecsConfiguration$$Lambda$1142/0x000000084094b840.
+[INFO]     [creator]     WARNING: Could not resolve org.springframework.boot.autoconfigure.http.codec.CodecsAutoConfiguration$JacksonCodecConfiguration$$Lambda$1151/0x0000000840949c40 for reflection configuration. Reason: java.lang.ClassNotFoundException: org.springframework.boot.autoconfigure.http.codec.CodecsAutoConfiguration$JacksonCodecConfiguration$$Lambda$1151/0x0000000840949c40.
+[INFO]     [creator]     WARNING: Could not resolve org.springframework.boot.autoconfigure.web.reactive.function.client.ClientHttpConnectorAutoConfiguration$$Lambda$1555/0x0000000840c57440 for reflection configuration. Reason: java.lang.ClassNotFoundException: org.springframework.boot.autoconfigure.web.reactive.function.client.ClientHttpConnectorAutoConfiguration$$Lambda$1555/0x0000000840c57440.
+[INFO]     [creator]     WARNING: Could not resolve org.springframework.boot.validation.beanvalidation.MethodValidationExcludeFilter$$Lambda$960/0x000000084074ac40 for reflection configuration. Reason: java.lang.ClassNotFoundException: org.springframework.boot.validation.beanvalidation.MethodValidationExcludeFilter$$Lambda$960/0x000000084074ac40.
+[INFO]     [creator]     WARNING: Could not resolve org.springframework.cglib.core.MethodWrapper$MethodWrapperKey$$KeyFactoryByCGLIB$$552be97a for reflection configuration. Reason: java.lang.ClassNotFoundException: org.springframework.cglib.core.MethodWrapper$MethodWrapperKey$$KeyFactoryByCGLIB$$552be97a.
+[INFO]     [creator]     WARNING: Could not resolve org.springframework.cglib.proxy.Enhancer$EnhancerKey$$KeyFactoryByCGLIB$$4ce19e8f for reflection configuration. Reason: java.lang.ClassNotFoundException: org.springframework.cglib.proxy.Enhancer$EnhancerKey$$KeyFactoryByCGLIB$$4ce19e8f.
+[INFO]     [creator]     WARNING: Could not register org.springframework.cloud.commons.httpclient.DefaultOkHttpClientConnectionPoolFactory: allDeclaredMethods for reflection. Reason: java.lang.NoClassDefFoundError: okhttp3/ConnectionPool.
+[INFO]     [creator]     WARNING: Could not register org.springframework.cloud.commons.httpclient.DefaultOkHttpClientConnectionPoolFactory: allPublicMethods for reflection. Reason: java.lang.NoClassDefFoundError: okhttp3/ConnectionPool.
+[INFO]     [creator]     WARNING: Could not register org.springframework.cloud.commons.httpclient.DefaultOkHttpClientFactory: allDeclaredMethods for reflection. Reason: java.lang.NoClassDefFoundError: okhttp3/OkHttpClient$Builder.
+[INFO]     [creator]     WARNING: Could not register org.springframework.cloud.commons.httpclient.DefaultOkHttpClientFactory: allDeclaredFields for reflection. Reason: java.lang.NoClassDefFoundError: Lokhttp3/OkHttpClient$Builder;.
+[INFO]     [creator]     WARNING: Could not register org.springframework.cloud.commons.httpclient.DefaultOkHttpClientFactory: allPublicMethods for reflection. Reason: java.lang.NoClassDefFoundError: okhttp3/OkHttpClient$Builder.
+[INFO]     [creator]     WARNING: Could not register org.springframework.cloud.commons.httpclient.HttpClientConfiguration$OkHttpClientConfiguration: allDeclaredMethods for reflection. Reason: java.lang.NoClassDefFoundError: okhttp3/OkHttpClient$Builder.
+[INFO]     [creator]     WARNING: Could not register org.springframework.cloud.commons.httpclient.HttpClientConfiguration$OkHttpClientConfiguration: allPublicMethods for reflection. Reason: java.lang.NoClassDefFoundError: okhttp3/OkHttpClient$Builder.
+[INFO]     [creator]     WARNING: Could not register org.springframework.cloud.commons.httpclient.OkHttpClientConnectionPoolFactory: allDeclaredMethods for reflection. Reason: java.lang.NoClassDefFoundError: okhttp3/ConnectionPool.
+[INFO]     [creator]     WARNING: Could not register org.springframework.cloud.commons.httpclient.OkHttpClientConnectionPoolFactory: allPublicMethods for reflection. Reason: java.lang.NoClassDefFoundError: okhttp3/ConnectionPool.
+[INFO]     [creator]     WARNING: Could not register org.springframework.cloud.commons.httpclient.OkHttpClientFactory: allDeclaredMethods for reflection. Reason: java.lang.NoClassDefFoundError: okhttp3/OkHttpClient$Builder.
+[INFO]     [creator]     WARNING: Could not register org.springframework.cloud.commons.httpclient.OkHttpClientFactory: allPublicMethods for reflection. Reason: java.lang.NoClassDefFoundError: okhttp3/OkHttpClient$Builder.
+[INFO]     [creator]     WARNING: Could not resolve org.springframework.cloud.kubernetes.ConditionalOnKubernetesEnabled for reflection configuration. Reason: java.lang.ClassNotFoundException: org.springframework.cloud.kubernetes.ConditionalOnKubernetesEnabled.
+[INFO]     [creator]     WARNING: Could not resolve org.springframework.cloud.kubernetes.KubernetesAutoConfiguration for reflection configuration. Reason: java.lang.ClassNotFoundException: org.springframework.cloud.kubernetes.KubernetesAutoConfiguration.
+[INFO]     [creator]     WARNING: Could not resolve org.springframework.cloud.kubernetes.KubernetesAutoConfiguration$KubernetesActuatorConfiguration for reflection configuration. Reason: java.lang.ClassNotFoundException: org.springframework.cloud.kubernetes.KubernetesAutoConfiguration$KubernetesActuatorConfiguration.
+[INFO]     [creator]     WARNING: Could not resolve org.springframework.cloud.kubernetes.KubernetesClientProperties for reflection configuration. Reason: java.lang.ClassNotFoundException: org.springframework.cloud.kubernetes.KubernetesClientProperties.
+[INFO]     [creator]     WARNING: Could not resolve org.springframework.cloud.kubernetes.KubernetesHealthIndicator for reflection configuration. Reason: java.lang.ClassNotFoundException: org.springframework.cloud.kubernetes.KubernetesHealthIndicator.
+[INFO]     [creator]     WARNING: Could not resolve org.springframework.cloud.kubernetes.KubernetesInfoContributor for reflection configuration. Reason: java.lang.ClassNotFoundException: org.springframework.cloud.kubernetes.KubernetesInfoContributor.
+[INFO]     [creator]     WARNING: Could not resolve org.springframework.cloud.kubernetes.PodUtils for reflection configuration. Reason: java.lang.ClassNotFoundException: org.springframework.cloud.kubernetes.PodUtils.
+[INFO]     [creator]     WARNING: Could not resolve org.springframework.cloud.kubernetes.StandardPodUtils for reflection configuration. Reason: java.lang.ClassNotFoundException: org.springframework.cloud.kubernetes.StandardPodUtils.
+[INFO]     [creator]     WARNING: Could not resolve org.springframework.cloud.kubernetes.config.reload.ConfigReloadAutoConfiguration for reflection configuration. Reason: java.lang.ClassNotFoundException: org.springframework.cloud.kubernetes.config.reload.ConfigReloadAutoConfiguration.
+[INFO]     [creator]     WARNING: Could not resolve org.springframework.cloud.kubernetes.config.reload.ConfigReloadProperties for reflection configuration. Reason: java.lang.ClassNotFoundException: org.springframework.cloud.kubernetes.config.reload.ConfigReloadProperties.
+[INFO]     [creator]     WARNING: Could not resolve org.springframework.cloud.kubernetes.config.reload.ConfigReloadProperties$ReloadDetectionMode for reflection configuration. Reason: java.lang.ClassNotFoundException: org.springframework.cloud.kubernetes.config.reload.ConfigReloadProperties$ReloadDetectionMode.
+[INFO]     [creator]     WARNING: Could not resolve org.springframework.cloud.kubernetes.config.reload.ConfigReloadProperties$ReloadStrategy for reflection configuration. Reason: java.lang.ClassNotFoundException: org.springframework.cloud.kubernetes.config.reload.ConfigReloadProperties$ReloadStrategy.
+[INFO]     [creator]     WARNING: Could not resolve org.springframework.cloud.kubernetes.profile.KubernetesProfileEnvironmentPostProcessor for reflection configuration. Reason: java.lang.ClassNotFoundException: org.springframework.cloud.kubernetes.profile.KubernetesProfileEnvironmentPostProcessor.
+[INFO]     [creator]     WARNING: Could not resolve org.springframework.cloud.sleuth.autoconfig.instrument.web.SkipPatternConfiguration$$Lambda$1480/0x0000000840c08440 for reflection configuration. Reason: java.lang.ClassNotFoundException: org.springframework.cloud.sleuth.autoconfig.instrument.web.SkipPatternConfiguration$$Lambda$1480/0x0000000840c08440.
+[INFO]     [creator]     WARNING: Could not resolve org.springframework.cloud.sleuth.autoconfig.instrument.web.SkipPatternConfiguration$ActuatorSkipPatternProviderConfig$$Lambda$1430/0x0000000840bcf040 for reflection configuration. Reason: java.lang.ClassNotFoundException: org.springframework.cloud.sleuth.autoconfig.instrument.web.SkipPatternConfiguration$ActuatorSkipPatternProviderConfig$$Lambda$1430/0x0000000840bcf040.
+[INFO]     [creator]     WARNING: Could not resolve org.springframework.cloud.sleuth.autoconfig.instrument.web.SkipPatternConfiguration$DefaultSkipPatternConfig$$Lambda$1428/0x0000000840bc9440 for reflection configuration. Reason: java.lang.ClassNotFoundException: org.springframework.cloud.sleuth.autoconfig.instrument.web.SkipPatternConfiguration$DefaultSkipPatternConfig$$Lambda$1428/0x0000000840bc9440.
+[INFO]     [creator]     WARNING: Could not resolve org.springframework.cloud.sleuth.autoconfig.zipkin2.ZipkinBraveConfiguration$$Lambda$1268/0x00000008409c4840 for reflection configuration. Reason: java.lang.ClassNotFoundException: org.springframework.cloud.sleuth.autoconfig.zipkin2.ZipkinBraveConfiguration$$Lambda$1268/0x00000008409c4840.
+[INFO]     [creator]     WARNING: Could not resolve org.springframework.security.oauth2.jwt.ReactiveJwtDecoder for reflection configuration. Reason: java.lang.ClassNotFoundException: org.springframework.security.oauth2.jwt.ReactiveJwtDecoder.
+[INFO]     [creator]     WARNING: Could not resolve org.springframework.web.reactive.accept.RequestedContentTypeResolverBuilder$$Lambda$1506/0x0000000840c40440 for reflection configuration. Reason: java.lang.ClassNotFoundException: org.springframework.web.reactive.accept.RequestedContentTypeResolverBuilder$$Lambda$1506/0x0000000840c40440.
+[INFO]     [creator]     WARNING: Could not register de.qaware.openapigeneratorforspring.webmvc.OpenApiRequestAwareSupplierForWebMvc: allDeclaredConstructors for reflection. Reason: java.lang.NoClassDefFoundError: javax/servlet/http/HttpServletRequest.
+[INFO]     [creator]     WARNING: Could not resolve io.undertow.Undertow for reflection configuration. Reason: java.lang.ClassNotFoundException: io.undertow.Undertow.
+[INFO]     [creator]     WARNING: Could not resolve io.undertow.websockets.WebSocketProtocolHandshakeHandler for reflection configuration. Reason: java.lang.ClassNotFoundException: io.undertow.websockets.WebSocketProtocolHandshakeHandler.
+[INFO]     [creator]     WARNING: Could not resolve javax.servlet.Filter for reflection configuration. Reason: java.lang.ClassNotFoundException: javax.servlet.Filter.
+[INFO]     [creator]     WARNING: Could not resolve javax.servlet.MultipartConfigElement for reflection configuration. Reason: java.lang.ClassNotFoundException: javax.servlet.MultipartConfigElement.
+[INFO]     [creator]     WARNING: Could not resolve javax.servlet.Servlet for reflection configuration. Reason: java.lang.ClassNotFoundException: javax.servlet.Servlet.
+[INFO]     [creator]     WARNING: Could not resolve javax.servlet.ServletRequest for reflection configuration. Reason: java.lang.ClassNotFoundException: javax.servlet.ServletRequest.
+[INFO]     [creator]     WARNING: Could not resolve javax.servlet.ServletRequestWrapper for reflection configuration. Reason: java.lang.ClassNotFoundException: javax.servlet.ServletRequestWrapper.
+[INFO]     [creator]     WARNING: Could not resolve javax.servlet.http.HttpServletRequestWrapper for reflection configuration. Reason: java.lang.ClassNotFoundException: javax.servlet.http.HttpServletRequestWrapper.
+[INFO]     [creator]     WARNING: Could not resolve org.eclipse.jetty.server.Server for reflection configuration. Reason: java.lang.ClassNotFoundException: org.eclipse.jetty.server.Server.
+[INFO]     [creator]     WARNING: Could not resolve org.eclipse.jetty.servlet.ServletHolder for reflection configuration. Reason: java.lang.ClassNotFoundException: org.eclipse.jetty.servlet.ServletHolder.
+[INFO]     [creator]     WARNING: Could not resolve org.eclipse.jetty.websocket.server.WebSocketServerFactory for reflection configuration. Reason: java.lang.ClassNotFoundException: org.eclipse.jetty.websocket.server.WebSocketServerFactory.
+[INFO]     [creator]     WARNING: Could not register org.springframework.boot.actuate.autoconfigure.trace.http.HttpTraceAutoConfiguration$ServletTraceFilterConfiguration: allDeclaredMethods for reflection. Reason: java.lang.NoClassDefFoundError: javax/servlet/Filter.
+[INFO]     [creator]     WARNING: Could not register org.springframework.boot.actuate.autoconfigure.web.servlet.ServletManagementChildContextConfiguration$ServletManagementContextSecurityConfiguration: allDeclaredMethods for reflection. Reason: java.lang.NoClassDefFoundError: javax/servlet/Filter.
+[INFO]     [creator]     WARNING: Could not register org.springframework.boot.actuate.autoconfigure.web.servlet.ServletManagementContextAutoConfiguration$ApplicationContextFilterConfiguration: allDeclaredMethods for reflection. Reason: java.lang.NoClassDefFoundError: javax/servlet/Filter.
+[INFO]     [creator]     WARNING: Could not register org.springframework.boot.actuate.endpoint.web.ServletEndpointRegistrar: allPublicMethods for reflection. Reason: java.lang.NoClassDefFoundError: javax/servlet/ServletContext.
+[INFO]     [creator]     WARNING: Could not register org.springframework.boot.actuate.metrics.web.jetty.JettyServerThreadPoolMetricsBinder: allDeclaredMethods for reflection. Reason: java.lang.NoClassDefFoundError: org/eclipse/jetty/util/thread/ThreadPool.
+[INFO]     [creator]     WARNING: Could not register org.springframework.boot.actuate.web.mappings.servlet.FilterRegistrationMappingDescription: allDeclaredConstructors for reflection. Reason: java.lang.NoClassDefFoundError: javax/servlet/Registration.
+[INFO]     [creator]     WARNING: Could not register org.springframework.boot.actuate.web.mappings.servlet.FilterRegistrationMappingDescription: allDeclaredMethods for reflection. Reason: java.lang.NoClassDefFoundError: javax/servlet/Registration.
+[INFO]     [creator]     WARNING: Could not register org.springframework.boot.actuate.web.mappings.servlet.FilterRegistrationMappingDescription: allDeclaredFields for reflection. Reason: java.lang.NoClassDefFoundError: javax/servlet/Registration.
+[INFO]     [creator]     WARNING: Could not register org.springframework.boot.actuate.web.mappings.servlet.RegistrationMappingDescription: allDeclaredConstructors for reflection. Reason: java.lang.NoClassDefFoundError: javax/servlet/Registration.
+[INFO]     [creator]     WARNING: Could not register org.springframework.boot.actuate.web.mappings.servlet.RegistrationMappingDescription: allDeclaredMethods for reflection. Reason: java.lang.NoClassDefFoundError: javax/servlet/Registration.
+[INFO]     [creator]     WARNING: Could not register org.springframework.boot.actuate.web.mappings.servlet.RegistrationMappingDescription: allDeclaredFields for reflection. Reason: java.lang.NoClassDefFoundError: Ljavax/servlet/Registration;.
+[INFO]     [creator]     WARNING: Could not register org.springframework.boot.actuate.web.mappings.servlet.ServletRegistrationMappingDescription: allDeclaredConstructors for reflection. Reason: java.lang.NoClassDefFoundError: javax/servlet/Registration.
+[INFO]     [creator]     WARNING: Could not register org.springframework.boot.actuate.web.mappings.servlet.ServletRegistrationMappingDescription: allDeclaredMethods for reflection. Reason: java.lang.NoClassDefFoundError: javax/servlet/Registration.
+[INFO]     [creator]     WARNING: Could not register org.springframework.boot.actuate.web.mappings.servlet.ServletRegistrationMappingDescription: allDeclaredFields for reflection. Reason: java.lang.NoClassDefFoundError: javax/servlet/Registration.
+[INFO]     [creator]     WARNING: Could not resolve org.springframework.boot.actuate.web.trace.servlet.HttpTraceFilter for reflection configuration. Reason: java.lang.NoClassDefFoundError: javax/servlet/Filter.
+[INFO]     [creator]     WARNING: Could not register org.springframework.boot.autoconfigure.security.servlet.SecurityFilterAutoConfiguration: allDeclaredMethods for reflection. Reason: java.lang.NoClassDefFoundError: javax/servlet/DispatcherType.
+[INFO]     [creator]     WARNING: Could not register org.springframework.boot.autoconfigure.web.reactive.function.client.ClientHttpConnectorConfiguration$JettyClient: allDeclaredConstructors for reflection. Reason: java.lang.NoClassDefFoundError: org/eclipse/jetty/util/ssl/SslContextFactory.
+[INFO]     [creator]     WARNING: Could not register org.springframework.boot.autoconfigure.web.servlet.HttpEncodingAutoConfiguration: allDeclaredConstructors for reflection. Reason: java.lang.NoClassDefFoundError: javax/servlet/Filter.
+[INFO]     [creator]     WARNING: Could not register org.springframework.boot.autoconfigure.web.servlet.HttpEncodingAutoConfiguration: allDeclaredMethods for reflection. Reason: java.lang.NoClassDefFoundError: javax/servlet/Filter.
+[INFO]     [creator]     WARNING: Could not register org.springframework.boot.autoconfigure.web.servlet.HttpEncodingAutoConfiguration: allDeclaredFields for reflection. Reason: java.lang.NoClassDefFoundError: javax/servlet/Filter.
+[INFO]     [creator]     WARNING: Could not register org.springframework.boot.autoconfigure.web.servlet.MultipartAutoConfiguration: allDeclaredMethods for reflection. Reason: java.lang.NoClassDefFoundError: javax/servlet/MultipartConfigElement.
+[INFO]     [creator]     WARNING: Could not register org.springframework.boot.autoconfigure.web.servlet.MultipartProperties: allPublicMethods for reflection. Reason: java.lang.NoClassDefFoundError: javax/servlet/MultipartConfigElement.
+[INFO]     [creator]     WARNING: Could not register org.springframework.boot.autoconfigure.web.servlet.ServletWebServerFactoryAutoConfiguration: allDeclaredConstructors for reflection. Reason: java.lang.NoClassDefFoundError: javax/servlet/Filter.
+[INFO]     [creator]     WARNING: Could not register org.springframework.boot.autoconfigure.web.servlet.ServletWebServerFactoryAutoConfiguration: allDeclaredMethods for reflection. Reason: java.lang.NoClassDefFoundError: javax/servlet/Filter.
+[INFO]     [creator]     WARNING: Could not register org.springframework.boot.autoconfigure.web.servlet.ServletWebServerFactoryAutoConfiguration: allDeclaredFields for reflection. Reason: java.lang.NoClassDefFoundError: javax/servlet/Filter.
+[INFO]     [creator]     WARNING: Could not register org.springframework.boot.web.embedded.jetty.JettyReactiveWebServerFactory: allDeclaredConstructors for reflection. Reason: java.lang.NoClassDefFoundError: org/eclipse/jetty/server/Handler.
+[INFO]     [creator]     WARNING: Could not register org.springframework.boot.web.embedded.undertow.UndertowReactiveWebServerFactory: allDeclaredConstructors for reflection. Reason: java.lang.NoClassDefFoundError: io/undertow/server/HttpHandler.
+[INFO]     [creator]     WARNING: Could not register org.springframework.boot.web.servlet.DelegatingFilterProxyRegistrationBean: allDeclaredConstructors for reflection. Reason: java.lang.NoClassDefFoundError: javax/servlet/Registration$Dynamic.
+[INFO]     [creator]     WARNING: Could not register org.springframework.boot.web.servlet.FilterRegistrationBean: allDeclaredConstructors for reflection. Reason: java.lang.NoClassDefFoundError: javax/servlet/Registration$Dynamic.
+[INFO]     [creator]     WARNING: Could not resolve org.springframework.boot.web.servlet.filter.ApplicationContextHeaderFilter for reflection configuration. Reason: java.lang.NoClassDefFoundError: javax/servlet/Filter.
+[INFO]     [creator]     WARNING: Could not register org.springframework.http.client.reactive.JettyResourceFactory: allDeclaredConstructors for reflection. Reason: java.lang.NoClassDefFoundError: org/eclipse/jetty/io/ByteBufferPool.
+[INFO]     [creator]     WARNING: Could not register org.springframework.security.config.annotation.web.HttpSecurityBuilder: allDeclaredMethods for reflection. Reason: java.lang.NoClassDefFoundError: javax/servlet/Filter.
+[INFO]     [creator]     WARNING: Could not register org.springframework.security.config.annotation.web.HttpSecurityBuilder: allPublicMethods for reflection. Reason: java.lang.NoClassDefFoundError: javax/servlet/Filter.
+[INFO]     [creator]     WARNING: Could not register org.springframework.security.config.annotation.web.configuration.HttpSecurityConfiguration: allDeclaredConstructors for reflection. Reason: java.lang.NoClassDefFoundError: javax/servlet/Filter.
+[INFO]     [creator]     WARNING: Could not register org.springframework.security.config.annotation.web.configuration.HttpSecurityConfiguration: allDeclaredMethods for reflection. Reason: java.lang.NoClassDefFoundError: javax/servlet/Filter.
+[INFO]     [creator]     WARNING: Could not register org.springframework.security.config.annotation.web.configuration.HttpSecurityConfiguration: allDeclaredFields for reflection. Reason: java.lang.NoClassDefFoundError: javax/servlet/Filter.
+[INFO]     [creator]     WARNING: Could not register org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration: allDeclaredMethods for reflection. Reason: java.lang.NoClassDefFoundError: javax/servlet/Filter.
+[INFO]     [creator]     WARNING: Could not register org.springframework.security.web.DefaultSecurityFilterChain: allDeclaredConstructors for reflection. Reason: java.lang.NoClassDefFoundError: [Ljavax/servlet/Filter;.
+[INFO]     [creator]     WARNING: Could not register org.springframework.security.web.DefaultSecurityFilterChain: allDeclaredMethods for reflection. Reason: java.lang.NoClassDefFoundError: javax/servlet/http/HttpServletRequest.
+[INFO]     [creator]     WARNING: Could not register org.springframework.security.web.DefaultSecurityFilterChain: allPublicMethods for reflection. Reason: java.lang.NoClassDefFoundError: javax/servlet/http/HttpServletRequest.
+[INFO]     [creator]     WARNING: Could not register org.springframework.security.web.SecurityFilterChain: allPublicMethods for reflection. Reason: java.lang.NoClassDefFoundError: javax/servlet/http/HttpServletRequest.
+[INFO]     [creator]     WARNING: Could not register org.springframework.security.web.access.expression.WebSecurityExpressionRoot: allDeclaredFields for reflection. Reason: java.lang.NoClassDefFoundError: Ljavax/servlet/http/HttpServletRequest;.
+[INFO]     [creator]     WARNING: Could not register org.springframework.web.context.support.GenericWebApplicationContext: allDeclaredConstructors for reflection. Reason: java.lang.NoClassDefFoundError: javax/servlet/ServletContext.
+[INFO]     [creator]     WARNING: Could not register org.springframework.web.context.support.GenericWebApplicationContext: allDeclaredMethods for reflection. Reason: java.lang.NoClassDefFoundError: javax/servlet/ServletContext.
+[INFO]     [creator]     WARNING: Could not register org.springframework.web.context.support.GenericWebApplicationContext: allDeclaredFields for reflection. Reason: java.lang.NoClassDefFoundError: Ljavax/servlet/ServletContext;.
+[INFO]     [creator]     WARNING: Could not resolve org.springframework.web.filter.CharacterEncodingFilter for reflection configuration. Reason: java.lang.NoClassDefFoundError: javax/servlet/Filter.
+[INFO]     [creator]     WARNING: Could not register org.springframework.web.multipart.support.StandardServletMultipartResolver: allDeclaredConstructors for reflection. Reason: java.lang.NoClassDefFoundError: javax/servlet/http/HttpServletRequest.
+[INFO]     [creator]     WARNING: Could not register org.springframework.web.reactive.socket.server.upgrade.JettyRequestUpgradeStrategy: allDeclaredMethods for reflection. Reason: java.lang.NoClassDefFoundError: org/eclipse/jetty/websocket/servlet/ServletUpgradeRequest.
+[INFO]     [creator]     WARNING: Could not register org.springframework.web.reactive.socket.server.upgrade.JettyRequestUpgradeStrategy: allDeclaredFields for reflection. Reason: java.lang.NoClassDefFoundError: Lorg/eclipse/jetty/websocket/api/WebSocketPolicy;.
+[INFO]     [creator]     WARNING: Could not register org.springframework.web.reactive.socket.server.upgrade.UndertowRequestUpgradeStrategy: allDeclaredConstructors for reflection. Reason: java.lang.NoClassDefFoundError: io/undertow/websockets/WebSocketConnectionCallback.
+[INFO]     [creator]     WARNING: Could not register org.springframework.web.reactive.socket.server.upgrade.UndertowRequestUpgradeStrategy: allDeclaredMethods for reflection. Reason: java.lang.NoClassDefFoundError: io/undertow/websockets/WebSocketConnectionCallback.
+[INFO]     [creator]     WARNING: Could not register org.springframework.web.reactive.socket.server.upgrade.UndertowRequestUpgradeStrategy: allDeclaredFields for reflection. Reason: java.lang.NoClassDefFoundError: io/undertow/websockets/WebSocketConnectionCallback.
+[INFO]     [creator]     WARNING: Could not resolve org.xnio.SslClientAuthMode for reflection configuration. Reason: java.lang.ClassNotFoundException: org.xnio.SslClientAuthMode.
+[INFO]     [creator]     [/layers/paketo-buildpacks_native-image/native-image/com.simonjamesrowe.apigateway.ApiGatewayApplicationKt:172]        setup:   6,042.39 ms,  1.69 GB
+[INFO]     [creator]     WARNING: Could not register reflection metadata for org.springframework.boot.autoconfigure.cache.RedisCacheConfiguration. Reason: java.lang.NoClassDefFoundError: org/springframework/data/redis/serializer/RedisSerializer.
+[INFO]     [creator]     WARNING: Could not register reflection metadata for org.springframework.core.ReactiveAdapterRegistry. Reason: java.lang.NoClassDefFoundError: reactor/blockhound/integration/BlockHoundIntegration.
+[INFO]     [creator]     WARNING: Could not register reflection metadata for org.springframework.boot.actuate.web.mappings.servlet.RequestMappingConditionsDescription$MediaTypeExpressionDescription. Reason: java.lang.NoClassDefFoundError: org/springframework/web/servlet/mvc/condition/MediaTypeExpression.
+[INFO]     [creator]     WARNING: Could not register reflection metadata for org.springframework.security.config.annotation.web.reactive.ReactiveOAuth2ClientImportSelector$OAuth2ClientWebFluxSecurityConfiguration. Reason: java.lang.NoClassDefFoundError: org/springframework/security/oauth2/client/web/server/ServerOAuth2AuthorizedClientRepository.
+[INFO]     [creator]     WARNING: Could not register reflection metadata for org.springframework.boot.web.servlet.DelegatingFilterProxyRegistrationBean. Reason: java.lang.NoClassDefFoundError: javax/servlet/Registration$Dynamic.
+[INFO]     [creator]     WARNING: Could not register reflection metadata for org.springframework.cloud.openfeign.FeignClientsConfiguration$MetricsConfiguration. Reason: java.lang.NoClassDefFoundError: feign/micrometer/MicrometerCapability.
+[INFO]     [creator]     12:11:14.984 [ForkJoinPool-4-worker-15] DEBUG io.netty.util.internal.logging.InternalLoggerFactory - Using SLF4J as the default logging framework
+[INFO]     [creator]     12:11:14.985 [ForkJoinPool-4-worker-15] DEBUG io.netty.util.internal.PlatformDependent0 - -Dio.netty.noUnsafe: false
+[INFO]     [creator]     12:11:14.986 [ForkJoinPool-4-worker-15] DEBUG io.netty.util.internal.PlatformDependent0 - Java version: 11
+[INFO]     [creator]     12:11:14.987 [ForkJoinPool-4-worker-15] DEBUG io.netty.util.internal.PlatformDependent0 - sun.misc.Unsafe.theUnsafe: available
+[INFO]     [creator]     WARNING: Could not register reflection metadata for org.springframework.boot.actuate.web.mappings.servlet.RegistrationMappingDescription. Reason: java.lang.NoClassDefFoundError: Ljavax/servlet/Registration;.
+[INFO]     [creator]     12:11:14.990 [ForkJoinPool-4-worker-15] DEBUG io.netty.util.internal.PlatformDependent0 - sun.misc.Unsafe.copyMemory: available
+[INFO]     [creator]     12:11:14.990 [ForkJoinPool-4-worker-15] DEBUG io.netty.util.internal.PlatformDependent0 - java.nio.Buffer.address: available
+[INFO]     [creator]     12:11:14.992 [ForkJoinPool-4-worker-15] DEBUG io.netty.util.internal.PlatformDependent0 - direct buffer constructor: unavailable
+[INFO]     [creator]     java.lang.UnsupportedOperationException: Reflective setAccessible(true) disabled
+[INFO]     [creator]     	at io.netty.util.internal.ReflectionUtil.trySetAccessible(ReflectionUtil.java:31)
+[INFO]     [creator]     	at io.netty.util.internal.PlatformDependent0$4.run(PlatformDependent0.java:238)
+[INFO]     [creator]     	at java.base/java.security.AccessController.doPrivileged(Native Method)
+[INFO]     [creator]     	at io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:232)
+[INFO]     [creator]     	at io.netty.util.internal.PlatformDependent.isAndroid(PlatformDependent.java:294)
+[INFO]     [creator]     	at io.netty.util.internal.PlatformDependent.<clinit>(PlatformDependent.java:93)
+[INFO]     [creator]     	at io.netty.util.AsciiString.<init>(AsciiString.java:223)
+[INFO]     [creator]     	at io.netty.util.AsciiString.<init>(AsciiString.java:210)
+[INFO]     [creator]     	at io.netty.util.AsciiString.cached(AsciiString.java:1401)
+[INFO]     [creator]     	at io.netty.util.AsciiString.<clinit>(AsciiString.java:48)
+[INFO]     [creator]     	at io.netty.handler.codec.http.HttpHeaderValues.<clinit>(HttpHeaderValues.java:28)
+[INFO]     [creator]     	at io.netty.handler.codec.http.HttpContentDecoder.<clinit>(HttpContentDecoder.java:49)
+[INFO]     [creator]     	at java.base/jdk.internal.misc.Unsafe.ensureClassInitialized0(Native Method)
+[INFO]     [creator]     	at java.base/jdk.internal.misc.Unsafe.ensureClassInitialized(Unsafe.java:1042)
+[INFO]     [creator]     	at jdk.unsupported/sun.misc.Unsafe.ensureClassInitialized(Unsafe.java:698)
+[INFO]     [creator]     	at com.oracle.svm.hosted.classinitialization.ConfigurableClassInitialization.ensureClassInitialized(ConfigurableClassInitialization.java:174)
+[INFO]     [creator]     	at com.oracle.svm.hosted.classinitialization.ConfigurableClassInitialization.computeInitKindAndMaybeInitializeClass(ConfigurableClassInitialization.java:607)
+[INFO]     [creator]     	at com.oracle.svm.hosted.classinitialization.ConfigurableClassInitialization.computeInitKindAndMaybeInitializeClass(ConfigurableClassInitialization.java:127)
+[INFO]     [creator]     	at com.oracle.svm.hosted.classinitialization.ConfigurableClassInitialization.maybeInitializeHosted(ConfigurableClassInitialization.java:165)
+[INFO]     [creator]     	at com.oracle.svm.hosted.SVMHost.initializeType(SVMHost.java:265)
+[INFO]     [creator]     	at com.oracle.graal.pointsto.meta.AnalysisType.lambda$new$0(AnalysisType.java:227)
+[INFO]     [creator]     	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+[INFO]     [creator]     	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+[INFO]     [creator]     	at java.base/java.util.concurrent.ForkJoinTask$RunnableExecuteAction.exec(ForkJoinTask.java:1426)
+[INFO]     [creator]     	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)
+[INFO]     [creator]     	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1020)
+[INFO]     [creator]     	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1656)
+[INFO]     [creator]     	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1594)
+[INFO]     [creator]     	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:183)
+[INFO]     [creator]     12:11:14.995 [ForkJoinPool-4-worker-15] DEBUG io.netty.util.internal.PlatformDependent0 - java.nio.Bits.unaligned: unavailable true
+[INFO]     [creator]     java.lang.UnsupportedOperationException: Reflective setAccessible(true) disabled
+[INFO]     [creator]     	at io.netty.util.internal.ReflectionUtil.trySetAccessible(ReflectionUtil.java:31)
+[INFO]     [creator]     	at io.netty.util.internal.PlatformDependent0$5.run(PlatformDependent0.java:310)
+[INFO]     [creator]     	at java.base/java.security.AccessController.doPrivileged(Native Method)
+[INFO]     [creator]     	at io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:284)
+[INFO]     [creator]     	at io.netty.util.internal.PlatformDependent.isAndroid(PlatformDependent.java:294)
+[INFO]     [creator]     	at io.netty.util.internal.PlatformDependent.<clinit>(PlatformDependent.java:93)
+[INFO]     [creator]     	at io.netty.util.AsciiString.<init>(AsciiString.java:223)
+[INFO]     [creator]     	at io.netty.util.AsciiString.<init>(AsciiString.java:210)
+[INFO]     [creator]     	at io.netty.util.AsciiString.cached(AsciiString.java:1401)
+[INFO]     [creator]     	at io.netty.util.AsciiString.<clinit>(AsciiString.java:48)
+[INFO]     [creator]     	at io.netty.handler.codec.http.HttpHeaderValues.<clinit>(HttpHeaderValues.java:28)
+[INFO]     [creator]     	at io.netty.handler.codec.http.HttpContentDecoder.<clinit>(HttpContentDecoder.java:49)
+[INFO]     [creator]     	at java.base/jdk.internal.misc.Unsafe.ensureClassInitialized0(Native Method)
+[INFO]     [creator]     	at java.base/jdk.internal.misc.Unsafe.ensureClassInitialized(Unsafe.java:1042)
+[INFO]     [creator]     	at jdk.unsupported/sun.misc.Unsafe.ensureClassInitialized(Unsafe.java:698)
+[INFO]     [creator]     	at com.oracle.svm.hosted.classinitialization.ConfigurableClassInitialization.ensureClassInitialized(ConfigurableClassInitialization.java:174)
+[INFO]     [creator]     	at com.oracle.svm.hosted.classinitialization.ConfigurableClassInitialization.computeInitKindAndMaybeInitializeClass(ConfigurableClassInitialization.java:607)
+[INFO]     [creator]     	at com.oracle.svm.hosted.classinitialization.ConfigurableClassInitialization.computeInitKindAndMaybeInitializeClass(ConfigurableClassInitialization.java:127)
+[INFO]     [creator]     	at com.oracle.svm.hosted.classinitialization.ConfigurableClassInitialization.maybeInitializeHosted(ConfigurableClassInitialization.java:165)
+[INFO]     [creator]     	at com.oracle.svm.hosted.SVMHost.initializeType(SVMHost.java:265)
+[INFO]     [creator]     	at com.oracle.graal.pointsto.meta.AnalysisType.lambda$new$0(AnalysisType.java:227)
+[INFO]     [creator]     	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+[INFO]     [creator]     	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+[INFO]     [creator]     	at java.base/java.util.concurrent.ForkJoinTask$RunnableExecuteAction.exec(ForkJoinTask.java:1426)
+[INFO]     [creator]     	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)
+[INFO]     [creator]     	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1020)
+[INFO]     [creator]     	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1656)
+[INFO]     [creator]     	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1594)
+[INFO]     [creator]     	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:183)
+[INFO]     [creator]     12:11:14.997 [ForkJoinPool-4-worker-15] DEBUG io.netty.util.internal.PlatformDependent0 - jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable
+[INFO]     [creator]     java.lang.IllegalAccessException: class io.netty.util.internal.PlatformDependent0$6 cannot access class jdk.internal.misc.Unsafe (in module java.base) because module java.base does not export jdk.internal.misc to unnamed module @30186f9c
+[INFO]     [creator]     	at java.base/jdk.internal.reflect.Reflection.newIllegalAccessException(Reflection.java:361)
+[INFO]     [creator]     	at java.base/java.lang.reflect.AccessibleObject.checkAccess(AccessibleObject.java:591)
+[INFO]     [creator]     	at java.base/java.lang.reflect.Method.invoke(Method.java:558)
+[INFO]     [creator]     	at io.netty.util.internal.PlatformDependent0$6.run(PlatformDependent0.java:352)
+[INFO]     [creator]     	at java.base/java.security.AccessController.doPrivileged(Native Method)
+[INFO]     [creator]     	at io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:343)
+[INFO]     [creator]     	at io.netty.util.internal.PlatformDependent.isAndroid(PlatformDependent.java:294)
+[INFO]     [creator]     	at io.netty.util.internal.PlatformDependent.<clinit>(PlatformDependent.java:93)
+[INFO]     [creator]     	at io.netty.util.AsciiString.<init>(AsciiString.java:223)
+[INFO]     [creator]     	at io.netty.util.AsciiString.<init>(AsciiString.java:210)
+[INFO]     [creator]     	at io.netty.util.AsciiString.cached(AsciiString.java:1401)
+[INFO]     [creator]     	at io.netty.util.AsciiString.<clinit>(AsciiString.java:48)
+[INFO]     [creator]     	at io.netty.handler.codec.http.HttpHeaderValues.<clinit>(HttpHeaderValues.java:28)
+[INFO]     [creator]     	at io.netty.handler.codec.http.HttpContentDecoder.<clinit>(HttpContentDecoder.java:49)
+[INFO]     [creator]     	at java.base/jdk.internal.misc.Unsafe.ensureClassInitialized0(Native Method)
+[INFO]     [creator]     	at java.base/jdk.internal.misc.Unsafe.ensureClassInitialized(Unsafe.java:1042)
+[INFO]     [creator]     	at jdk.unsupported/sun.misc.Unsafe.ensureClassInitialized(Unsafe.java:698)
+[INFO]     [creator]     	at com.oracle.svm.hosted.classinitialization.ConfigurableClassInitialization.ensureClassInitialized(ConfigurableClassInitialization.java:174)
+[INFO]     [creator]     	at com.oracle.svm.hosted.classinitialization.ConfigurableClassInitialization.computeInitKindAndMaybeInitializeClass(ConfigurableClassInitialization.java:607)
+[INFO]     [creator]     	at com.oracle.svm.hosted.classinitialization.ConfigurableClassInitialization.computeInitKindAndMaybeInitializeClass(ConfigurableClassInitialization.java:127)
+[INFO]     [creator]     	at com.oracle.svm.hosted.classinitialization.ConfigurableClassInitialization.maybeInitializeHosted(ConfigurableClassInitialization.java:165)
+[INFO]     [creator]     	at com.oracle.svm.hosted.SVMHost.initializeType(SVMHost.java:265)
+[INFO]     [creator]     	at com.oracle.graal.pointsto.meta.AnalysisType.lambda$new$0(AnalysisType.java:227)
+[INFO]     [creator]     	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+[INFO]     [creator]     	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+[INFO]     [creator]     	at java.base/java.util.concurrent.ForkJoinTask$RunnableExecuteAction.exec(ForkJoinTask.java:1426)
+[INFO]     [creator]     	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)
+[INFO]     [creator]     	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1020)
+[INFO]     [creator]     	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1656)
+[INFO]     [creator]     	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1594)
+[INFO]     [creator]     	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:183)
+[INFO]     [creator]     12:11:14.999 [ForkJoinPool-4-worker-15] DEBUG io.netty.util.internal.PlatformDependent0 - java.nio.DirectByteBuffer.<init>(long, int): unavailable
+[INFO]     [creator]     12:11:15.000 [ForkJoinPool-4-worker-15] DEBUG io.netty.util.internal.PlatformDependent - sun.misc.Unsafe: available
+[INFO]     [creator]     12:11:15.007 [ForkJoinPool-4-worker-15] DEBUG io.netty.util.internal.PlatformDependent - maxDirectMemory: 13362528256 bytes (maybe)
+[INFO]     [creator]     12:11:15.008 [ForkJoinPool-4-worker-15] DEBUG io.netty.util.internal.PlatformDependent - -Dio.netty.tmpdir: /tmp (java.io.tmpdir)
+[INFO]     [creator]     12:11:15.009 [ForkJoinPool-4-worker-15] DEBUG io.netty.util.internal.PlatformDependent - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+[INFO]     [creator]     12:11:15.011 [ForkJoinPool-4-worker-15] DEBUG io.netty.util.internal.PlatformDependent - -Dio.netty.maxDirectMemory: -1 bytes
+[INFO]     [creator]     12:11:15.011 [ForkJoinPool-4-worker-15] DEBUG io.netty.util.internal.PlatformDependent - -Dio.netty.uninitializedArrayAllocationThreshold: -1
+[INFO]     [creator]     12:11:15.012 [ForkJoinPool-4-worker-15] DEBUG io.netty.util.internal.CleanerJava9 - java.nio.ByteBuffer.cleaner(): available
+[INFO]     [creator]     12:11:15.013 [ForkJoinPool-4-worker-15] DEBUG io.netty.util.internal.PlatformDependent - -Dio.netty.noPreferDirect: false
+[INFO]     [creator]     WARNING: Could not register reflection metadata for org.springframework.boot.autoconfigure.web.reactive.function.client.ClientHttpConnectorConfiguration$JettyClient. Reason: java.lang.NoClassDefFoundError: org/eclipse/jetty/util/ssl/SslContextFactory.
+[INFO]     [creator]     WARNING: Could not register reflection metadata for org.springframework.web.reactive.socket.server.upgrade.JettyRequestUpgradeStrategy. Reason: java.lang.NoClassDefFoundError: Lorg/eclipse/jetty/websocket/api/WebSocketPolicy;.
+[INFO]     [creator]     WARNING: Could not register reflection metadata for org.springframework.boot.actuate.autoconfigure.trace.http.HttpTraceAutoConfiguration$ServletTraceFilterConfiguration. Reason: java.lang.NoClassDefFoundError: javax/servlet/Filter.
+[INFO]     [creator]     WARNING: Could not register reflection metadata for org.springframework.boot.autoconfigure.web.servlet.MultipartProperties. Reason: java.lang.NoClassDefFoundError: javax/servlet/MultipartConfigElement.
+[INFO]     [creator]     WARNING: Could not register reflection metadata for org.springframework.boot.autoconfigure.cache.CouchbaseCacheConfiguration. Reason: java.lang.NoClassDefFoundError: org/springframework/data/couchbase/CouchbaseClientFactory.
+[INFO]     [creator]     WARNING: Could not register reflection metadata for org.springframework.security.web.SecurityFilterChain. Reason: java.lang.NoClassDefFoundError: javax/servlet/http/HttpServletRequest.
+[INFO]     [creator]     WARNING: Could not register reflection metadata for org.springframework.boot.autoconfigure.web.servlet.ServletWebServerFactoryAutoConfiguration. Reason: java.lang.NoClassDefFoundError: javax/servlet/Filter.
+[INFO]     [creator]     WARNING: Could not register reflection metadata for org.springframework.security.config.annotation.web.configuration.OAuth2ClientConfiguration. Reason: java.lang.NoClassDefFoundError: org/springframework/web/servlet/config/annotation/WebMvcConfigurer.
+[INFO]     [creator]     WARNING: Could not register reflection metadata for org.springframework.cloud.gateway.filter.ReactiveLoadBalancerClientFilter. Reason: java.lang.NoClassDefFoundError: Lorg/springframework/cloud/loadbalancer/support/LoadBalancerClientFactory;.
+[INFO]     [creator]     WARNING: Could not register reflection metadata for de.qaware.openapigeneratorforspring.autoconfigure.OpenApiSwaggerUiWebMvcAutoConfiguration. Reason: java.lang.NoClassDefFoundError: org/springframework/web/servlet/config/annotation/WebMvcConfigurer.
+[INFO]     [creator]     WARNING: Could not register reflection metadata for org.springframework.boot.actuate.autoconfigure.web.servlet.ServletManagementContextAutoConfiguration$ApplicationContextFilterConfiguration. Reason: java.lang.NoClassDefFoundError: javax/servlet/Filter.
+[INFO]     [creator]     WARNING: Could not register reflection metadata for org.springframework.web.multipart.support.StandardServletMultipartResolver. Reason: java.lang.NoClassDefFoundError: javax/servlet/http/HttpServletRequest.
+[INFO]     [creator]     WARNING: Could not register reflection metadata for org.springframework.cloud.sleuth.autoconfig.instrument.quartz.TraceQuartzAutoConfiguration. Reason: java.lang.NoClassDefFoundError: org/quartz/TriggerListener.
+[INFO]     [creator]     12:11:15.461 [ForkJoinPool-4-worker-1] DEBUG io.netty.buffer.AbstractByteBuf - -Dio.netty.buffer.checkAccessible: true
+[INFO]     [creator]     12:11:15.461 [ForkJoinPool-4-worker-1] DEBUG io.netty.buffer.AbstractByteBuf - -Dio.netty.buffer.checkBounds: true
+[INFO]     [creator]     12:11:15.463 [ForkJoinPool-4-worker-1] DEBUG io.netty.util.ResourceLeakDetector - -Dio.netty.leakDetection.level: simple
+[INFO]     [creator]     12:11:15.463 [ForkJoinPool-4-worker-1] DEBUG io.netty.util.ResourceLeakDetector - -Dio.netty.leakDetection.targetRecords: 4
+[INFO]     [creator]     12:11:15.469 [ForkJoinPool-4-worker-1] DEBUG io.netty.util.ResourceLeakDetectorFactory - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@170e5063
+[INFO]     [creator]     WARNING: Could not register reflection metadata for org.springframework.boot.actuate.web.mappings.servlet.FilterRegistrationMappingDescription. Reason: java.lang.NoClassDefFoundError: javax/servlet/Registration.
+[INFO]     [creator]     WARNING: Could not register reflection metadata for org.springframework.boot.autoconfigure.cache.CaffeineCacheConfiguration. Reason: java.lang.NoClassDefFoundError: com/github/benmanes/caffeine/cache/CaffeineSpec.
+[INFO]     [creator]     WARNING: Could not register reflection metadata for org.springframework.security.web.context.AbstractSecurityWebApplicationInitializer. Reason: java.lang.NoClassDefFoundError: javax/servlet/Filter.
+[INFO]     [creator]     WARNING: Could not register reflection metadata for org.springframework.boot.actuate.endpoint.web.ServletEndpointRegistrar. Reason: java.lang.NoClassDefFoundError: javax/servlet/ServletContext.
+[INFO]     [creator]     WARNING: Could not register reflection metadata for org.springframework.http.client.reactive.JettyResourceFactory. Reason: java.lang.NoClassDefFoundError: org/eclipse/jetty/io/ByteBufferPool.
+[INFO]     [creator]     WARNING: Could not register reflection metadata for org.springframework.security.web.DefaultSecurityFilterChain. Reason: java.lang.NoClassDefFoundError: javax/servlet/http/HttpServletRequest.
+[INFO]     [creator]     WARNING: Could not register reflection metadata for io.micrometer.core.instrument.binder.jetty.JettyServerThreadPoolMetrics. Reason: java.lang.NoClassDefFoundError: Lorg/eclipse/jetty/util/thread/ThreadPool;.
+[INFO]     [creator]     WARNING: Could not register reflection metadata for org.springframework.web.reactive.socket.server.upgrade.UndertowRequestUpgradeStrategy. Reason: java.lang.NoClassDefFoundError: io/undertow/websockets/WebSocketConnectionCallback.
+[INFO]     [creator]     WARNING: Could not register reflection metadata for org.springframework.boot.actuate.web.mappings.servlet.ServletRegistrationMappingDescription. Reason: java.lang.NoClassDefFoundError: javax/servlet/Registration.
+[INFO]     [creator]     WARNING: Could not register reflection metadata for org.springframework.boot.web.embedded.undertow.UndertowServletWebServerFactory. Reason: java.lang.NoClassDefFoundError: io/undertow/servlet/api/InstanceFactory.
+[INFO]     [creator]     WARNING: Could not register reflection metadata for org.springframework.boot.autoconfigure.cache.InfinispanCacheConfiguration. Reason: java.lang.NoClassDefFoundError: org/infinispan/manager/EmbeddedCacheManager.
+[INFO]     [creator]     WARNING: Could not register reflection metadata for org.springframework.boot.autoconfigure.cache.JCacheCacheConfiguration. Reason: java.lang.NoClassDefFoundError: javax/cache/CacheManager.
+[INFO]     [creator]     WARNING: Could not register reflection metadata for org.springframework.boot.autoconfigure.jsonb.JsonbAutoConfiguration. Reason: java.lang.NoClassDefFoundError: javax/json/bind/Jsonb.
+[INFO]     [creator]     WARNING: Could not register reflection metadata for org.springframework.kafka.config.StreamsBuilderFactoryBean. Reason: java.lang.NoClassDefFoundError: org/apache/kafka/streams/KafkaClientSupplier.
+[INFO]     [creator]     WARNING: Could not register reflection metadata for org.springframework.security.web.access.expression.WebSecurityExpressionRoot. Reason: java.lang.NoClassDefFoundError: Ljavax/servlet/http/HttpServletRequest;.
+[INFO]     [creator]     WARNING: Could not register reflection metadata for org.springframework.boot.autoconfigure.cache.HazelcastCacheConfiguration. Reason: java.lang.NoClassDefFoundError: com/hazelcast/core/HazelcastInstance.
+[INFO]     [creator]     WARNING: Could not register reflection metadata for org.springframework.boot.autoconfigure.quartz.QuartzAutoConfiguration. Reason: java.lang.NoClassDefFoundError: org/quartz/spi/JobFactory.
+[INFO]     [creator]     WARNING: Could not register reflection metadata for org.springframework.web.multipart.MultipartResolver. Reason: java.lang.NoClassDefFoundError: javax/servlet/http/HttpServletRequest.
+[INFO]     [creator]     WARNING: Could not register reflection metadata for org.springframework.boot.actuate.metrics.web.jetty.JettyServerThreadPoolMetricsBinder. Reason: java.lang.NoClassDefFoundError: org/eclipse/jetty/util/thread/ThreadPool.
+[INFO]     [creator]     WARNING: Could not register reflection metadata for de.qaware.openapigeneratorforspring.autoconfigure.OpenApiGeneratorWebMvcAutoConfiguration. Reason: java.lang.NoClassDefFoundError: org/springframework/web/servlet/mvc/method/annotation/RequestMappingHandlerMapping.
+[INFO]     [creator]     WARNING: Could not register reflection metadata for org.springframework.cloud.commons.httpclient.DefaultOkHttpClientConnectionPoolFactory. Reason: java.lang.NoClassDefFoundError: okhttp3/ConnectionPool.
+[INFO]     [creator]     WARNING: Could not register reflection metadata for org.springframework.messaging.rsocket.annotation.support.RSocketMessageHandler. Reason: java.lang.NoClassDefFoundError: io/rsocket/SocketAcceptor.
+[INFO]     [creator]     WARNING: Could not register reflection metadata for org.springframework.boot.autoconfigure.web.servlet.MultipartAutoConfiguration. Reason: java.lang.NoClassDefFoundError: javax/servlet/MultipartConfigElement.
+[INFO]     [creator]     WARNING: Could not register reflection metadata for org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration. Reason: java.lang.NoClassDefFoundError: org/springframework/data/redis/connection/RedisConnectionFactory.
+[INFO]     [creator]     WARNING: Could not register reflection metadata for org.springframework.security.config.web.server.ServerHttpSecurity$OAuth2ClientSpec. Reason: java.lang.NoClassDefFoundError: org/springframework/security/oauth2/client/web/server/ServerAuthorizationRequestRepository.
+[INFO]     [creator]     WARNING: Could not register reflection metadata for org.springframework.security.config.annotation.web.builders.HttpSecurity. Reason: java.lang.NoClassDefFoundError: javax/servlet/Filter.
+[INFO]     [creator]     WARNING: Could not register reflection metadata for org.springframework.boot.autoconfigure.web.servlet.HttpEncodingAutoConfiguration. Reason: java.lang.NoClassDefFoundError: javax/servlet/Filter.
+[INFO]     [creator]     WARNING: Could not register reflection metadata for de.qaware.openapigeneratorforspring.webmvc.OpenApiRequestAwareSupplierForWebMvc. Reason: java.lang.NoClassDefFoundError: Ljavax/servlet/http/HttpServletRequest;.
+[INFO]     [creator]     WARNING: Could not register reflection metadata for org.springframework.cloud.commons.httpclient.DefaultOkHttpClientFactory. Reason: java.lang.NoClassDefFoundError: Lokhttp3/OkHttpClient$Builder;.
+[INFO]     [creator]     WARNING: Could not register reflection metadata for org.springframework.security.config.annotation.web.configurers.oauth2.server.resource.OAuth2ResourceServerConfigurer. Reason: java.lang.NoClassDefFoundError: javax/servlet/Filter.
+[INFO]     [creator]     WARNING: Could not register reflection metadata for org.springframework.security.config.annotation.web.HttpSecurityBuilder. Reason: java.lang.NoClassDefFoundError: javax/servlet/Filter.
+[INFO]     [creator]     WARNING: Could not register reflection metadata for org.springframework.boot.actuate.autoconfigure.web.servlet.ServletManagementChildContextConfiguration$ServletManagementContextSecurityConfiguration. Reason: java.lang.NoClassDefFoundError: javax/servlet/Filter.
+[INFO]     [creator]     WARNING: Could not register reflection metadata for io.micrometer.core.instrument.binder.kafka.KafkaStreamsMetrics. Reason: java.lang.NoClassDefFoundError: org/apache/kafka/streams/KafkaStreams.
+[INFO]     [creator]     WARNING: Could not register reflection metadata for org.springframework.cloud.commons.httpclient.HttpClientConfiguration$OkHttpClientConfiguration. Reason: java.lang.NoClassDefFoundError: okhttp3/OkHttpClient$Builder.
+[INFO]     [creator]     WARNING: Could not register reflection metadata for org.springframework.boot.web.servlet.FilterRegistrationBean. Reason: java.lang.NoClassDefFoundError: javax/servlet/Registration$Dynamic.
+[INFO]     [creator]     WARNING: Could not register reflection metadata for org.springframework.boot.web.embedded.undertow.UndertowReactiveWebServerFactory. Reason: java.lang.NoClassDefFoundError: io/undertow/server/HttpHandler.
+[INFO]     [creator]     WARNING: Could not register reflection metadata for org.springframework.cloud.openfeign.loadbalancer.FeignBlockingLoadBalancerClient. Reason: java.lang.NoClassDefFoundError: Lorg/springframework/cloud/loadbalancer/support/LoadBalancerClientFactory;.
+[INFO]     [creator]     WARNING: Could not register reflection metadata for org.springframework.cloud.gateway.config.GatewayReactiveLoadBalancerClientAutoConfiguration. Reason: java.lang.NoClassDefFoundError: org/springframework/cloud/loadbalancer/support/LoadBalancerClientFactory.
+[INFO]     [creator]     WARNING: Could not register reflection metadata for org.springframework.security.config.web.server.ServerHttpSecurity$OAuth2LoginSpec. Reason: java.lang.NoClassDefFoundError: org/springframework/security/oauth2/client/web/server/ServerAuthorizationRequestRepository.
+[INFO]     [creator]     WARNING: Could not register reflection metadata for org.springframework.boot.autoconfigure.cache.EhCacheCacheConfiguration. Reason: java.lang.NoClassDefFoundError: net/sf/ehcache/CacheManager.
+[INFO]     [creator]     WARNING: Could not register reflection metadata for org.springframework.cloud.autoconfigure.RestartEndpointWithIntegrationConfiguration. Reason: java.lang.NoClassDefFoundError: Lorg/springframework/integration/monitor/IntegrationMBeanExporter;.
+[INFO]     [creator]     WARNING: Could not register reflection metadata for org.springframework.web.context.support.GenericWebApplicationContext. Reason: java.lang.NoClassDefFoundError: Ljavax/servlet/ServletContext;.
+[INFO]     [creator]     WARNING: Could not register reflection metadata for org.springframework.cloud.commons.httpclient.OkHttpClientConnectionPoolFactory. Reason: java.lang.NoClassDefFoundError: okhttp3/ConnectionPool.
+[INFO]     [creator]     WARNING: Could not register reflection metadata for org.springframework.boot.autoconfigure.security.SecurityDataConfiguration. Reason: java.lang.NoClassDefFoundError: org/springframework/security/data/repository/query/SecurityEvaluationContextExtension.
+[INFO]     [creator]     WARNING: Could not register reflection metadata for org.springframework.security.config.annotation.web.configurers.oauth2.server.resource.OAuth2ResourceServerConfigurer$JwtConfigurer. Reason: java.lang.NoClassDefFoundError: org/springframework/security/oauth2/jwt/JwtDecoder.
+[INFO]     [creator]     WARNING: Could not register reflection metadata for org.springframework.boot.autoconfigure.security.servlet.SecurityFilterAutoConfiguration. Reason: java.lang.NoClassDefFoundError: javax/servlet/DispatcherType.
+[INFO]     [creator]     WARNING: Could not register reflection metadata for org.springframework.web.multipart.commons.CommonsMultipartResolver. Reason: java.lang.NoClassDefFoundError: javax/servlet/http/HttpServletRequest.
+[INFO]     [creator]     WARNING: Could not register reflection metadata for org.springframework.boot.autoconfigure.gson.GsonAutoConfiguration. Reason: java.lang.NoClassDefFoundError: com/google/gson/GsonBuilder.
+[INFO]     [creator]     WARNING: Could not register reflection metadata for org.springframework.boot.web.embedded.jetty.JettyReactiveWebServerFactory. Reason: java.lang.NoClassDefFoundError: org/eclipse/jetty/server/Handler.
+[INFO]     [creator]     WARNING: Could not register reflection metadata for org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration. Reason: java.lang.NoClassDefFoundError: javax/servlet/Filter.
+[INFO]     [creator]     WARNING: Could not register reflection metadata for org.springframework.security.config.annotation.web.configuration.HttpSecurityConfiguration. Reason: java.lang.NoClassDefFoundError: javax/servlet/Filter.
+[INFO]     [creator]     WARNING: Could not register reflection metadata for org.springframework.security.web.util.matcher.RequestMatcher. Reason: java.lang.NoClassDefFoundError: javax/servlet/http/HttpServletRequest.
+[INFO]     [creator]     WARNING: Could not register reflection metadata for org.springframework.boot.autoconfigure.data.neo4j.Neo4jDataAutoConfiguration. Reason: java.lang.NoClassDefFoundError: org/neo4j/driver/Driver.
+[INFO]     [creator]     WARNING: Could not register reflection metadata for org.springframework.cloud.commons.httpclient.OkHttpClientFactory. Reason: java.lang.NoClassDefFoundError: okhttp3/OkHttpClient$Builder.
+[INFO]     [creator]     WARNING: Could not register reflection metadata for org.springframework.boot.actuate.web.mappings.servlet.RequestMappingConditionsDescription. Reason: java.lang.NoClassDefFoundError: org/springframework/web/servlet/mvc/method/RequestMappingInfo.
+[INFO]     [creator]     WARNING: Could not register reflection metadata for org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration. Reason: java.lang.NoClassDefFoundError: javax/servlet/Filter.
+[INFO]     [creator]     WARNING: Could not register reflection metadata for org.springframework.boot.actuate.autoconfigure.web.servlet.ServletManagementChildContextConfiguration$JettyAccessLogCustomizer. Reason: java.lang.NoClassDefFoundError: org/eclipse/jetty/server/Server.
+[INFO]     [creator]     12:12:15.900 [ForkJoinPool-4-worker-11] DEBUG io.netty.util.internal.InternalThreadLocalMap - -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+[INFO]     [creator]     12:12:15.900 [ForkJoinPool-4-worker-11] DEBUG io.netty.util.internal.InternalThreadLocalMap - -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+[INFO]     [creator]     [/layers/paketo-buildpacks_native-image/native-image/com.simonjamesrowe.apigateway.ApiGatewayApplicationKt:172]     analysis: 104,855.09 ms,  5.21 GB
+[INFO]     [creator]     Fatal error:java.lang.TypeNotPresentException: Type javax.servlet.Filter not present
+[INFO]     [creator]     	at java.base/sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:117)
+[INFO]     [creator]     	at java.base/sun.reflect.generics.visitor.Reifier.visitClassTypeSignature(Reifier.java:125)
+[INFO]     [creator]     	at java.base/sun.reflect.generics.tree.ClassTypeSignature.accept(ClassTypeSignature.java:49)
+[INFO]     [creator]     	at java.base/sun.reflect.generics.visitor.Reifier.reifyTypeArguments(Reifier.java:68)
+[INFO]     [creator]     	at java.base/sun.reflect.generics.visitor.Reifier.visitClassTypeSignature(Reifier.java:138)
+[INFO]     [creator]     	at java.base/sun.reflect.generics.tree.ClassTypeSignature.accept(ClassTypeSignature.java:49)
+[INFO]     [creator]     	at java.base/sun.reflect.generics.visitor.Reifier.reifyTypeArguments(Reifier.java:68)
+[INFO]     [creator]     	at java.base/sun.reflect.generics.visitor.Reifier.visitClassTypeSignature(Reifier.java:138)
+[INFO]     [creator]     	at java.base/sun.reflect.generics.tree.ClassTypeSignature.accept(ClassTypeSignature.java:49)
+[INFO]     [creator]     	at java.base/sun.reflect.generics.repository.MethodRepository.computeReturnType(MethodRepository.java:75)
+[INFO]     [creator]     	at java.base/sun.reflect.generics.repository.MethodRepository.getReturnType(MethodRepository.java:66)
+[INFO]     [creator]     	at java.base/java.lang.reflect.Method.getGenericReturnType(Method.java:292)
+[INFO]     [creator]     	at com.oracle.svm.reflect.hosted.ReflectionMetadataFeature.replacer(ReflectionMetadataFeature.java:65)
+[INFO]     [creator]     	at com.oracle.graal.pointsto.meta.AnalysisUniverse.replaceObject(AnalysisUniverse.java:565)
+[INFO]     [creator]     	at com.oracle.graal.pointsto.ObjectScanner.scanArray(ObjectScanner.java:236)
+[INFO]     [creator]     	at com.oracle.graal.pointsto.ObjectScanner.doScan(ObjectScanner.java:351)
+[INFO]     [creator]     	at com.oracle.graal.pointsto.ObjectScanner.access$400(ObjectScanner.java:60)
+[INFO]     [creator]     	at com.oracle.graal.pointsto.ObjectScanner$2$1.run(ObjectScanner.java:388)
+[INFO]     [creator]     	at com.oracle.graal.pointsto.util.CompletionExecutor.lambda$execute$0(CompletionExecutor.java:173)
+[INFO]     [creator]     	at java.base/java.util.concurrent.ForkJoinTask$RunnableExecuteAction.exec(ForkJoinTask.java:1426)
+[INFO]     [creator]     	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)
+[INFO]     [creator]     	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1020)
+[INFO]     [creator]     	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1656)
+[INFO]     [creator]     	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1594)
+[INFO]     [creator]     	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:183)
+[INFO]     [creator]     Caused by: java.lang.ClassNotFoundException: javax.servlet.Filter
+[INFO]     [creator]     	at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:471)
+[INFO]     [creator]     	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:589)
+[INFO]     [creator]     	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:522)
+[INFO]     [creator]     	at java.base/java.lang.Class.forName0(Native Method)
+[INFO]     [creator]     	at java.base/java.lang.Class.forName(Class.java:398)
+[INFO]     [creator]     	at java.base/sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:114)
+[INFO]     [creator]     	... 24 more
+[INFO]     [creator]     Error: Image build request failed with exit status 1
+[INFO]     [creator]     unable to invoke layer creator
+[INFO]     [creator]     unable to contribute native-image layer
+[INFO]     [creator]     error running build
+[INFO]     [creator]     exit status 1
+[INFO]     [creator]     ERROR: failed to build: exit status 1
+[DEBUG] Releasing connection 
+[DEBUG] http-outgoing-1: set socket timeout to 0
+[DEBUG] Connection can be kept alive indefinitely
+[DEBUG] CookieSpec selected: default
+[DEBUG] Auth cache not set in the context
+[DEBUG] Get connection for route {}->docker://localhost:2376
+[DEBUG] http-outgoing-1: set socket timeout to 0
+[DEBUG] Executing request POST /v1.24/containers/82ce1ccb96e2a03886058863143566a9e13334da18b65576f54dd0e16c6fe63f/wait HTTP/1.1
+[DEBUG] Target auth state: UNCHALLENGED
+[DEBUG] Proxy auth state: UNCHALLENGED
+[DEBUG] http-outgoing-1 >> POST /v1.24/containers/82ce1ccb96e2a03886058863143566a9e13334da18b65576f54dd0e16c6fe63f/wait HTTP/1.1
+[DEBUG] http-outgoing-1 >> Content-Length: 0
+[DEBUG] http-outgoing-1 >> Host: localhost
+[DEBUG] http-outgoing-1 >> Connection: Keep-Alive
+[DEBUG] http-outgoing-1 >> User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.10)
+[DEBUG] http-outgoing-1 >> Accept-Encoding: gzip,deflate
+[DEBUG] http-outgoing-1 << HTTP/1.1 200 OK
+[DEBUG] http-outgoing-1 << Api-Version: 1.41
+[DEBUG] http-outgoing-1 << Content-Type: application/json
+[DEBUG] http-outgoing-1 << Date: Mon, 05 Apr 2021 12:12:19 GMT
+[DEBUG] http-outgoing-1 << Docker-Experimental: true
+[DEBUG] http-outgoing-1 << Ostype: linux
+[DEBUG] http-outgoing-1 << Server: Docker/20.10.5 (linux)
+[DEBUG] http-outgoing-1 << Transfer-Encoding: chunked
+[DEBUG] Connection can be kept alive indefinitely
+[DEBUG] Releasing connection 
+[DEBUG] http-outgoing-1: set socket timeout to 0
+[DEBUG] Connection can be kept alive indefinitely
+[DEBUG] CookieSpec selected: default
+[DEBUG] Auth cache not set in the context
+[DEBUG] Get connection for route {}->docker://localhost:2376
+[DEBUG] http-outgoing-1: set socket timeout to 0
+[DEBUG] Executing request DELETE /v1.24/containers/82ce1ccb96e2a03886058863143566a9e13334da18b65576f54dd0e16c6fe63f?force=1 HTTP/1.1
+[DEBUG] Target auth state: UNCHALLENGED
+[DEBUG] Proxy auth state: UNCHALLENGED
+[DEBUG] http-outgoing-1 >> DELETE /v1.24/containers/82ce1ccb96e2a03886058863143566a9e13334da18b65576f54dd0e16c6fe63f?force=1 HTTP/1.1
+[DEBUG] http-outgoing-1 >> Host: localhost
+[DEBUG] http-outgoing-1 >> Connection: Keep-Alive
+[DEBUG] http-outgoing-1 >> User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.10)
+[DEBUG] http-outgoing-1 >> Accept-Encoding: gzip,deflate
+[DEBUG] http-outgoing-1 << HTTP/1.1 204 No Content
+[DEBUG] http-outgoing-1 << Api-Version: 1.41
+[DEBUG] http-outgoing-1 << Date: Mon, 05 Apr 2021 12:12:19 GMT
+[DEBUG] http-outgoing-1 << Docker-Experimental: true
+[DEBUG] http-outgoing-1 << Ostype: linux
+[DEBUG] http-outgoing-1 << Server: Docker/20.10.5 (linux)
+[DEBUG] Connection can be kept alive indefinitely
+[DEBUG] Releasing connection 
+[DEBUG] http-outgoing-1: set socket timeout to 0
+[DEBUG] Connection can be kept alive indefinitely
+[DEBUG] CookieSpec selected: default
+[DEBUG] Auth cache not set in the context
+[DEBUG] Get connection for route {}->docker://localhost:2376
+[DEBUG] http-outgoing-1: set socket timeout to 0
+[DEBUG] Executing request DELETE /v1.24/volumes/pack-layers-vrevsdjfyg?force=1 HTTP/1.1
+[DEBUG] Target auth state: UNCHALLENGED
+[DEBUG] Proxy auth state: UNCHALLENGED
+[DEBUG] http-outgoing-1 >> DELETE /v1.24/volumes/pack-layers-vrevsdjfyg?force=1 HTTP/1.1
+[DEBUG] http-outgoing-1 >> Host: localhost
+[DEBUG] http-outgoing-1 >> Connection: Keep-Alive
+[DEBUG] http-outgoing-1 >> User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.10)
+[DEBUG] http-outgoing-1 >> Accept-Encoding: gzip,deflate
+[DEBUG] http-outgoing-1 << HTTP/1.1 204 No Content
+[DEBUG] http-outgoing-1 << Api-Version: 1.41
+[DEBUG] http-outgoing-1 << Date: Mon, 05 Apr 2021 12:12:21 GMT
+[DEBUG] http-outgoing-1 << Docker-Experimental: true
+[DEBUG] http-outgoing-1 << Ostype: linux
+[DEBUG] http-outgoing-1 << Server: Docker/20.10.5 (linux)
+[DEBUG] Connection can be kept alive indefinitely
+[DEBUG] Releasing connection 
+[DEBUG] http-outgoing-1: set socket timeout to 0
+[DEBUG] Connection can be kept alive indefinitely
+[DEBUG] CookieSpec selected: default
+[DEBUG] Auth cache not set in the context
+[DEBUG] Get connection for route {}->docker://localhost:2376
+[DEBUG] http-outgoing-1: set socket timeout to 0
+[DEBUG] Executing request DELETE /v1.24/volumes/pack-app-vogtfdkhti?force=1 HTTP/1.1
+[DEBUG] Target auth state: UNCHALLENGED
+[DEBUG] Proxy auth state: UNCHALLENGED
+[DEBUG] http-outgoing-1 >> DELETE /v1.24/volumes/pack-app-vogtfdkhti?force=1 HTTP/1.1
+[DEBUG] http-outgoing-1 >> Host: localhost
+[DEBUG] http-outgoing-1 >> Connection: Keep-Alive
+[DEBUG] http-outgoing-1 >> User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.10)
+[DEBUG] http-outgoing-1 >> Accept-Encoding: gzip,deflate
+[DEBUG] http-outgoing-1 << HTTP/1.1 204 No Content
+[DEBUG] http-outgoing-1 << Api-Version: 1.41
+[DEBUG] http-outgoing-1 << Date: Mon, 05 Apr 2021 12:12:21 GMT
+[DEBUG] http-outgoing-1 << Docker-Experimental: true
+[DEBUG] http-outgoing-1 << Ostype: linux
+[DEBUG] http-outgoing-1 << Server: Docker/20.10.5 (linux)
+[DEBUG] Connection can be kept alive indefinitely
+[DEBUG] Releasing connection 
+[DEBUG] http-outgoing-1: set socket timeout to 0
+[DEBUG] Connection can be kept alive indefinitely
+[DEBUG] CookieSpec selected: default
+[DEBUG] Auth cache not set in the context
+[DEBUG] Get connection for route {}->docker://localhost:2376
+[DEBUG] http-outgoing-1: set socket timeout to 0
+[DEBUG] Executing request DELETE /v1.24/images/pack.local/builder/tevdrfbvfk:latest?force=1 HTTP/1.1
+[DEBUG] Target auth state: UNCHALLENGED
+[DEBUG] Proxy auth state: UNCHALLENGED
+[DEBUG] http-outgoing-1 >> DELETE /v1.24/images/pack.local/builder/tevdrfbvfk:latest?force=1 HTTP/1.1
+[DEBUG] http-outgoing-1 >> Host: localhost
+[DEBUG] http-outgoing-1 >> Connection: Keep-Alive
+[DEBUG] http-outgoing-1 >> User-Agent: Apache-HttpClient/4.5.13 (Java/11.0.10)
+[DEBUG] http-outgoing-1 >> Accept-Encoding: gzip,deflate
+[DEBUG] http-outgoing-1 << HTTP/1.1 200 OK
+[DEBUG] http-outgoing-1 << Api-Version: 1.41
+[DEBUG] http-outgoing-1 << Content-Type: application/json
+[DEBUG] http-outgoing-1 << Date: Mon, 05 Apr 2021 12:12:21 GMT
+[DEBUG] http-outgoing-1 << Docker-Experimental: true
+[DEBUG] http-outgoing-1 << Ostype: linux
+[DEBUG] http-outgoing-1 << Server: Docker/20.10.5 (linux)
+[DEBUG] http-outgoing-1 << Transfer-Encoding: chunked
+[DEBUG] Connection can be kept alive indefinitely
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  13:14 min
+[INFO] Finished at: 2021-04-05T12:12:21Z
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.springframework.boot:spring-boot-maven-plugin:2.4.4:build-image (default-cli) on project api-gateway: Execution default-cli of goal org.springframework.boot:spring-boot-maven-plugin:2.4.4:build-image failed: Builder lifecycle 'creator' failed with status code 145 -> [Help 1]
+org.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.springframework.boot:spring-boot-maven-plugin:2.4.4:build-image (default-cli) on project api-gateway: Execution default-cli of goal org.springframework.boot:spring-boot-maven-plugin:2.4.4:build-image failed: Builder lifecycle 'creator' failed with status code 145
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:215)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:156)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:148)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:117)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:81)
+    at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build (SingleThreadedBuilder.java:56)
+    at org.apache.maven.lifecycle.internal.LifecycleStarter.execute (LifecycleStarter.java:128)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:305)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:192)
+    at org.apache.maven.DefaultMaven.execute (DefaultMaven.java:105)
+    at org.apache.maven.cli.MavenCli.execute (MavenCli.java:957)
+    at org.apache.maven.cli.MavenCli.doMain (MavenCli.java:289)
+    at org.apache.maven.cli.MavenCli.main (MavenCli.java:193)
+    at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0 (Native Method)
+    at jdk.internal.reflect.NativeMethodAccessorImpl.invoke (NativeMethodAccessorImpl.java:62)
+    at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke (DelegatingMethodAccessorImpl.java:43)
+    at java.lang.reflect.Method.invoke (Method.java:566)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced (Launcher.java:282)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launch (Launcher.java:225)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode (Launcher.java:406)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.main (Launcher.java:347)
+Caused by: org.apache.maven.plugin.PluginExecutionException: Execution default-cli of goal org.springframework.boot:spring-boot-maven-plugin:2.4.4:build-image failed: Builder lifecycle 'creator' failed with status code 145
+    at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo (DefaultBuildPluginManager.java:148)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:210)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:156)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:148)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:117)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:81)
+    at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build (SingleThreadedBuilder.java:56)
+    at org.apache.maven.lifecycle.internal.LifecycleStarter.execute (LifecycleStarter.java:128)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:305)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:192)
+    at org.apache.maven.DefaultMaven.execute (DefaultMaven.java:105)
+    at org.apache.maven.cli.MavenCli.execute (MavenCli.java:957)
+    at org.apache.maven.cli.MavenCli.doMain (MavenCli.java:289)
+    at org.apache.maven.cli.MavenCli.main (MavenCli.java:193)
+    at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0 (Native Method)
+    at jdk.internal.reflect.NativeMethodAccessorImpl.invoke (NativeMethodAccessorImpl.java:62)
+    at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke (DelegatingMethodAccessorImpl.java:43)
+    at java.lang.reflect.Method.invoke (Method.java:566)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced (Launcher.java:282)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launch (Launcher.java:225)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode (Launcher.java:406)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.main (Launcher.java:347)
+Caused by: org.springframework.boot.buildpack.platform.build.BuilderException: Builder lifecycle 'creator' failed with status code 145
+    at org.springframework.boot.buildpack.platform.build.Lifecycle.run (Lifecycle.java:166)
+    at org.springframework.boot.buildpack.platform.build.Lifecycle.execute (Lifecycle.java:119)
+    at org.springframework.boot.buildpack.platform.build.Builder.executeLifecycle (Builder.java:193)
+    at org.springframework.boot.buildpack.platform.build.Builder.build (Builder.java:103)
+    at org.springframework.boot.maven.BuildImageMojo.buildImage (BuildImageMojo.java:181)
+    at org.springframework.boot.maven.BuildImageMojo.execute (BuildImageMojo.java:171)
+    at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo (DefaultBuildPluginManager.java:137)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:210)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:156)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:148)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:117)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:81)
+    at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build (SingleThreadedBuilder.java:56)
+    at org.apache.maven.lifecycle.internal.LifecycleStarter.execute (LifecycleStarter.java:128)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:305)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:192)
+    at org.apache.maven.DefaultMaven.execute (DefaultMaven.java:105)
+    at org.apache.maven.cli.MavenCli.execute (MavenCli.java:957)
+    at org.apache.maven.cli.MavenCli.doMain (MavenCli.java:289)
+    at org.apache.maven.cli.MavenCli.main (MavenCli.java:193)
+    at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0 (Native Method)
+    at jdk.internal.reflect.NativeMethodAccessorImpl.invoke (NativeMethodAccessorImpl.java:62)
+    at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke (DelegatingMethodAccessorImpl.java:43)
+    at java.lang.reflect.Method.invoke (Method.java:566)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced (Launcher.java:282)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launch (Launcher.java:225)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode (Launcher.java:406)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.main (Launcher.java:347)
+[ERROR] 
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/PluginExecutionException
+[31m
+Pipeline failed on stage 'from-build-pack' : container 'step-build-container-build'. The execution of the pipeline has stopped.[0m
