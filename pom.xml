@@ -331,6 +331,17 @@
                         <configuration>
                             <target>
                                 <delete file="target/classes/META-INF/native-image/serialization-config.json"/>
+                            </target>
+                        </configuration>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>delete-native-image-spring-aot-reflect</id>
+                        <phase>prepare-package</phase>
+                        <configuration>
+                            <target>
                                 <delete file="target/classes/META-INF/native-image/org.springframework.aot/spring-aot/reflect-config.json"/>
                             </target>
                         </configuration>
@@ -345,7 +356,10 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.0.0-M5</version>
                 <configuration>
-                    <argLine>-agentlib:native-image-agent=access-filter-file=src/test/resources/access-filter.json,caller-filter-file=src/test/resources/access-filter.json,config-merge-dir=target/classes/META-INF/native-image -Xmx2g -Xms1g</argLine>
+                    <argLine>
+                        -agentlib:native-image-agent=access-filter-file=src/test/resources/access-filter.json,caller-filter-file=src/test/resources/access-filter.json,config-merge-dir=target/classes/META-INF/native-image
+                        -Xmx2g -Xms1g
+                    </argLine>
                 </configuration>
             </plugin>
             <plugin>
