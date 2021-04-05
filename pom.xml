@@ -357,9 +357,8 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.0.0-M5</version>
                 <configuration>
-                    <forkCount>3</forkCount>
-                    <reuseForks>true</reuseForks>
                     <argLine>-agentlib:native-image-agent=access-filter-file=src/test/resources/access-filter.json,caller-filter-file=src/test/resources/access-filter.json,config-merge-dir=target/classes/META-INF/native-image -Xmx2g -Xms1g</argLine>
                 </configuration>
             </plugin>
