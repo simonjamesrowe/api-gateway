@@ -58,7 +58,7 @@
 
     <properties>
         <java.version>11</java.version>
-        <kotlin.version>1.4.30</kotlin.version>
+        <kotlin.version>1.4.31</kotlin.version>
         <spring-cloud.version>2020.0.2</spring-cloud.version>
         <native.build.args>--allow-incomplete-classpath --initialize-at-build-time=sun.instrument.InstrumentationImpl
             -H:+AddAllCharsets --enable-url-protocols=http
@@ -88,11 +88,12 @@
             <groupId>io.projectreactor.netty</groupId>
             <artifactId>reactor-netty</artifactId>
         </dependency>
+        <!--
         <dependency>
             <groupId>de.qaware.tools.openapi-generator-for-spring</groupId>
             <artifactId>openapi-generator-for-spring-webflux</artifactId>
             <version>1.0.1</version>
-        </dependency>
+        </dependency>-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-sleuth</artifactId>
@@ -133,11 +134,6 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-gateway-webflux</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>io.github.openfeign</groupId>
-            <artifactId>feign-jackson</artifactId>
-            <version>11.0</version>
         </dependency>
         <dependency>
             <groupId>commons-io</groupId>
