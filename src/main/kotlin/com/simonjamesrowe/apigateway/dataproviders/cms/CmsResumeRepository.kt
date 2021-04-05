@@ -12,7 +12,7 @@ import org.springframework.stereotype.Repository
 
 @Repository
 class CmsResumeRepository(
-  private val cmsRestApi: CmsRestApi
+  private val cmsRestApi: ICmsRestApi
 ) : ResumeRepository {
 
   @NewSpan("getResumeData")

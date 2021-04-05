@@ -1,19 +1,17 @@
 package com.simonjamesrowe.apigateway.test.dataproviders.cms
 
 import com.github.tomakehurst.wiremock.WireMockServer
-import com.simonjamesrowe.apigateway.test.TestUtils.mockGet
-import com.simonjamesrowe.apigateway.config.FeignConfig
+import com.simonjamesrowe.apigateway.config.WebClientConfiguration
+import com.simonjamesrowe.apigateway.dataproviders.cms.CmsRestApi
 import com.simonjamesrowe.apigateway.dataproviders.cms.CmsResumeRepository
+import com.simonjamesrowe.apigateway.test.TestUtils.mockGet
 import kotlinx.coroutines.runBlocking
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
-import org.springframework.boot.autoconfigure.ImportAutoConfiguration
 import org.springframework.boot.test.autoconfigure.json.JsonTest
 import org.springframework.cloud.contract.wiremock.AutoConfigureWireMock
-import org.springframework.cloud.openfeign.FeignAutoConfiguration
-import org.springframework.cloud.openfeign.FeignClientsConfiguration
 import org.springframework.context.annotation.Import
 import org.springframework.test.context.ActiveProfiles
 import java.time.LocalDate
@@ -21,8 +19,7 @@ import java.time.LocalDate
 @JsonTest
 @AutoConfigureWireMock(port = 0)
 @ActiveProfiles("cms")
-@ImportAutoConfiguration(FeignAutoConfiguration::class, FeignClientsConfiguration::class)
-@Import(FeignConfig::class, CmsResumeRepository::class)
+@Import(CmsRestApi::class, CmsResumeRepository::class, WebClientConfiguration::class)
 internal class CmsResumeRepositoryTest {
 
   @Autowired
@@ -52,7 +49,10 @@ internal class CmsResumeRepositoryTest {
     assertThat(result.jobs).hasSize(6)
     assertThat(result.jobs[0]).hasFieldOrPropertyWithValue("role", "Senior Developer")
     assertThat(result.jobs[0]).hasFieldOrPropertyWithValue("company", "Y-Tree")
-    assertThat(result.jobs[0]).hasFieldOrPropertyWithValue("link", "https://www.simonjamesrowe.com/jobs/5eedd4803c8d74001e4497f5")
+    assertThat(result.jobs[0]).hasFieldOrPropertyWithValue(
+      "link",
+      "https://www.simonjamesrowe.com/jobs/5eedd4803c8d74001e4497f5"
+    )
     assertThat(result.jobs[0]).hasFieldOrPropertyWithValue("start", LocalDate.parse("2020-05-04"))
     assertThat(result.jobs[0]).hasFieldOrPropertyWithValue("location", "London")
     assertThat(result.education).hasSize(1)
