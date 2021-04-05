@@ -70,6 +70,9 @@
       "excludeClasses": "sun.**"
     },
     {
+      "excludeClasses": "net.bytebuddy.**"
+    },
+    {
       "excludeClasses": "worker.org.gradle.**"
     },
     {

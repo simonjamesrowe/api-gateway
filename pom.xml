@@ -60,9 +60,7 @@
         <java.version>11</java.version>
         <kotlin.version>1.4.31</kotlin.version>
         <spring-cloud.version>2020.0.2</spring-cloud.version>
-        <native.build.args>--allow-incomplete-classpath --initialize-at-build-time=sun.instrument.InstrumentationImpl
-            --initialize-at-build-time=net.bytebuddy.implementation.bind.annotation.Super$Instantiation -H:+AddAllCharsets --enable-url-protocols=http
-        </native.build.args>
+        <native.build.args>--allow-incomplete-classpath --initialize-at-build-time=sun.instrument.InstrumentationImpl -H:+AddAllCharsets --enable-url-protocols=http</native.build.args>
         <builder>paketobuildpacks/builder:tiny</builder>
     </properties>
 
