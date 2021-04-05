@@ -1,0 +1,200 @@
+
+Showing logs for build [32msimonjamesrowe-api-gateway-mast-dj6wg-51[0m stage [32mfrom-build-pack[0m and container [32mcredential-initializer[0m
+{"level":"info","ts":1617619704.8293827,"caller":"creds-init/main.go:44","msg":"Credentials initialized."}
+
+Showing logs for build [32msimonjamesrowe-api-gateway-mast-dj6wg-51[0m stage [32mfrom-build-pack[0m and container [32mworking-dir-initializer[0m
+
+Showing logs for build [32msimonjamesrowe-api-gateway-mast-dj6wg-51[0m stage [32mfrom-build-pack[0m and container [32mplace-tools[0m
+
+Showing logs for build [32msimonjamesrowe-api-gateway-mast-dj6wg-51[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-simonjamesrowe-api-gateway-mast-dj6wg-tsjks[0m
+{"level":"info","ts":1617619713.661123,"caller":"git/git.go:105","msg":"Successfully cloned https://github.com/simonjamesrowe/api-gateway.git @ v0.0.55 in path /workspace/source"}
+{"level":"warn","ts":1617619713.6614516,"caller":"git/git.go:152","msg":"Unexpected error: creating symlink: symlink /tekton/home/.ssh /****/.ssh: file exists"}
+{"level":"info","ts":1617619713.7335663,"caller":"git/git.go:133","msg":"Successfully initialized and updated submodules in path /workspace/source"}
+
+Showing logs for build [32msimonjamesrowe-api-gateway-mast-dj6wg-51[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-builder-home[0m
+
+Showing logs for build [32msimonjamesrowe-api-gateway-mast-dj6wg-51[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:6d7925912a1cba945f5fcaa4787cac7fb8bbb0a8
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32msimonjamesrowe-api-gateway-mast-dj6wg-51[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32msimonjamesrowe-api-gateway-mast-dj6wg-51[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+Picked up _JAVA_OPTIONS: -XX:+UnlockExperimentalVMOptions -Dsun.zip.disableMemoryMapping=true -XX:+UseParallelGC -XX:MinHeapFreeRatio=5 -XX:MaxHeapFreeRatio=10 -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Xms2g -Xmx4g
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.simonjamesrowe:api-gateway:jar:0.0.55
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: org.skyscreamer:jsonassert:jar -> duplicate declaration of version 1.5.0 @ line 233, column 21
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] -------------------< com.simonjamesrowe:api-gateway >-------------------
+[INFO] Building api-gateway 0.0.55
+[INFO] --------------------------------[ jar ]---------------------------------
+[WARNING] The POM for com.sun.xml.bind:jaxb-osgi:jar:2.2.10 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+[INFO] 
+[INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ api-gateway ---
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.8.6:prepare-agent (default) @ api-gateway ---
+[INFO] argLine set to -javaagent:/home/jenkins/.mvnrepository/org/jacoco/org.jacoco.agent/0.8.6/org.jacoco.agent-0.8.6-runtime.jar=destfile=/workspace/source/target/jacoco.exec
+[INFO] 
+[INFO] --- maven-resources-plugin:3.2.0:resources (default-resources) @ api-gateway ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] Copying 1 resource
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ api-gateway ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- kotlin-maven-plugin:1.4.30:compile (compile) @ api-gateway ---
+[INFO] Applied plugin: 'spring'
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by com.intellij.util.ReflectionUtil (file:/home/jenkins/.mvnrepository/org/jetbrains/kotlin/kotlin-compiler/1.4.30/kotlin-compiler-1.4.30.jar) to method java.util.ResourceBundle.setParent(java.util.ResourceBundle)
+WARNING: Please consider reporting this to the maintainers of com.intellij.util.ReflectionUtil
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+[WARNING] /workspace/source/src/main/kotlin/com/simonjamesrowe/apigateway/entrypoints/restcontroller/UploadController.kt: (49, 87) Unchecked cast: ResponseEntity<ByteArray> to ResponseEntity<ByteArray?>
+[WARNING] /workspace/source/src/main/kotlin/com/simonjamesrowe/apigateway/entrypoints/restcontroller/UploadController.kt: (59, 80) Unchecked cast: ResponseEntity<ByteArray> to ResponseEntity<ByteArray?>
+[INFO] 
+[INFO] --- maven-resources-plugin:3.2.0:testResources (default-testResources) @ api-gateway ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] Copying 9 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ api-gateway ---
+[INFO] Changes detected - recompiling the module!
+[INFO] 
+[INFO] --- kotlin-maven-plugin:1.4.30:test-compile (test-compile) @ api-gateway ---
+[INFO] Applied plugin: 'spring'
+[INFO] 
+[INFO] --- maven-antrun-plugin:1.8:run (create-native-image-config-folder) @ api-gateway ---
+[INFO] Executing tasks
+
+main:
+    [mkdir] Created dir: /workspace/source/target/classes/META-INF/native-image
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- spring-aot-maven-plugin:0.9.2-SNAPSHOT:test-generate (test-generate) @ api-gateway ---
+[INFO] Spring Native operating mode: native
+[WARNING] Failed verification check: this type was requested to be added to configuration but is not resolvable: org.springframework.data.jpa.repository.support.EntityManagerBeanDefinitionRegistrarPostProcessor it will be skipped
+[WARNING] Failed verification check: this type was requested to be added to configuration but is not resolvable: javax.transaction.Transactional it will be skipped
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 34 source files to /workspace/source/target/test-classes
+[INFO] /workspace/source/target/generated-test-sources/spring-aot/src/test/java/org/springframework/aot/StaticSpringFactories.java: /workspace/source/target/generated-test-sources/spring-aot/src/test/java/org/springframework/aot/StaticSpringFactories.java uses or overrides a deprecated API.
+[INFO] /workspace/source/target/generated-test-sources/spring-aot/src/test/java/org/springframework/aot/StaticSpringFactories.java: Recompile with -Xlint:deprecation for details.
+[INFO] /workspace/source/target/generated-test-sources/spring-aot/src/test/java/org/springframework/aot/StaticSpringFactories.java: Some input files use unchecked or unsafe operations.
+[INFO] /workspace/source/target/generated-test-sources/spring-aot/src/test/java/org/springframework/aot/StaticSpringFactories.java: Recompile with -Xlint:unchecked for details.
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] Copying 5 resources
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ api-gateway ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 0, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Skipping api-gateway
+[INFO] This project has been banned from the build due to previous failures.
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Skipping api-gateway
+[INFO] This project has been banned from the build due to previous failures.
+[INFO] ------------------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  54.629 s
+[INFO] Finished at: 2021-04-05T10:49:32Z
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project api-gateway: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /workspace/source/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] ExecutionException The forked VM terminated without properly saying goodbye. VM crash or System.exit called?
+[ERROR] Command was /bin/sh -c cd /workspace/source && /opt/graalvm/bin/java -agentlib:native-image-agent=access-filter-file=src/test/resources/access-filter.json,caller-filter-file=src/test/resources/access-filter.json,config-merge-dir=target/classes/META-INF/native-image -Xmx2g -Xms1g -jar /workspace/source/target/surefire/surefirebooter9052989018523471649.jar /workspace/source/target/surefire 2021-04-05T10-49-31_046-jvmRun1 surefire17910425058805044328tmp surefire_114901423091157551823tmp
+[ERROR] Error occurred in starting fork, check output in log
+[ERROR] Process Exit Code: 1
+[ERROR] ExecutionException The forked VM terminated without properly saying goodbye. VM crash or System.exit called?
+[ERROR] Command was /bin/sh -c cd /workspace/source && /opt/graalvm/bin/java -agentlib:native-image-agent=access-filter-file=src/test/resources/access-filter.json,caller-filter-file=src/test/resources/access-filter.json,config-merge-dir=target/classes/META-INF/native-image -Xmx2g -Xms1g -jar /workspace/source/target/surefire/surefirebooter9252292651170533137.jar /workspace/source/target/surefire 2021-04-05T10-49-31_046-jvmRun3 surefire13232718500468565768tmp surefire_011053338896556315039tmp
+[ERROR] Error occurred in starting fork, check output in log
+[ERROR] Process Exit Code: 1
+[ERROR] ExecutionException The forked VM terminated without properly saying goodbye. VM crash or System.exit called?
+[ERROR] Command was /bin/sh -c cd /workspace/source && /opt/graalvm/bin/java -agentlib:native-image-agent=access-filter-file=src/test/resources/access-filter.json,caller-filter-file=src/test/resources/access-filter.json,config-merge-dir=target/classes/META-INF/native-image -Xmx2g -Xms1g -jar /workspace/source/target/surefire/surefirebooter10059184498408944505.jar /workspace/source/target/surefire 2021-04-05T10-49-31_046-jvmRun2 surefire5113127204149054760tmp surefire_216727295065194062064tmp
+[ERROR] Error occurred in starting fork, check output in log
+[ERROR] Process Exit Code: 1
+[ERROR] org.apache.maven.surefire.booter.SurefireBooterForkException: ExecutionException The forked VM terminated without properly saying goodbye. VM crash or System.exit called?
+[ERROR] Command was /bin/sh -c cd /workspace/source && /opt/graalvm/bin/java -agentlib:native-image-agent=access-filter-file=src/test/resources/access-filter.json,caller-filter-file=src/test/resources/access-filter.json,config-merge-dir=target/classes/META-INF/native-image -Xmx2g -Xms1g -jar /workspace/source/target/surefire/surefirebooter9052989018523471649.jar /workspace/source/target/surefire 2021-04-05T10-49-31_046-jvmRun1 surefire17910425058805044328tmp surefire_114901423091157551823tmp
+[ERROR] Error occurred in starting fork, check output in log
+[ERROR] Process Exit Code: 1
+[ERROR] ExecutionException The forked VM terminated without properly saying goodbye. VM crash or System.exit called?
+[ERROR] Command was /bin/sh -c cd /workspace/source && /opt/graalvm/bin/java -agentlib:native-image-agent=access-filter-file=src/test/resources/access-filter.json,caller-filter-file=src/test/resources/access-filter.json,config-merge-dir=target/classes/META-INF/native-image -Xmx2g -Xms1g -jar /workspace/source/target/surefire/surefirebooter9252292651170533137.jar /workspace/source/target/surefire 2021-04-05T10-49-31_046-jvmRun3 surefire13232718500468565768tmp surefire_011053338896556315039tmp
+[ERROR] Error occurred in starting fork, check output in log
+[ERROR] Process Exit Code: 1
+[ERROR] ExecutionException The forked VM terminated without properly saying goodbye. VM crash or System.exit called?
+[ERROR] Command was /bin/sh -c cd /workspace/source && /opt/graalvm/bin/java -agentlib:native-image-agent=access-filter-file=src/test/resources/access-filter.json,caller-filter-file=src/test/resources/access-filter.json,config-merge-dir=target/classes/META-INF/native-image -Xmx2g -Xms1g -jar /workspace/source/target/surefire/surefirebooter10059184498408944505.jar /workspace/source/target/surefire 2021-04-05T10-49-31_046-jvmRun2 surefire5113127204149054760tmp surefire_216727295065194062064tmp
+[ERROR] Error occurred in starting fork, check output in log
+[ERROR] Process Exit Code: 1
+[ERROR] 	at org.apache.maven.plugin.surefire.booterclient.ForkStarter.awaitResultsDone(ForkStarter.java:510)
+[ERROR] 	at org.apache.maven.plugin.surefire.booterclient.ForkStarter.runSuitesForkOnceMultiple(ForkStarter.java:382)
+[ERROR] 	at org.apache.maven.plugin.surefire.booterclient.ForkStarter.run(ForkStarter.java:297)
+[ERROR] 	at org.apache.maven.plugin.surefire.booterclient.ForkStarter.run(ForkStarter.java:246)
+[ERROR] 	at org.apache.maven.plugin.surefire.AbstractSurefireMojo.executeProvider(AbstractSurefireMojo.java:1183)
+[ERROR] 	at org.apache.maven.plugin.surefire.AbstractSurefireMojo.executeAfterPreconditionsChecked(AbstractSurefireMojo.java:1011)
+[ERROR] 	at org.apache.maven.plugin.surefire.AbstractSurefireMojo.execute(AbstractSurefireMojo.java:857)
+[ERROR] 	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:137)
+[ERROR] 	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:210)
+[ERROR] 	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:156)
+[ERROR] 	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:148)
+[ERROR] 	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:117)
+[ERROR] 	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:81)
+[ERROR] 	at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build(SingleThreadedBuilder.java:56)
+[ERROR] 	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:128)
+[ERROR] 	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:305)
+[ERROR] 	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:192)
+[ERROR] 	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:105)
+[ERROR] 	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:957)
+[ERROR] 	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:289)
+[ERROR] 	at org.apache.maven.cli.MavenCli.main(MavenCli.java:193)
+[ERROR] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+[ERROR] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+[ERROR] 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+[ERROR] 	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+[ERROR] 	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:282)
+[ERROR] 	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:225)
+[ERROR] 	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:406)
+[ERROR] 	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:347)
+[ERROR] Caused by: org.apache.maven.surefire.booter.SurefireBooterForkException: The forked VM terminated without properly saying goodbye. VM crash or System.exit called?
+[ERROR] Command was /bin/sh -c cd /workspace/source && /opt/graalvm/bin/java -agentlib:native-image-agent=access-filter-file=src/test/resources/access-filter.json,caller-filter-file=src/test/resources/access-filter.json,config-merge-dir=target/classes/META-INF/native-image -Xmx2g -Xms1g -jar /workspace/source/target/surefire/surefirebooter10059184498408944505.jar /workspace/source/target/surefire 2021-04-05T10-49-31_046-jvmRun2 surefire5113127204149054760tmp surefire_216727295065194062064tmp
+[ERROR] Error occurred in starting fork, check output in log
+[ERROR] Process Exit Code: 1
+[ERROR] 	at org.apache.maven.plugin.surefire.booterclient.ForkStarter.fork(ForkStarter.java:669)
+[ERROR] 	at org.apache.maven.plugin.surefire.booterclient.ForkStarter.access$600(ForkStarter.java:115)
+[ERROR] 	at org.apache.maven.plugin.surefire.booterclient.ForkStarter$1.call(ForkStarter.java:371)
+[ERROR] 	at org.apache.maven.plugin.surefire.booterclient.ForkStarter$1.call(ForkStarter.java:347)
+[ERROR] 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+[ERROR] 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+[ERROR] 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+[ERROR] 	at java.base/java.lang.Thread.run(Thread.java:834)
+[ERROR] 
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
+[31m
+Pipeline failed on stage 'from-build-pack' : container 'step-build-container-build'. The execution of the pipeline has stopped.[0m
