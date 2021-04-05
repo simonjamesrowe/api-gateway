@@ -1,0 +1,26 @@
+
+Showing logs for build [32msimonjamesrowe-api-gateway-mast-rckrg-67[0m stage [32mfrom-build-pack[0m and container [32mcredential-initializer[0m
+{"level":"info","ts":1617656437.229714,"caller":"creds-init/main.go:44","msg":"Credentials initialized."}
+
+Showing logs for build [32msimonjamesrowe-api-gateway-mast-rckrg-67[0m stage [32mfrom-build-pack[0m and container [32mworking-dir-initializer[0m
+Unable to retrieve container logs for containerd://6876754e24527c12b5c9e1e9d765f356eb3f26ce2817fba18d04fc20569648f8
+
+Showing logs for build [32msimonjamesrowe-api-gateway-mast-rckrg-67[0m stage [32mfrom-build-pack[0m and container [32mplace-tools[0m
+Unable to retrieve container logs for containerd://a3702026251315ad47ce8c055a3ba6bd8b1c5962fb7f929d8e2d850905869f05
+
+Showing logs for build [32msimonjamesrowe-api-gateway-mast-rckrg-67[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-simonjamesrowe-api-gateway-mast-rckrg-wlvhw[0m
+Unable to retrieve container logs for containerd://40625bf2edced7ce4ae5712decc3fbd1a7464a8e4221cf67104e32a9fba38d9d
+
+Showing logs for build [32msimonjamesrowe-api-gateway-mast-rckrg-67[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-builder-home[0m
+Unable to retrieve container logs for containerd://0759ebc4ec6d0828bb581482dd400d2b6a0150efc94fe6e4f5943d8873e5b5e2
+
+Showing logs for build [32msimonjamesrowe-api-gateway-mast-rckrg-67[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Unable to retrieve container logs for containerd://529cf63241ba69b49fa6d6f5c02e36992efd0c5bc3aa64eec9d089b52887528b
+
+Showing logs for build [32msimonjamesrowe-api-gateway-mast-rckrg-67[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Unable to retrieve container logs for containerd://cc0fb3b8cfca5a7d0cf8a5b16c51e57a14008aace2271459a54419c249350dee
+
+Showing logs for build [32msimonjamesrowe-api-gateway-mast-rckrg-67[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+Unable to retrieve container logs for containerd://6d1bfd38d9788021dbbef0d0489cc55b97dd5d0d0e6e36b977d069b473f20b71
+[31m
+Pipeline failed on stage 'from-build-pack' : container 'step-build-container-build'. The execution of the pipeline has stopped.[0m
