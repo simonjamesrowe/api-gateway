@@ -3,7 +3,7 @@ package com.simonjamesrowe.apigateway.test.restcontroller
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.ninjasquad.springmockk.MockkBean
 import com.sendgrid.SendGrid
-import com.simonjamesrowe.apigateway.core.usecase.ResumeUseCase
+import com.simonjamesrowe.apigateway.core.usecase.IResumeUseCase
 import com.simonjamesrowe.component.test.BaseComponentTest
 import com.simonjamesrowe.component.test.kafka.WithKafkaContainer
 import com.simonjamesrowe.model.cms.dto.BlogResponseDTO
@@ -43,7 +43,7 @@ internal class WebhookControllerTest : BaseComponentTest() {
   lateinit var sendGrid: SendGrid
 
   @MockkBean(relaxed = true)
-  lateinit var resumeUseCase: ResumeUseCase
+  lateinit var resumeUseCase: IResumeUseCase
 
   @BeforeEach
   fun beforeEach() {
@@ -795,7 +795,7 @@ internal class WebhookControllerTest : BaseComponentTest() {
       
       """.trimIndent()
       )
-      .post("http://localhost:$port/webhook")
+      .post("/webhook")
       .then()
       .log()
       .all()
@@ -808,7 +808,10 @@ internal class WebhookControllerTest : BaseComponentTest() {
     val blogEventMessage = testStreamListener.events[0]
     val blog = objectMapper.convertValue(blogEventMessage.payload[0].entry, BlogResponseDTO::class.java)
     val key = blogEventMessage.headers[KafkaHeaders.RECEIVED_MESSAGE_KEY] as String
-    val modelType =blogEventMessage.headers["model"] as String
+    val modelType = blogEventMessage.headers["model"] as String
+    val traceId = blogEventMessage.headers["b3"] as Long
+
+    assertThat(traceId).isNotNull()
     assertThat(modelType).isEqualTo("blog")
     assertThat(key).isEqualTo("blog-5f0215c69d8081001fd38fa1")
     assertThat(blog.title).isEqualTo("Creating a rich web app that can be hosted from home")

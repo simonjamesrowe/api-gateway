@@ -36,17 +36,18 @@ spring:
     producer:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: com.simonjamesrowe.model.serialization.WebhookEventSerializer
-    sleuth:
-      messaging:
-        kafka:
-          enabled: false
-    main:
-      allow-bean-definition-overriding: true
-    zipkin:
-      sender:
-        type: web
-      service:
-        name: ${spring.application.name}-${namespace:local}
+  sleuth:
+    messaging:
+      kafka:
+        enabled: false
+      enabled: false
+  main:
+    allow-bean-definition-overriding: true
+  zipkin:
+    sender:
+      type: web
+    service:
+      name: ${spring.application.name}-${namespace:local}
   application:
     name: api-gateway
 
