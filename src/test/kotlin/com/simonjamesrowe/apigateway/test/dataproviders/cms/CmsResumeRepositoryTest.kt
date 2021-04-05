@@ -16,7 +16,7 @@ import org.springframework.context.annotation.Import
 import org.springframework.test.context.ActiveProfiles
 import java.time.LocalDate
 
-@JsonTest
+@JsonTest(properties = ["spring.main.web-application-type=none"])
 @AutoConfigureWireMock(port = 0)
 @ActiveProfiles("cms")
 @Import(CmsRestApi::class, CmsResumeRepository::class, WebClientConfiguration::class)
