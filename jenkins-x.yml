@@ -1,1 +1,2 @@
 buildPack: maven-java11-springboot
+buildPackGitRef: https://github.com/jenkins-x/jxr-packs-kubernetes
